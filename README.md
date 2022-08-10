@@ -23,6 +23,11 @@ Profesión: Realizador Audiovisual, Actualmente me desempeño com Editor en el T
 Hobby: Realizar piezas audivisuales con mi productora para redes, ademas hacer una peli documental sobre
 Carlos Inzillo, creador del ciclo "Jazzologia" donde pasaron grandes artistas del ambito del jazz.
 
+Nombre: Francisco Valenza, 32 años, argentino, actualmente viviendo en Uruguay. 
+Profesión: Corredor inmobiliario y guía de turismo. 
+Pasatiempos favoritos: viajar, surfiar, juntarme con amigos y disfrutar sobre todas las cosas.
+
+
 
 Link del tablero de trabajo en donde se encuentran trabajando:
 Nos encotramos trabajando con Trello, el link del tablero es:
