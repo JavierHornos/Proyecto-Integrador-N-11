@@ -13,7 +13,7 @@ https://cheersapp.com.ar
 https://siempreencasa.com.ar
 https://www.outletdebebidas.com.ar/
 https://www.espaciovino.com.ar/
-https://marken.kyte.site/
+https://www.gobar.com.ar
 
 Listado del grupo con una breve descripción de cada uno:
 Somos 5 integrantes:
@@ -22,6 +22,10 @@ Nombre: Javier Hornos, 43 años, Argentino
 Profesión: Realizador Audiovisual, Actualmente me desempeño com Editor en el Teatro San Martin
 Hobby: Realizar piezas audivisuales con mi productora para redes, ademas hacer una peli documental sobre
 Carlos Inzillo, creador del ciclo "Jazzologia" donde pasaron grandes artistas del ambito del jazz.
+
+Nombre: Francisco Valenza, 32 años, argentino, actualmente viviendo en Uruguay. 
+Profesión: Corredor inmobiliario y guía de turismo. 
+Pasatiempos favoritos: viajar, surfiar, juntarme con amigos y disfrutar sobre todas las cosas.
 
 Nombre: Lucas Vallone, 29 años, Argentino
 Profesión: Chofer en la linea 109.
