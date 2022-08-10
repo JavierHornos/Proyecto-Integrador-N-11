@@ -13,7 +13,7 @@ https://cheersapp.com.ar
 https://siempreencasa.com.ar
 https://www.outletdebebidas.com.ar/
 https://www.espaciovino.com.ar/
-https://marken.kyte.site/
+https://www.gobar.com.ar
 
 Listado del grupo con una breve descripción de cada uno:
 Somos 5 integrantes:
