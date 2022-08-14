@@ -31,6 +31,11 @@ Nombre: Lucas Vallone, 29 años, Argentino
 Profesión: Chofer en la linea 109.
 Hobby: Hago mecanica automotriz.
 
+Nombre: Mauricio Manera, 40 años, argentino.
+Profesión: Periodista. Actualmente realizando alguna corresponsalía pero principalmente me desempeño 
+como conductor de Cabify y Uber.
+Hobby: jugar al fútbol y juntarme con amigos.
+
 
 Link del tablero de trabajo en donde se encuentran trabajando:
 Nos encotramos trabajando con Trello, el link del tablero es:
