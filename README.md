@@ -5,6 +5,7 @@ Misión: otorgar los mejores productos,  a un buen precio, siempre haciendo énf
 Visión: ser la empresa líder en distribución de bebidas. Demostrar que nuestro servicio es de alto nivel y que podemos ser versátiles y adaptarnos a las exigencias de los consumidores.
 
 Público Objetivo:
+Apuntamos a un ámbito socio-cultural principalmente nocturno, mayores de 18 años de edad, con cultura alcohólica. Grupos socialmente activos de personas, por generar reuniones numerosas y frecuentes. Generalmente compras abundantes y clientes fieles, con reiteración de compra. Cualquier persona está capacitada para la utilización de la plataforma, y todo aquel que tenga un domicilio y un teléfono fijo o celular puede utilizarla.
 
 Listado de 5 páginas referentes a las que se basa su proyecto:
 Nos inspiramos en las siguientes páginas:
