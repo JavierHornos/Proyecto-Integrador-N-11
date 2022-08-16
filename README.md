@@ -38,6 +38,6 @@ como conductor de Cabify y Uber.
 Hobby: jugar al fútbol y juntarme con amigos.
 
 
-**Link del tablero de trabajo en donde se encuentran trabajando:**
+**Link del tablero de trabajo en donde estamos trabajando:**
 Nos encotramos trabajando con Trello, el link del tablero es:
 https://trello.com/invite/b/Bwcncn9Z/c86f48e044442d392e6cee9ce8d18c59/trabajo-grupal
