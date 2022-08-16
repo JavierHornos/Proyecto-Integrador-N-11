@@ -37,6 +37,9 @@ Profesión: Periodista. Actualmente realizando alguna corresponsalía pero princ
 como conductor de Cabify y Uber.
 Hobby: jugar al fútbol y juntarme con amigos.
 
+Nombre : **Laura Nuñez**, 27 años , Venezolana viviendo en Argentina
+Profesion: Bioquimica y Maestra Panadera, actualmente solo mama de tiempo completo.
+Hooby: Pasar tiempo en familia, ver peliculas, cocinar y escuchar musica
 
 **Link del tablero de trabajo en donde estamos trabajando:**
 Nos encotramos trabajando con Trello, el link del tablero es:
