@@ -9,12 +9,11 @@ Apuntamos a un ámbito socio-cultural principalmente nocturno, mayores de 18 añ
 
 **Listado de 5 páginas referentes a las que se basa su proyecto:**
 Nos inspiramos en las siguientes páginas:
-https://www.fullescabio.com
-https://cheersapp.com.ar
-https://siempreencasa.com.ar
-https://www.outletdebebidas.com.ar/
-https://www.espaciovino.com.ar/
-https://www.gobar.com.ar
+1. https://www.fullescabio.com
+2. https://cheersapp.com.ar
+3. https://siempreencasa.com.ar
+4. https://www.outletdebebidas.com.ar/
+5. https://www.gobar.com.ar
 
 **Listado del grupo con una breve descripción de cada uno:**
 Somos 5 integrantes:
