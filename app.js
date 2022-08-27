@@ -11,23 +11,23 @@ app.get('/', (req, res) => {
     res.send('ahora si entre')
 })
 
-app.get('/mostrar_home', (rew, res) => {
+app.get('/mostrar_home', (req, res) => {
     res.sendFile((__dirname + '/views/home.html'))
 })
 
-app.get('/mostrar_carrito', (rew, res) => {
+app.get('/mostrar_carrito', (req, res) => {
     res.sendFile((__dirname + '/views/carrito.html'))
 })
 
-app.get('/mostrar_login', (rew, res) => {
+app.get('/mostrar_login', (req, res) => {
     res.sendFile((__dirname + '/views/login.html'))
 })
 
-app.get('/mostrar_producto', (rew, res) => {
+app.get('/mostrar_producto', (req, res) => {
     res.sendFile((__dirname + '/views/producto.html'))
 })
 
-app.get('/mostrar_registro', (rew, res) => {
+app.get('/mostrar_registro', (req, res) => {
     res.sendFile((__dirname + '/views/registro.html'))
 })
 
