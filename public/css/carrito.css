@@ -1,4 +1,40 @@
-.header{
-    background-color: black;
 
+.encabezado{
+    background-color:BLACK;
+    color: white; 
+    height:15vh; 
+    padding: 20px;
+}
+
+.hipervinculos{
+    font-size: 10px; 
+    margin-top: 20px; 
+    text-decoration: none; 
+    color: white; 
+    text-align: center; 
+    margin-left: 220px; 
+    margin-right: 220px;             
+}
+
+.medio{
+background-color:orangered; 
+color: white; 
+height:65vh; 
+padding: 20px;
+}
+
+.producto1{
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+}
+
+.pie{
+    background-color:BLACK; 
+    color: white; 
+    height:20vh; 
+    padding: 20px;
+}
+
+.iconosf{
+    padding:10px
 }
