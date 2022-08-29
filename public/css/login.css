@@ -1,0 +1,66 @@
+
+.encabezado{
+    background-color:BLACK;
+    color: white; 
+    height:15vh; 
+    padding: 20px;
+}
+
+
+.medio{
+background-color: grey ; 
+color: #696A67; 
+height:100vh; 
+box-sizing: border-box;
+height: 95vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.login{
+   width: 360px;
+   height: min-content;
+   padding: 20px;
+   border-radius: 12px;
+   background: white;
+   
+}
+
+.login h1{
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group{
+    margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#boton{
+    background-color: #E28237;
+    border-radius: 12px;
+}
+
+
+
+
+
+.pie{
+    background-color:BLACK; 
+    color: white; 
+    height:20vh; 
+    padding: 20px;
+}
+
+.iconosf{
+    padding:10px
+}
