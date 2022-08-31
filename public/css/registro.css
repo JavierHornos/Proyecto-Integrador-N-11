@@ -49,6 +49,7 @@ li{
 
 .form-control{
     max-width: 1060px;
+    display: flex;
 }
 
 i{
@@ -75,6 +76,10 @@ i{
 
 .col-6{
     padding-top: 30px;;
+}
+
+.fa:hover{
+    color: orange;
 }
 
 .tyc{
