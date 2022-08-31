@@ -16,6 +16,11 @@
     color: white;
 }
 
+.carrito a{
+    text-decoration: none;
+    color: white;
+}
+
 .hipervinculos a{
     text-decoration: none;
     color: white;
@@ -28,7 +33,8 @@
     color: white; 
     text-align: center; 
     margin-left: 220px; 
-    margin-right: 220px;             
+    margin-right: 220px;
+    padding: 20px;       
 }
 
 .medio{
@@ -53,3 +59,4 @@ padding: 20px;
 .iconosf{
     padding:10px
 }
+
