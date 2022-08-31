@@ -6,6 +6,21 @@
     padding: 20px;
 }
 
+.ingresa a{
+    text-decoration: none;
+    color: white;
+}
+
+.registrate a{
+    text-decoration: none;
+    color: white;
+}
+
+.hipervinculos a{
+    text-decoration: none;
+    color: white;
+}
+
 .hipervinculos{
     font-size: 10px; 
     margin-top: 20px; 
