@@ -54,3 +54,10 @@ padding: 20px;
     padding:10px
 }
 
+.noPadding{
+    padding: 0;
+}
+
+.tope-de-arriba{
+    background-color: orangered;
+}
