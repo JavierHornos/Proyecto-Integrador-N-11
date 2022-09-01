@@ -1,42 +1,92 @@
+/*header*/
 
-.encabezado{
-    background-color:BLACK;
-    color: white; 
-    height:15vh; 
-    padding: 20px;
+header{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    min-height:15vh;
+    padding: 10px;
+    
 }
 
-.ingresa a{
+.logo{
+    position: relative;
+    top: -10px;
+    left: 10px
+
+}
+
+.input{
+    width: 85%;
+    height: 4vh;
+    position: relative;
+    top: -10px;
+}
+
+a{
     text-decoration: none;
     color: white;
 }
-
-.registrate a{
+a:hover{
     text-decoration: none;
-    color: white;
+    color: orange;
 }
 
-.carrito a{
-    text-decoration: none;
-    color: white;
+li{
+    margin: auto 4px;
+}
+.a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.menu{
+    display: flex;
+    margin:0px auto;
+    text-align: center;
+    color:white;
+    list-style: none;
+    padding-right: 15px;
+    position: relative;
+    top: 25px;
+    font-size: 12px;
 }
 
-.hipervinculos a{
-    text-decoration: none;
-    color: white;
+.menu2{
+ display: flex;
+ position: relative;
+ top:-15px;
+ right:15px;
 }
 
-.hipervinculos{
-    font-size: 10px; 
-    margin-top: 20px; 
-    text-decoration: none; 
-    color: white; 
-    text-align: center; 
-    margin-left: 220px; 
-    margin-right: 220px;
-    padding: 20px;       
+
+.b{
+    display: flex;
+    align-items: center;
+    width: 5vw;
+    position: relative;
+    top:-15px;
+    right: 10px;
+    justify-content: space-between;
+
 }
 
+.form-control{
+    max-width: 1060px;
+    display: flex;
+}
+
+i{
+    color:white;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+
+/* main */
 .medio{
 background-color:orangered; 
 color: white; 
@@ -49,11 +99,32 @@ padding: 20px;
     border-bottom: solid black 2px;
 }
 
+/* footer */
+
 .pie{
     background-color:BLACK; 
     color: white; 
     height:20vh; 
     padding: 20px;
+    display: flex;
+}
+
+.pie1{
+    position: relative;
+    top:20px;
+    left: 15px;
+}
+
+.pie2{
+    position: relative;
+    top: 40px;
+    left: 300px;
+}
+
+.pie3{
+    position: relative;
+    left: 900px;
+    top: 25px;
 }
 
 .iconosf{
