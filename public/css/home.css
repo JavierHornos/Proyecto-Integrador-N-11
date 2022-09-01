@@ -1,0 +1,56 @@
+.encabezado{
+    background-color:BLACK;
+    color: white; 
+    height:15vh; 
+    padding: 20px;
+}
+
+.ingresa a{
+    text-decoration: none;
+    color: white;
+}
+
+.registrate a{
+    text-decoration: none;
+    color: white;
+}
+
+.carrito a{
+    text-decoration: none;
+    color: white;
+}
+
+.hipervinculos a{
+    text-decoration: none;
+    color: white;
+}
+
+.hipervinculos{
+    font-size: 10px; 
+    margin-top: 20px; 
+    text-decoration: none; 
+    color: white; 
+    text-align: center; 
+    margin-left: 220px; 
+    margin-right: 220px;
+    padding: 20px;       
+}
+
+.medio{
+background-color:orangered; 
+color: white; 
+height:65vh; 
+padding: 20px;
+}
+
+.pie{
+    background-color:BLACK; 
+    color: white; 
+    height:20vh; 
+    padding: 20px;
+}
+
+.iconosf{
+    padding:10px
+}
+
