@@ -1,8 +1,11 @@
+
+
 .encabezado{
     background-color:BLACK;
     color: white; 
     height:15vh; 
     padding: 20px;
+    font-size: 14px;
 }
 
 .ingresa a{
@@ -60,4 +63,34 @@ padding: 20px;
 
 .tope-de-arriba{
     background-color: orangered;
+    height: 5vh ;
+    display:flex;
+    
+
+}
+
+.boton-busqueda{
+    display: inline;
+    height: 80%;
+    font-size: 0.7em !important;
+    margin-top: -7px;
+}
+
+.buscador{
+    display: inline !important;
+    width: 75% !important;
+    height: 80%;
+    margin-left: 0.5em;
+}
+
+.centrar-buscador{
+    text-align: center;
+}
+
+.mensaje{
+    color: white;
+    text-align: center;
+    flex: 0.8;
+    margin-top: 4px;
+    
 }
