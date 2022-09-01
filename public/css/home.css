@@ -3,8 +3,8 @@
 .encabezado{
     background-color:BLACK;
     color: white; 
-    height:15vh; 
-    padding: 20px;
+    /* height: 17vh;  */
+     padding-top: 35px;
     font-size: 14px;
 }
 
@@ -36,14 +36,17 @@
     text-align: center; 
     margin-left: 220px; 
     margin-right: 220px;
-    padding: 20px;       
+    padding: 16px; 
+    border-top: 9px solid orangered; 
+    margin-top: 6px !important;     
 }
 
 .medio{
 background-color:orangered; 
 color: white; 
-height:65vh; 
-padding: 20px;
+/* height:65vh;  */
+ padding: 0px !important; 
+margin: 0;
 }
 
 .pie{
@@ -51,6 +54,7 @@ padding: 20px;
     color: white; 
     height:20vh; 
     padding: 20px;
+    
 }
 
 .iconosf{
@@ -71,26 +75,55 @@ padding: 20px;
 
 .boton-busqueda{
     display: inline;
-    height: 80%;
+    /* height: 80%; */
     font-size: 0.7em !important;
-    margin-top: -7px;
+    margin-top: -1em;
+    
 }
 
 .buscador{
     display: inline !important;
     width: 75% !important;
-    height: 80%;
+    height: 30px;
     margin-left: 0.5em;
+
+    
 }
 
 .centrar-buscador{
     text-align: center;
+    margin-top: -1em !important ;
 }
 
 .mensaje{
     color: white;
     text-align: center;
-    flex: 0.8;
+    flex: 0.9;
     margin-top: 4px;
     
+}
+
+.fondo-imagenes{
+     background-image: url("../imagenes/primera.jpeg");
+      height: 90vh;
+     background-repeat: no-repeat;
+     background-size: cover;
+     /* background-position: ; */
+     background-attachment: fixed;
+    
+}
+
+.logo{
+    /* margin-top: -1em !important; */
+}
+
+.item{
+    margin-left: 1em;
+}
+
+.separador{
+    margin-left: 1em;
+}
+.arriba{
+    margin-top: -1em !important;
 }
