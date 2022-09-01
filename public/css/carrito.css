@@ -63,11 +63,16 @@ li{
     font-size: 12px;
 }
 
+.fa:hover{
+    color: orange;
+}
+
 .menu2{
  display: flex;
  position: relative;
  top:-15px;
  right:15px;
+ list-style: none;
 }
 
 
