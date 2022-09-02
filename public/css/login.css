@@ -166,6 +166,9 @@ main{
    background: none;
 }
 
+.sinContrasena:hover{
+    cursor: pointer;
+}
 
 
 

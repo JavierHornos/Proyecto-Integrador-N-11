@@ -7,6 +7,9 @@ app.use(express.static(path.join(__dirname, './public')));
 
 app.use(express.static(__dirname +'/views'));
 
+
+const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
+
 app.get('/', (req, res) => {
     res.send('ahora si entre')
 })
@@ -35,6 +38,11 @@ app.get('*', (req, res) => {
     res.send('ruta restringida ****')
 })
 
-app.listen(3100, function() {
+
+/* app.listen(3100, function() {
     console.log("Levantando un servidor con Express")
+}) */ 
+
+app.listen(PORT, function() {                                   /* Codigo para Heroku*/
+    console.log("Levantando un servidor con Express", PORT)
 })
