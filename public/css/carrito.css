@@ -25,7 +25,7 @@ header{
 }
 
 .boton-busqueda{
-    height: 4.65vh;
+    height: 4vh;
     position: relative;
     top: -10px;
     right: 60px;
@@ -100,6 +100,7 @@ i{
 
 
 /* main */
+
 .medio{
 background-color:white; 
 color: black; 
@@ -111,7 +112,7 @@ border: solid 2px gainsboro;
 .fondo-main{
     color: gainsboro;
     position: absolute;
-    top: 280px;
+  bottom: -500px;
     right: 630px; 
     font-size: 550px;
 }
@@ -120,7 +121,9 @@ border: solid 2px gainsboro;
 .tu-carrito{
     font-size: 50px;
     padding: 10px;
+    position: relative;
 }
+
 
 .esta-vacio{
     font-size: 35px;
@@ -151,11 +154,31 @@ border: solid 2px gainsboro;
     color: blue;
     font-size: 25px;
     position: relative;
-    left: 46%;
+    left: 35%;
     bottom: 50px;
     z-index: 1;
 }
 
+
+.caja-carrito{
+  position: relative;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.caja-texto{
+    position: absolute;
+    top: -35px;
+    right: 700px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 0px;
+    
+}
 
 /* footer */
 
