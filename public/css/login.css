@@ -1,64 +1,203 @@
+/*header*/
 
-.encabezado{
-    background-color:BLACK;
-    color: white; 
-    height:15vh; 
-    padding: 20px;
+header{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    min-height:15vh;
+    padding: 10px;
+    
+}
+
+.logo{
+    position: relative;
+    top: -10px;
+    left: 10px
+
+}
+
+.input{
+    width: 85%;
+    height: 4vh;
+    position: relative;
+    top: -10px;
+}
+
+.boton-busqueda{
+    height: 4.65vh;
+    position: relative;
+    top: -10px;
+    right: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: orange;
+}
+
+li{
+    margin: auto 4px;
+}
+
+.a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.menu{
+    display: flex;
+    margin:0px auto;
+    text-align: center;
+    color:white;
+    list-style: none;
+    padding-right: 15px;
+    position: relative;
+    top: 25px;
+    font-size: 12px;
+}
+
+.fa:hover{
+    color: orange;
+}
+
+.menu2{
+ display: flex;
+ position: relative;
+ top:-15px;
+ right:15px;
+ list-style: none;
 }
 
 
-.medio{
-background-color: grey ; 
-color: #696A67; 
-height:100vh; 
-box-sizing: border-box;
-height: 95vh;
-display: flex;
-align-items: center;
-justify-content: center;
+.b{
+    display: flex;
+    align-items: center;
+    width: 5vw;
+    position: relative;
+    top:-15px;
+    right: 10px;
+    justify-content: space-between;
+
 }
 
-.login{
-   width: 360px;
-   height: min-content;
-   padding: 20px;
-   border-radius: 12px;
-   background: white;
-   
+.form-control{
+    max-width: 1060px;
+    display: flex;
 }
 
-.login h1{
-    font-size: 40px;
-    margin-bottom: 25px;
-}
-
-.login form {
+i{
+    color:white;
     font-size: 20px;
+    margin-left: 3px;
 }
 
-.login form .form-group{
-    margin-bottom: 12px;
-}
-
-.login form input[type="submit"] {
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-#boton{
-    background-color: #E28237;
-    border-radius: 12px;
+body, html {
+    height: 100%;
 }
 
 
+/*main*/
+main{
+    margin: 0;
+    padding: 0;
+    background: grey;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-box{
+    width: 100%;
+    padding: 60px;
+    background: rgb(55, 54, 54);
+    text-align: center;
+    
+}
+
+.form-title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box button[type="submit"] {
+    border: 0;
+    background:none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 10px;
+    text-align: center;
+    border: 2px solid #F1701C;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+    
+
+.form-box input[type="email"]:focus,
+.form-box input[type="password"]:focus {
+    width: 280px;
+    border-color: #ffffff;
+}
+
+.form-box button[type="submit"] {
+    border: 0;
+    background: #F1701C;
+    cursor: pointer;
+    border: 2px solid #F1701C;
+}
+
+.form-box button[type="submit"]:hover {
+   background: none;
+}
+
+.sinContrasena:hover{
+    cursor: pointer;
+}
 
 
+
+/* footer */
 
 .pie{
     background-color:BLACK; 
     color: white; 
     height:20vh; 
     padding: 20px;
+    display: flex;
+}
+
+.pie1{
+    position: relative;
+    top:20px;
+    left: 5px;
+}
+
+.pie2{
+    position: relative;
+    top: 40px;
+    left: 300px;
+}
+
+.pie3{
+    position: relative;
+    left: 750px;
+    top: 25px;
 }
 
 .iconosf{

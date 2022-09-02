@@ -63,11 +63,16 @@ li{
     font-size: 12px;
 }
 
+.fa:hover{
+    color: orange;
+}
+
 .menu2{
  display: flex;
  position: relative;
  top:-15px;
  right:15px;
+ list-style: none;
 }
 
 
@@ -96,16 +101,61 @@ i{
 
 /* main */
 .medio{
-background-color:orangered; 
-color: white; 
+background-color:white; 
+color: black; 
 height:65vh; 
 padding: 20px;
+border: solid 2px gainsboro;
 }
 
-.producto1{
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
+.fondo-main{
+    color: gainsboro;
+    position: absolute;
+    top: 280px;
+    right: 630px; 
+    font-size: 550px;
 }
+
+
+.tu-carrito{
+    font-size: 50px;
+    padding: 10px;
+}
+
+.esta-vacio{
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+    color: gray;
+    font-weight: bold;
+    padding:10px ;
+    bottom: 60px;
+    z-index: 1;
+    
+}
+
+.llenalo{
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: gray;
+    font-weight: bold;
+    bottom: 60px;
+    z-index: 1;
+}
+
+.compras {
+    text-decoration: none;
+    color: blue;
+    font-size: 25px;
+    position: relative;
+    left: 46%;
+    bottom: 50px;
+    z-index: 1;
+}
+
 
 /* footer */
 
