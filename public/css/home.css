@@ -1,3 +1,5 @@
+
+
 .encabezado {
     background-color: BLACK;
     color: white;
@@ -165,11 +167,11 @@
     color: aliceblue !important;
 }
 
-.mobile{
+.mobile {
     display: none !important;
 }
 
-.grande{
+.grande {
     display: block;
 }
 
@@ -178,11 +180,11 @@
         width: 100%;
     }
 
-    .mobile{
+    .mobile {
         display: block !important;
     }
 
-    .grande{
+    .grande {
         display: none !important;
     }
 
@@ -206,60 +208,115 @@
 
     .arriba {
         margin-top: 1em !important;
-        text-align: center;
+        /* text-align: center; */
+        display: flex;
+        /* align-items: center; */
     }
 
     .centrar-buscador {
         margin-top: 1em !important;
     }
 
-    .encabezado{
+    .encabezado {
         padding-top: 0.2em;
     }
 
-    .flex-container{
+    .flex-container {
         display: none;
     }
 
-    .pie{
+    .pie {
         height: auto;
     }
 
-.logo-abajo{
-    width: 70%;
-    height: 70%;
-    margin-bottom: 2em;
-}
+    .logo-abajo {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 2em;
+    }
 
-    .acomodar-logo{
+    .acomodar-logo {
         justify-content: center;
         display: flex;
     }
 
     .fondo-imagenes {
-        background-image: url("../imagenes/primera.jpeg");
-         height: 70vh;
+        background-image: url("../imagenes/cerveza4.jpeg");
+        height: 100vh;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
-        /* background-position: ; */
+        /* background-size: 100% 100%; */
+        background-position: center center;
         background-attachment: fixed;
 
     }
-    
-    .condiciones-arreglando{
+
+    .condiciones-arreglando {
         margin-bottom: 0.5em;
     }
 
+    #hamitens a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+        color: white;
+    }
 
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        background: orangered;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 5px;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+    }
+
+    #hamitens {
+        display: none;
+    }
+
+    #hamnav input:checked~#hamitens {
+        display: block;
+    }
+
+    #hamnav {
+        width: 100%;
+        background: #000;
+    }
+
+    #hamitens {
+        /* display: flex; */
+    }
+
+    #hamitens a {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #hamitens a:hover {
+        background: orangered;
+    }
+
+    #hamnav #hamburger {
+        display: none;
+    }
 
 }
 
+a {
+    color: white !important;
+}
 
-
-.inferior-mensaje{
-position: fixed;
-bottom: 6%;
-right: 5%;
-width: 100px;
-height: 100px;
+.inferior-mensaje {
+    position: fixed;
+    bottom: 6%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
 }
