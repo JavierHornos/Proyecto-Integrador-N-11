@@ -166,12 +166,13 @@ border: solid 2px gainsboro;
 
 *{
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .caja-texto{
     position: absolute;
     top: -35px;
-    right: 700px;
+    right: 670px;
     background-color: black;
     color: white;
     padding-left: 20px;
