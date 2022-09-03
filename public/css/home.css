@@ -225,6 +225,41 @@
         height: auto;
     }
 
+.logo-abajo{
+    width: 70%;
+    height: 70%;
+    margin-bottom: 2em;
+}
+
+    .acomodar-logo{
+        justify-content: center;
+        display: flex;
+    }
+
+    .fondo-imagenes {
+        background-image: url("../imagenes/primera.jpeg");
+         height: 70vh;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        /* background-position: ; */
+        background-attachment: fixed;
+
+    }
+    
+    .condiciones-arreglando{
+        margin-bottom: 0.5em;
+    }
 
 
+
+}
+
+
+
+.inferior-mensaje{
+position: fixed;
+bottom: 6%;
+right: 5%;
+width: 100px;
+height: 100px;
 }
