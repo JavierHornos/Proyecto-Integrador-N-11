@@ -1,19 +1,18 @@
 /*header*/
 
-header{
-    
+header{   
     background-color: black;
     align-items: center;
     justify-content: space-between;
     min-height:15vh;
     padding: 10px;
-    
 }
 
 header .fila1{
 display: flex;
 justify-content: space-around;
 align-items: center;
+margin-bottom: 20px;
 }
 
 header .ayb{
@@ -28,18 +27,18 @@ header .logo{
     flex-grow: 1;
 }
 
-
-
 header .b{
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-top: 30px;
 }
 
 header .menu2{
     flex-grow: 1;
+    margin-top: 40px;
 }
 
 header .ayb input{
@@ -71,11 +70,10 @@ header .fila2 {
     position: relative;
 }
 
-
-
 header .fila2 .menu{
     flex-grow: 1;
 }
+
 
 header .fila2  .menu-mobile{
     display:none ;
@@ -106,6 +104,7 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile{
     gap:10px;
     text-align: left;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: solid orange 1px;
     padding: 20px !important;
     margin-block-start: 0em !important;
     margin-block-end: 0em !important;
@@ -118,6 +117,20 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li{
     width: max-content;
     margin: 0 !important;
     text-align: left !important;
+}
+
+.hamburguesa{
+    background-color: orange;
+    
+}
+
+.boton-desplegable{
+    background-color: orange;
+    border-radius: 20%;
+    border: solid gray 3px;
+    height: 40px;
+    width: 40px;
+    padding-right: 20px;
 }
 
 header .fila2 .input-responsive{
@@ -170,7 +183,7 @@ li{
     color:white;
     list-style: none;
     padding-right: 15px;
-    position: relative;
+    position: absolute;
     top: 25px;
     font-size: 12px;
 }
@@ -304,11 +317,24 @@ border: solid 2px gainsboro;
     justify-content: space-around;
 }
 
-
-
 .iconosf{
-    padding:10px
+    padding-right: 10px;
 }
+
+.pie2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pie3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
 
 @media(max-width:1100px){
     header .fila1 .ayb{
@@ -316,7 +342,7 @@ border: solid 2px gainsboro;
     }
 
     header .fila2 .input-responsive{
-        display: block;
+        display: flex;
     }
 
     header .fila2 .menu-mobile{
@@ -326,4 +352,47 @@ border: solid 2px gainsboro;
     header .fila2 .menu{
         display: none;
     }
+
+  .pie1 img{
+        height: 50px;
+        width: 200px;
+    }
+
+    .pie2{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .pie3{
+        font-size: 12px;
+        margin-left: 20px;
+     
+    }
+
+
+    .pie{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .input-responsive .input{
+        flex-grow: 5;
+        width: 40vw;
+    }
+}
+
+@media(max-width:691px){
+
+    header .b{
+        display: none;
+    }
+
+ header .logo img{
+     width: 220px;
+ }
+
+ footer .pie1 img{
+
+ }
+
 }
