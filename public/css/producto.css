@@ -237,6 +237,7 @@ i{
 /* main */
 main{
     height: 65vh;
+
 }
 
 .jack-daniels{
@@ -253,6 +254,14 @@ main{
     max-width: 50vw;
     margin-left: 30px;
     border: 2px solid gainsboro;
+}
+
+.caja1 a{
+    color: blue;
+}
+
+.caja1 a:hover{
+    color: orange;
 }
 
 .caja2{
