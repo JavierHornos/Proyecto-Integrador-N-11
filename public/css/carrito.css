@@ -372,7 +372,7 @@ border: solid 2px gainsboro;
 
     .pie{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap:wrap
     }
 
     .input-responsive .input{
@@ -391,8 +391,9 @@ border: solid 2px gainsboro;
      width: 220px;
  }
 
- footer .pie1 img{
-
- }
+ .pie{
+    display: flex;
+    flex-wrap:inherit;
+}
 
 }
