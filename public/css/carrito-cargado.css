@@ -1,29 +1,190 @@
-
-
-
-
-*{
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+header{
+    height: 20vh;
+    background-color: black;
 }
 
-/*header*/
+main{
+    height: 60vh;
+}
 
-header{   
+footer{
+    height: 20vh;
+    background-color: black;
+}
+
+
+/*main*/
+.contenedor1{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:100px;
+    position: relative;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.contenedor1a{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:50px;
+    position: relative;
+    flex-wrap: wrap;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+.contenedor1b{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:50px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.columna2{
+    display: flex;
+    flex-direction: column;
+    gap:50px ;  
+}
+
+.columna3{
+    display: flex;
+    flex-direction: column;
+    gap:50px ;
+}
+
+.columna4{
+    display: flex;
+    flex-direction: column;
+    gap:50px ;
+}
+
+.columna5{
+    display: flex;
+    flex-direction: column;
+    gap:50px ;
+}
+
+.columna6{
+    display: flex;
+    flex-direction: column;
+    gap:50px ;
+}
+
+.cantidades{
+    
+    width: 2em;
+    height: 1em;
+    text-align: center;
+    border-radius: 0.6em;
+    border-color: gainsboro;
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila2{
+    display: flex;
+    gap:100px;
+}
+
+.fila3{
+    display: flex;
+    gap:110px;
+}
+
+.fila4{
+    display: flex;
+    gap:100px;
+}
+
+.wiskito{
+    display: none;
+}
+
+*{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media(max-width:1103px){
+  .contenedor1{
+      gap:50px
+  }
+}
+
+
+@media(max-width:1053px){
+    .contenedor2{
+        padding-left: 300px;
+    }
+  }
+
+
+
+
+@media(max-width:855px){
+    *{
+        font-size: small;
+    }
+}
+
+@media(max-width:760px){
+  .contenedor1a{
+      gap: 20px;
+  }
+
+  .contenedor2{
+    padding-left: 150px;
+}
+}
+
+@media(max-width:610px){
+    .contenedor1a{
+        gap: 20px;
+        font-size:10px ;
+    }
+  }
+
+  @media(max-width:536px){
+    .contenedor1a{
+        gap:10px;
+        font-size:8px ;
+    }
+
+    .mayusculas{
+        display: none;
+    }
+
+    .wiskito{
+        display: flex;
+    }
+
+    .contenedor2{
+        padding-left: 50%;
+    }
+  }
+
+  @media(max-width:390px){
+*{
+    font-size: 10px;
+}
+  }
+
+  /*header*/
+
+  header{   
     background-color: black;
     align-items: center;
     justify-content: space-between;
     min-height:15vh;
     padding: 10px;
-}
-
-.padre-precio{
-    display: flex;
-    align-items: center;
-}
-
-.barr{
-    color:white;
 }
 
 header .fila1{
@@ -66,7 +227,7 @@ header .ayb input{
 
 header .ayb button{
     flex-grow: 1;
-    height: 40px;
+    height: 45px;
     color: black;
     cursor:pointer;
 
@@ -95,31 +256,6 @@ header .fila2 .menu{
 
 header .fila2  .menu-mobile{
     display:none ;
-}
-
-.cantidades{
-    margin: 0.5em;
-    width: 3em;
-height: 2em;
-text-align: center;
-border-radius: 0.6em;
-border-color: gainsboro;
-}
-
-.al-carrito{
-    width: 10em;
-    height: 2.5em;
-    background-color: orangered;
-    font-size: 0.9em;
-    border-color: transparent;
-    border-radius: 0.6em;
-    margin: 0.2em;
-    margin-bottom: 0.5em;
-    color: white;
-}
-
-.al-carrito:hover{
-    background-color: rgb(238, 78, 20);
 }
 
 header .fila2 .menu-mobile .contenedor-lista-mobile{
@@ -185,7 +321,7 @@ header .fila2 .input-responsive input{
     }
 
 header .fila2 .input-responsive button{
-    height: 40px;
+
     color: black;
     cursor:pointer;
 }
@@ -266,140 +402,10 @@ i{
     margin-left: 3px;
 }
 
-body{
-margin: 0;
+.palito{
+    color: white;
+    margin: 5px;
 }
-
-/* main */
-main{
-     height: 65vh; 
-}
-
-.jack-daniels{
-    /* position: relative; */
-    /* top:20px; */
-    margin-top: -1em;
-}
-
-.caja1{
-    display: flex;
-    flex-direction: column;
-    /* position: relative; */
-    /* bottom: 300px; */
-    /* left: 200px; */
-     max-width: 50vw;
-    margin-left: 40px;
-    /* border: 2px solid gainsboro; */
-     padding-left: 2em;
-
-}
-
-.padre-cajas{
-    display: flex;
-    height: 500px;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    align-items: center center;
-    justify-content: center;
-}
-
-.precio{
-    /* font-family: Arial, Helvetica, sans-serif; */
-    margin-right: 0.5em;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-
-}
-
-.cuotas{
-    font-size: 15px;
-    margin-bottom: -0.3em;
-}
-
-.botones-ml{
-    display: flex;
-    margin-bottom: 0.7em;
-    color: black;
-}
-
-.descuento{
-    font-size: 15px;
-}
-
-.pago{
-    color: rgb(72, 72, 235);
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-
-}
-
-.main-principal{
-    margin: 2em;
-}
-
-.caja2 table td{
-    border: 1px solid gainsboro;
-    padding: 0.5em;
-    font-size: 15px;
-}
-
-.caja2 table{
-  margin-bottom: 1em;
-}
-
-
-.caja3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.bancos-seleccionados{
-    width: 250px;
-}
-
-.pagos-tarjetas{
-    font-size: x-large;
-    
-    }
-
-
-.botones-ml input{
-    width: 10em;
-}
-
-.litro{
-    margin-bottom: -0.3em ;
-    margin-top: 0.3em ;
-}
-
-.off{
-    color: rgb(25, 235, 25);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    margin-top: -0.5em;
-}
-
-.caja1 a{
-    color: blue;
-}
-
-.caja1 a:hover{
-    color: orange;
-}
-
-.caja2{
-    color: black;
-    margin-left: 3em;
-}
-
-.container{
-    height: 590px;
-}
-
-
 
 
 /* footer */
@@ -407,7 +413,7 @@ main{
 .pie{
     background-color:BLACK; 
     color: white; 
-    height:20vh; 
+    height: 25vh;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -428,7 +434,6 @@ main{
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 
 
@@ -475,67 +480,43 @@ main{
         flex-grow: 5;
         width: 40vw;
     }
-    
-
-    
 }
 
 @media(max-width:691px){
 
     header .b{
         display: none;
-        
     }
 
- header .logo{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    padding-left: 1vw;
+ header .logo img{
+     width: 80%;
+    
  }
 
+ footer .pie1 img{
+    width: 80%;
+ }
  .pie{
     display: flex;
     flex-wrap:inherit;
 }
 
-.padre-cajas{
-    flex-direction: column;
-}
-.jack-daniels{
-    margin-right: auto;
-    margin-left: auto;
-}
-.caja2{
-    margin-top: 1.5em;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    height: 600px;
-    margin: 55%;
-}
+@media(max-width: 365px){
+ 
 
-.pie1{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-.pie2{
-    display: flex;
-    flex-direction: column;
-}
-
-.pie3{
-        display: flex;
+    .pie{
         flex-direction: column;
-}
+        gap:15px;
+    }
 
-.bancos-seleccionados{
-    display: flex;
-        flex-direction: column;
-        width: 100%;
-}
 
 }
+
+
+
+
+
+
+  
