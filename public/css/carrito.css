@@ -362,14 +362,16 @@ i{
     }
 
  header .logo img{
-     width: 220px;
+     width: 80%;
  }
 
+ footer .pie1 img{
+    width: 80%;
+ }
  .pie{
     display: flex;
     flex-wrap:inherit;
 }
 
-
-
 }
+
