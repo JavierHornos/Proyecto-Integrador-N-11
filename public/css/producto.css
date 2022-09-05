@@ -488,10 +488,11 @@ main{
     }
 
  header .logo{
-    display: flex;
+    display: none;
     flex-direction: column;
-    width: 20%;
-    padding-left: 1vw;
+    width: 5%;
+    padding-left: 6vw;
+    margin-top: 2px;
  }
 
  .pie{
@@ -501,6 +502,7 @@ main{
 
 .padre-cajas{
     flex-direction: column;
+    
 }
 .jack-daniels{
     margin-right: auto;
@@ -514,13 +516,14 @@ main{
     display: flex;
     justify-content: center;
     height: 600px;
-    margin: 55%;
+    margin: 130%;
+    margin-left: 200px;
 }
 
 .pie1{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 60%;
 }
 .pie2{
     display: flex;
