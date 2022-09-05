@@ -458,7 +458,10 @@ main{
     }
 
  header .logo{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-left: 1vw;
  }
 
  .pie{
@@ -478,7 +481,17 @@ main{
 }
 
 .pie1{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.pie2{
+    display: flex;
+    flex-direction: column;
 }
 
+.pie3{
+        display: flex;
+        flex-direction: column;
+}*/
 }
