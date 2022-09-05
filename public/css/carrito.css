@@ -298,7 +298,7 @@ i{
 .pie{
     background-color:BLACK; 
     color: white; 
-    height:20vh; 
+    height: 25vh;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -394,6 +394,13 @@ i{
         font-size: small;
         top: 36%;
     }
+
+    .pie{
+        flex-direction: column;
+        gap:15px;
+    }
+
+
 }
 
 
