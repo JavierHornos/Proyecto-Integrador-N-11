@@ -454,13 +454,28 @@ main{
         display: none;
     }
 
- header .logo img{
-     width: 220px;
+ header .logo{
+    display: none;
  }
 
  .pie{
     display: flex;
     flex-wrap:inherit;
+}
+
+.padre-cajas{
+    flex-direction: column;
+}
+.jack-daniels{
+    margin-right: auto;
+    margin-left: auto;
+}
+.caja2{
+    margin-top: 1.5em;
+}
+
+.pie1{
+    display: none;
 }
 
 }
