@@ -18,7 +18,7 @@ footer{
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    gap:100px;
+    gap:50px;
     position: relative;
     flex-wrap: wrap;
     padding-top: 20px;
@@ -89,14 +89,23 @@ footer{
     gap: 20px;
 }
 
-.fila2{
+.fila1b{
+    border: solid gray 1px;
+    background-color: gainsboro;
+    padding: 3px;
+    opacity: 0.5;
+}
+
+.fila2b{
     display: flex;
     gap:100px;
+    border-bottom: solid 1px gainsboro;
 }
 
 .fila3{
     display: flex;
     gap:110px;
+    border-bottom: solid 1px gainsboro;
 }
 
 .fila4{
@@ -114,11 +123,10 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 @media(max-width:1103px){
-  .contenedor1{
-      gap:50px
+    .contenedor1{
+        gap:40px
+    }
   }
-}
-
 
 @media(max-width:1053px){
     .contenedor2{
@@ -152,7 +160,7 @@ font-family: Arial, Helvetica, sans-serif;
     }
   }
 
-  @media(max-width:536px){
+  @media(max-width:558px){
     .contenedor1a{
         gap:10px;
         font-size:8px ;
@@ -171,7 +179,7 @@ font-family: Arial, Helvetica, sans-serif;
     }
   }
 
-  @media(max-width:390px){
+  @media(max-width:411px){
 *{
     font-size: 10px;
 }
@@ -481,6 +489,7 @@ i{
         width: 40vw;
     }
 }
+
 
 @media(max-width:691px){
 
