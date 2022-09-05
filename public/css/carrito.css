@@ -1,4 +1,4 @@
-*header*/
+/*header*/
 
 header{   
     background-color: black;
@@ -6,6 +6,10 @@ header{
     justify-content: space-between;
     min-height:15vh;
     padding: 10px;
+}
+
+.ayb{
+    height: 60px;
 }
 
 header .fila1{
@@ -48,7 +52,7 @@ header .ayb input{
 
 header .ayb button{
     flex-grow: 1;
-    height: 40px;
+ 
     color: black;
     cursor:pointer;
 
@@ -142,7 +146,7 @@ header .fila2 .input-responsive input{
     }
 
 header .fila2 .input-responsive button{
-    height: 40px;
+height: 40px;
     color: black;
     cursor:pointer;
 }
@@ -221,6 +225,14 @@ i{
     color:white;
     font-size: 20px;
     margin-left: 3px;
+}
+
+.palito{
+    color: white;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
