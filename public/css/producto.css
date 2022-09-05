@@ -494,5 +494,9 @@ main{
         flex-direction: column;
 }
 
+.menu2{
+    display:none;
+}
+
 
 }
