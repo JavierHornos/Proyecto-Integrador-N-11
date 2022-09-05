@@ -93,6 +93,31 @@ header .fila2  .menu-mobile{
     display:none ;
 }
 
+.cantidades{
+    margin: 0.5em;
+    width: 3em;
+height: 2em;
+text-align: center;
+border-radius: 0.6em;
+border-color: gainsboro;
+}
+
+.al-carrito{
+    width: 10em;
+    height: 2.5em;
+    background-color: orangered;
+    font-size: 0.9em;
+    border-color: transparent;
+    border-radius: 0.6em;
+    margin: 0.2em;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.al-carrito:hover{
+    background-color: rgb(238, 78, 20);
+}
+
 header .fila2 .menu-mobile .contenedor-lista-mobile{
     display: none;
     position: absolute;
