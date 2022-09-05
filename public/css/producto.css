@@ -17,6 +17,11 @@ header{
     padding: 10px;
 }
 
+.padre-precio{
+    display: flex;
+    align-items: center;
+}
+
 header .fila1{
 display: flex;
 justify-content: space-around;
@@ -232,31 +237,105 @@ i{
     margin-left: 3px;
 }
 
-
-
+body{
+margin: 0;
+}
 /* main */
 main{
-    height: 65vh;
+    /* height: 65vh; */
 }
 
 .jack-daniels{
-    position: relative;
-    top:20px;
+    /* position: relative; */
+    /* top:20px; */
+    margin-top: -1em;
 }
 
 .caja1{
     display: flex;
     flex-direction: column;
-    position: relative;
-    bottom: 330px;
-    left: 200px;
-    max-width: 50vw;
-    margin-left: 30px;
-    border: 2px solid gainsboro;
+    /* position: relative; */
+    /* bottom: 300px; */
+    /* left: 200px; */
+     max-width: 50vw;
+    margin-left: 40px;
+    /* border: 2px solid gainsboro; */
+     padding-left: 2em;
+
+}
+
+.padre-cajas{
+    display: flex;
+    align-items: center center;
+    justify-content: center;
+}
+
+.precio{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+
+}
+
+.cuotas{
+    font-size: 15px;
+    margin-bottom: -0.3em;
+}
+
+.botones-ml{
+    display: flex;
+    margin-bottom: 0.7em;
+    color: black;
+}
+
+.descuento{
+    font-size: 15px;
+}
+
+.pago{
+    color: rgb(72, 72, 235);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
+
+.main-principal{
+    margin: 2em;
+}
+
+.caja2 table td{
+    border: 1px solid gainsboro;
+    padding: 0.5em;
+    font-size: 15px;
+}
+
+.caja2 table{
+  margin-bottom: 1em;
+}
+.pagos-tarjetas{
+    /* margin-top: 1em !important; */
+}
+
+.botones-ml input{
+    width: 10em;
+}
+
+.litro{
+    margin-bottom: -0.3em ;
+    margin-top: 0.3em ;
+}
+
+.off{
+    color: rgb(25, 235, 25);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    margin-top: -0.5em;
 }
 
 .caja2{
     color: black;
+    margin-left: 3em;
 }
 
 
