@@ -265,9 +265,10 @@ i{
 body{
 margin: 0;
 }
+
 /* main */
 main{
-    /* height: 65vh; */
+     height: 65vh; 
 }
 
 .jack-daniels{
@@ -291,6 +292,7 @@ main{
 
 .padre-cajas{
     display: flex;
+    height: 500px;
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
@@ -341,9 +343,24 @@ main{
 .caja2 table{
   margin-bottom: 1em;
 }
-.pagos-tarjetas{
-    /* margin-top: 1em !important; */
+
+
+.caja3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+.bancos-seleccionados{
+    width: 250px;
+}
+
+.pagos-tarjetas{
+    font-size: x-large;
+    
+    }
+
 
 .botones-ml input{
     width: 10em;
@@ -373,6 +390,11 @@ main{
     color: black;
     margin-left: 3em;
 }
+
+.container{
+    height: 590px;
+}
+
 
 
 
@@ -449,12 +471,16 @@ main{
         flex-grow: 5;
         width: 40vw;
     }
+    
+
+    
 }
 
 @media(max-width:691px){
 
     header .b{
         display: none;
+        
     }
 
  header .logo{
@@ -480,10 +506,17 @@ main{
     margin-top: 1.5em;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    margin: 55%;
+}
+
 .pie1{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
 }
 .pie2{
     display: flex;
@@ -495,5 +528,10 @@ main{
         flex-direction: column;
 }
 
+.bancos-seleccionados{
+    display: flex;
+        flex-direction: column;
+        width: 100%;
+}
 
 }

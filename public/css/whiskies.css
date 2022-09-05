@@ -242,8 +242,8 @@ margin: 0;
 }
 .producto{
     max-width: 280px;
-    display: flex;
-    flex-flow: column;
+    
+    
     border-radius: 6px;
     box-shadow: 0 0 0.1em rgba(208, 201, 201, 0.2);
     background-color: rgb(255, 255, 255);
@@ -341,8 +341,8 @@ margin: 0;
 
 .container-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 280px);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, 401px);
+    grid-template-rows: 2fr;
     grid-gap: 6em;
 
 }
@@ -443,7 +443,7 @@ margin: 0;
     }
 
  header .logo img{
-     width: 220px;
+     width: 200px;
  }
 
  .fila1, .logo, .men2{
@@ -463,9 +463,12 @@ margin: 0;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    margin-left: 150px;
+    margin-left: 180px;
+    margin-bottom: 50px;
 
  }
+
+ 
 
    
 
