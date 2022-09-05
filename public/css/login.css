@@ -380,6 +380,15 @@ main{
     flex-direction: column;
  }
 
- 
+ .pie{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    
+    
+    
+ }
+
+  
 
 }
