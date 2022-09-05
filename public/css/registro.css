@@ -236,11 +236,12 @@ i{
 .container1{
     flex-direction: column;
     display: flex;
-    border: 3px black solid;
+    border: 3px rgb(37, 36, 36) solid;
     margin-top: 1vh;
     width: 70vw;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 15px black;
 }
 .col-6{
     padding-top: 30px;;
