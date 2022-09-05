@@ -333,6 +333,14 @@ main{
     margin-top: -0.5em;
 }
 
+.caja1 a{
+    color: blue;
+}
+
+.caja1 a:hover{
+    color: orange;
+}
+
 .caja2{
     color: black;
     margin-left: 3em;
