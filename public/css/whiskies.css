@@ -1,6 +1,10 @@
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
+/*header*/
 
 header{   
     background-color: black;
@@ -9,6 +13,8 @@ header{
     min-height:15vh;
     padding: 10px;
 }
+
+
 
 header .fila1{
 display: flex;
@@ -50,7 +56,7 @@ header .ayb input{
 
 header .ayb button{
     flex-grow: 1;
-    height: 45px;
+    height: 40px;
     color: black;
     cursor:pointer;
 
@@ -80,6 +86,7 @@ header .fila2 .menu{
 header .fila2  .menu-mobile{
     display:none ;
 }
+
 
 header .fila2 .menu-mobile .contenedor-lista-mobile{
     display: none;
@@ -144,7 +151,7 @@ header .fila2 .input-responsive input{
     }
 
 header .fila2 .input-responsive button{
-
+    height: 40px;
     color: black;
     cursor:pointer;
 }
@@ -225,80 +232,141 @@ i{
     margin-left: 3px;
 }
 
-.palito{
-    color: white;
-    margin: 5px;
+body{
+margin: 0;
 }
-
-
-
 /* main */
-.medio{
-    background-color:white; 
-    color: black; 
-    height:65vh; 
-    padding: 20px;
-    border: solid 2px gainsboro;
-    }
+
+.main{
+    border-color: rgb(184, 182, 182);
+}
+.producto{
+    max-width: 280px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 6px;
+    box-shadow: 0 0 0.1em rgba(208, 201, 201, 0.2);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
     
-    .caja-texto a{
-        color: blue;
-    }
+}
 
-.carrito-fondo{
+.producto:hover{
+    box-shadow: 0 0 1,5em rgba(0, 0, 0, 0.2); 
+
+}
+
+.producto > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.informacion{
+    border-top: 1px solid rgb(230, 230, 230);
+    padding: 1em;
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    margin-top: 20px;
-    padding-top: 50px;
-    position: relative;
-   
+    flex-flow: column;
 }
 
-.background-image-carrito{
-    position: relative;
-    background-image: url("../imagenes/background-carrito.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 300px;
-    height: 300px;
+.informacion * + *{
+    margin-bottom: 0.5em;
 }
 
-.caja-texto{
+.tipo-envio{
+    background-color: rgb(52, 131, 250);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    max-width: max-content;
+    padding: 0 0.2em;
+    border-radius: 3px;
+}
+
+.precio{
+    font-size: 1.5em;
+}
+
+.precio-envio{
+    color: rgb(0, 166, 80);
+
+
+}
+
+.descripcion, .ubicacion{
+    font-weight: 300;
+   }
+
+
+.precio-envio, .descripcion .ubicacion{
+    font-size: 0.9em;
+}
+
+.calificacion, .ubicacion{
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    opacity: 0;
+}
+
+.producto:hover .calificacion,
+.producto:hover .ubicacion{
+    opacity: 1;
+}
+
+.calificacion {
+    margin: 0;
     display: flex;
-    flex-direction: column; 
-    gap:20px;
-    align-items: center;
-    position: absolute;
-    top:30%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-
-   
+    flex-flow: row nowrap;
+    align-items: flex-end;
 }
 
-.tu-carrito{
-    color: rgba(0, 0, 0, 0.773);
-    display: inline;
-    padding: 5px;
-    border-radius: 10%;
-    border: 2px solid rgba(130, 128, 128, 0.5);
-    box-shadow: 0px 0px 10px rgba(130, 128, 128, 0.5) 
+.tipo-envio, .calificacion{
+    font-size: 0.8m;
 }
 
-.derechos{
-    text-align: center;
+.calificacion > span:first-child{
+    color: rgb(52, 131, 250);    
+
+}
+.celeste{
+    color: rgb(52, 131, 250);  
 }
 
+.conStock{
+    color:rgb(0, 166, 80)
+}
+
+.sinStock{
+    color:red
+}
+
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-template-rows: 1fr;
+    grid-gap: 6em;
+
+}
+
+
+
+.detalle-producto{
+    width: 10em;
+    height: 2.5em;
+    background-color: orangered;
+    font-size: 0.9em;
+    border-color: transparent;
+    border-radius: 0.6em;
+    margin: 0.2em;
+    margin-bottom: 0.5em;
+    color: white;
+}
 
 /* footer */
 
 .pie{
     background-color:BLACK; 
     color: white; 
-    height: 25vh;
+    height:20vh; 
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -375,48 +443,30 @@ i{
     }
 
  header .logo img{
-     width: 80%;
-    
+     width: 220px;
  }
 
- footer .pie1 img{
-    width: 80%;
+ .fila1, .logo, .men2{
+    display: flex;
+    flex-direction: column;
  }
+
  .pie{
     display: flex;
-    flex-wrap:inherit;
-}
-
-}
-
-@media(max-width: 365px){
-    .caja-texto{
-        font-size: small;
-        top: 36%;
-    }
-
-    .pie{
-        flex-direction: column;
-        gap:15px;
-    }
-
-
-}
-
-
-@media(max-width: 315px){
-    .caja-texto{
-        font-size: x-small;
-        top: 36%;
-    }
-}
-
-@media(max-width:270px){
-    .caja-texto .esta-vacio, .caja-texto .llenalo{
-display: none;
-    }
-    .caja-texto{
-        font-size: small;
-    }
+    flex-flow: column;
+    text-align: center;
     
+    
+    
+ }
+ .container-grid{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-left: 150px;
+
+ }
+
+   
+
 }

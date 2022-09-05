@@ -303,9 +303,9 @@
         background: #000;
     }
 
-    #hamitens {
-        /* display: flex; */
-    }
+    /*#hamitens {
+         display: flex; 
+    }*/
 
     #hamitens a {
         flex-grow: 1;
