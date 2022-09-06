@@ -497,7 +497,6 @@ main{
     }
 
  header .logo{
-    display: none;
     flex-direction: column;
     width: 5%;
     padding-left: 6vw;
@@ -548,6 +547,10 @@ main{
     display: flex;
         flex-direction: column;
         width: 100%;
+}
+
+.menu2{
+    display: none;
 }
 
 }
