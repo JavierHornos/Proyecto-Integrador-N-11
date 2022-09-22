@@ -4,7 +4,7 @@
   "description": "**Tematica  y descripción del sitio:** Somos una tienda especializada en la comercialización de bebidas  alcohólicas, con más de 20 años de trayectoria y con la más amplia variedad de productos, que llegan a clientes de todo el país. Brindamos un servicio seguro, de calidad y con un gran compromiso por los que nos eligen. Misión: otorgar los mejores productos,  a un buen precio, siempre haciendo énfasis en la buena experiencia de nuestros clientes. Visión: ser la empresa líder en distribución de bebidas. Demostrar que nuestro servicio es de alto nivel y que podemos ser versátiles y adaptarnos a las exigencias de los consumidores.",
   "main": "app.js",
   "scripts": {
-    "start": "node app", 
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JavierHornos/Proyecto-Integrador-N-11#readme",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.1"
   }
 }

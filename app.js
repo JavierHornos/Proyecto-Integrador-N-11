@@ -1,11 +1,13 @@
 const express = require("express")
 const path = require('path')
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 const app = express()
 
 app.use(express.static(path.join(__dirname, './public')));
 
-app.use(express.static(__dirname +'/views'));
+//app.use(express.static(__dirname +'/views'));
 
 
 const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
