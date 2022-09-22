@@ -1,5 +1,7 @@
 const productosRoutes = require('./src/routes/mainRoutes');
 
+const usersRouters = require('./src/routes/userRoutes');
+
 const express = require('express');
 const path = require('path');
 
@@ -9,16 +11,19 @@ app.use(express.static(path.resolve(__dirname, './public')));
 
 app.use('/', productosRoutes); // se concatenan las rutas del primer y segundo parámetro 
 
+app.use('/users', usersRouters);
+
 app.use('*', function(req, res) {
     res.send("Error de acceso, esta ruta no existe en el sitio")
 });
 
 app.set('view engine', 'ejs')
 
-
 app.set('views', path.join(__dirname, '/src/views'));
 
 
+
+/*app.set('views', path.join(__dirname, '/src/views/partials/'));*/
 const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
 
 

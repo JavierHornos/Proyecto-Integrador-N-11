@@ -15,7 +15,7 @@ router.get ('/producto', mainController.producto)
 
 router.get ('/registro', mainController.registro)
 
-router.get ('/whiskies', mainController.whiskies)
+router.get ('products/whiskies', mainController.whiskies)
 
 
 module.exports = router;

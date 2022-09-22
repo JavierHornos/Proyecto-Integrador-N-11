@@ -28,6 +28,14 @@ const controlador = {
     whiskies: (req , res) =>{
         res.render("whiskies");
     },
+
+    /*head: (req , res) =>{
+        res.send("head");
+    },
+
+    header: (req , res) =>{
+        res.send("header");
+    },*/
 }
 
 
