@@ -16,14 +16,14 @@ app.use('*', function(req, res) {
 app.set('view engine', 'ejs')
 
 
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/src/views'));
 
 
 const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
 
 
 app.listen(PORT, function() {                                   /* Codigo para Heroku*/
-    console.log("Levantando un servidor con Express", PORT)
+   console.log("Levantando un servidor con Express", PORT)
 })
 //app.use(express.static(__dirname +'/views'));
 
@@ -59,8 +59,8 @@ app.get('*', (req, res) => {
 })*/
 
 
-/* app.listen(3100, function() {
+/*app.listen(3100, function() {
     console.log("Levantando un servidor con Express")
-}) */ 
-
+})
+*/
 
