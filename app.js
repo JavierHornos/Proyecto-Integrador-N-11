@@ -33,6 +33,9 @@ app.listen(PORT, function() {                                   /* Codigo para H
 //app.use(express.static(__dirname +'/views'));
 
 
+const methodOverride = require('method-override');  // para usar put y delete
+app.use(methodOverride('_method'));                 // para usar put y delete
+
 
 
 /*app.get('/', (req, res) => {

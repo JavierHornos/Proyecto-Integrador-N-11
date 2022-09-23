@@ -5,6 +5,10 @@ const controlador = {
         res.render('home');
     },
 
+    home2: (req, res) => {
+        res.render('home2');
+    },
+
     carrito: (req, res) => {
         res.render("carrito");
     },
@@ -21,6 +25,10 @@ const controlador = {
         res.render(__dirname + "/../views/products/producto");
     },
 
+    productosTodos: (req, res) => {
+        res.render(__dirname + "/../views/products/productos-todos");
+    },
+
     registro: (req, res) => {
         res.render(__dirname + "/../views/users/registro");
     },
@@ -30,8 +38,12 @@ const controlador = {
     },
 
     editarProducto: (req, res) => {
-        res.render(__dirname + "/../views/products/editar-producto");
-    }
+        res.render(__dirname + "/../views/products/administracion-producto");
+    },
+
+    crear: (req, res) => {
+		res.render(__dirname + "/../views/products/creacion-producto");
+	},
 
     /*head: (req , res) =>{
         res.send("head");
