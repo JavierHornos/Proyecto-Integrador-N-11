@@ -14,19 +14,19 @@ const controlador = {
     },
     
     login: (req , res) =>{
-        res.render("login");
+        res.render(__dirname+"/../views/users/login");
     },
     
     producto: (req , res) =>{
-        res.render("producto");
+        res.render(__dirname+"/../views/products/producto");
     },
     
     registro: (req , res) =>{
-        res.render("registro");
+        res.render(__dirname+"/../views/users/registro");
     },
     
     whiskies: (req , res) =>{
-        res.render("whiskies");
+        res.render(__dirname+"/../views/products/whiskies");
     },
 
     /*head: (req , res) =>{
