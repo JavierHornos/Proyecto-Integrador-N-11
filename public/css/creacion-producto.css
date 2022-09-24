@@ -286,7 +286,7 @@ hr {
 
 /*====== Product Detail ======*/
 .product-detail {
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -735,15 +735,4 @@ border-color: gainsboro;
 
 .estetica-intereses input{
      width: 60%;
-}
-
-/* /editado por lau/ */
-
-main{
-  margin: 1em;
-}
-
-.editando-imagen{
-  border: none;
-  padding-top: 1em;
 }

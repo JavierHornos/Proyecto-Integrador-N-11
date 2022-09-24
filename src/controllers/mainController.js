@@ -33,6 +33,10 @@ const controlador = {
         res.render(__dirname + "/../views/users/registro");
     },
 
+    perfil: (req, res) => {
+        res.render(__dirname + "/../views/users/perfil");
+    },
+
     whiskies: (req, res) => {
         res.render(__dirname + "/../views/products/whiskies");
     },

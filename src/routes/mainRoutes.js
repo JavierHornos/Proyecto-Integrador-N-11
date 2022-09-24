@@ -15,7 +15,9 @@ router.get ('/login', mainController.login)
 
 router.get ('/producto', mainController.producto)
 
-router.get ('/registro', mainController.registro)
+router.get ('/perfil', mainController.perfil)
+
+router.get ('/reg', mainController.registro)
 
 router.get ('/whiskies', mainController.whiskies)
 
