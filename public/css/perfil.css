@@ -263,9 +263,7 @@ body{
     line-height: 21px;
     margin-bottom: 35px;
   }
-  button{
-    margin: 10px 0 40px 0;
-  }
+
   .msg-btn, .follow-btn{
     background: #03bfbc;
     border: 1px solid #03bfbc;
