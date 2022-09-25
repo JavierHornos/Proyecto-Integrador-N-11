@@ -155,9 +155,6 @@ font-family: Arial, Helvetica, sans-serif;
       gap: 20px;
   }
 
-  .contenedor2{
-    padding-left: 150px;
-}
 }
 
 @media(max-width:610px){
@@ -179,10 +176,6 @@ font-family: Arial, Helvetica, sans-serif;
 
     .wiskito{
         display: flex;
-    }
-
-    .contenedor2{
-        padding-left: 50%;
     }
   }
 
@@ -375,6 +368,10 @@ li{
     color: black;
 }
 
+.elegi:hover{
+    color: orange;
+}
+
 .menu{
     display: flex;
     margin:0px auto;
@@ -525,17 +522,27 @@ i{
 }
 
 @media(max-width: 365px){
- 
-
     .pie{
         flex-direction: column;
         gap:15px;
     }
-
-
 }
 
 
 
+
+@media(max-width: 1275px){
+ 
+.contenedor1{
+    justify-content: center;
+    font-size: 16px;
+}
+}
+
+@media(max-width: 349px){
+ .contenedor1{
+gap: 10px
+    }
+    }
 
   
