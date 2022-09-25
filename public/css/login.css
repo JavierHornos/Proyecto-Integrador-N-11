@@ -48,7 +48,7 @@ header .ayb input{
 
 header .ayb button{
     flex-grow: 1;
-    height: 40px;
+    height: 46px;
     color: black;
     cursor:pointer;
 
@@ -142,7 +142,7 @@ header .fila2 .input-responsive input{
     }
 
 header .fila2 .input-responsive button{
-    height: 40px;
+   
     color: black;
     cursor:pointer;
 }

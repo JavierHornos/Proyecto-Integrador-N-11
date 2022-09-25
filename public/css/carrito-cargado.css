@@ -87,6 +87,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
 }
 
 .fila1b{
@@ -136,7 +137,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 @media(max-width:1053px){
     .contenedor2{
-        padding-left: 300px;
+        justify-content: center;
     }
   }
 
@@ -369,6 +370,11 @@ li{
     align-content: center;
     flex-wrap: wrap;
 }
+
+.elegi{
+    color: black;
+}
+
 .menu{
     display: flex;
     margin:0px auto;
@@ -528,8 +534,6 @@ i{
 
 
 }
-
-
 
 
 
