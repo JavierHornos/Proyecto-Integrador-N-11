@@ -282,7 +282,8 @@ i{
 main{
     margin: 0;
     padding: 0;
-    background: grey;
+    background: rgb(55, 54, 54);;
+    padding-bottom: 50px;
 
     display: flex;
     flex-direction: row;
