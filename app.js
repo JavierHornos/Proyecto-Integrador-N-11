@@ -23,13 +23,17 @@ app.set('views', path.join(__dirname, '/src/views'));
 
 
 
-/*app.set('views', path.join(__dirname, '/src/views/partials/'));*/
-const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
+// app.set('views', path.join(__dirname, '/src/views/partials/'))
+// const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
+// app.listen(PORT, function() {                                   /* Codigo para Heroku*/
+//    console.log("Levantando un servidor con Express", PORT); 
+// }) //
+
+const server = app.listen(process.env.PORT || 3100);
+const portNumber = server.address().port;
+console.log('Servidor Corriendo');
 
 
-app.listen(PORT, function() {                                   /* Codigo para Heroku*/
-   console.log("Levantando un servidor con Express", PORT)
-})
 //app.use(express.static(__dirname +'/views'));
 
 
