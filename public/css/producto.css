@@ -273,6 +273,8 @@ margin: 0;
 /* main */
 main{
      height: 65vh; 
+     
+     
 }
 
 .jack-daniels{
@@ -284,21 +286,16 @@ main{
 .caja1{
     display: flex;
     flex-direction: column;
-    /* position: relative; */
-    /* bottom: 300px; */
-    /* left: 200px; */
-     max-width: 50vw;
-    margin-left: 40px;
-    /* border: 2px solid gainsboro; */
-     padding-left: 2em;
+font-size: small;
+gap: 2px
 
 }
 
 .padre-cajas{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
     margin-top: 100px;
 }
 
@@ -348,11 +345,15 @@ main{
 .caja3{
     display: flex;
     flex-direction: column;
+   align-items: center;
+    gap: 10px;
+    margin-top: 50px;
 }
 
 
 .bancos-seleccionados{
     width: 250px;
+    object-fit: contain;
 }
 
 .pagos-tarjetas{
@@ -360,10 +361,6 @@ main{
     
     }
 
-
-.botones-ml input{
-    width: 10em;
-}
 
 .litro{
     margin-bottom: -0.3em ;
@@ -468,68 +465,20 @@ main{
         width: 40vw;
     }
     
- 
-
-
-    
 }
 
-@media(max-width:691px){
-
-    header .b{
-        display: none;
-        
-    }
-
- header .logo{
-    flex-direction: column;
-    width: 5%;
-    padding-left: 6vw;
-    margin-top: 2px;
- }
-
- .pie{
-    display: flex;
-    flex-wrap:inherit;
-}
-
+@media(max-width:444px){
 .padre-cajas{
-    flex-direction: column;
-    
+    font-size: xx-small;
+    gap: 1px;
+    margin-top: 10px;
 }
-.jack-daniels{
-    margin-right: auto;
-    margin-left: auto;
+.caja3{
+    margin-top: 30px;
+    font-size: small;
 }
-.caja2{
-    margin-top: 1.5em;
+main{
+    margin-bottom: 20px;
+    overflow: scroll;
 }
-
-
-
-.pie1{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-}
-.pie2{
-    display: flex;
-    flex-direction: column;
-}
-
-.pie3{
-        display: flex;
-        flex-direction: column;
-}
-
-.bancos-seleccionados{
-    display: flex;
-        flex-direction: column;
-        width: 100%;
-}
-
-.menu2{
-    display: none;
-}
-
 }
