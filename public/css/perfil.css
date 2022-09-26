@@ -162,7 +162,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: orange;
+    color: white;
 }
 
 li{
@@ -226,23 +226,29 @@ i{
 /*main2*/
 body{
     font-family: Montserrat, sans-serif;
-    background: rgb(221, 64, 6);
+    /* background: rgb(221, 64, 6); */
+    background-image: url("/imagenes/botellas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20vh;
   }
   .container{
     user-select: none;
     margin: 100px auto;
-    background: rgba(105, 48, 27, 0.582);
-    color: #b3b8cd;
+    background: rgb(19, 18, 18);
+    color: rgb(247, 194, 175);
     border-radius: 5px;
-    width: 350px;
+    width: 340px;
     text-align: center;
     box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
   }
   .cover-photo{
-    background: url(https://images.unsplash.com/photo-1540228232483-1b64a7024923?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+    background: url('/imagenes/trigo.jpg');
     height: 160px;
     width: 100%;
     border-radius: 5px 5px 0 0;
+    background-position: center center;
+    background-size: cover;
   }
   .profile{
     height: 120px;
@@ -251,7 +257,7 @@ body{
     margin: 93px 0 0 -175px;
     border: 1px solid #1f1a32;
     padding: 7px;
-    background: #292343;
+    background: rgb(3, 3, 3);
   }
   .profile-name{
     font-size: 25px;
@@ -265,10 +271,10 @@ body{
   }
 
   .msg-btn, .follow-btn{
-    background: #03bfbc;
-    border: 1px solid #03bfbc;
+    background: orangered;
+    border: 1px solid rgb(184, 51, 3);
     padding: 10px 25px;
-    color: #231e39;
+    color: #2b2b2c;
     border-radius: 3px;
     font-family: Montserrat, sans-serif;
     cursor: pointer;
@@ -276,14 +282,17 @@ body{
   }
   .follow-btn{
     margin-left: 10px;
-    background: transparent;
-    color: #02899c;
+    /* background: transparent; */
+    /* color: #02899c; */
+   
     
   }
   .follow-btn:hover{
-    color: #231e39;
-    background: #03bfbc;
+    color: white;
+    /* background: #03bfbc; */
     transition: .5s;
+
+
   }
   .container i{
     padding-left: 20px;
@@ -293,7 +302,7 @@ body{
     transition: .5s;
   }
   .container i:hover{
-    color: #03bfbc;
+    color: orangered;
   }
 
   .fab{
@@ -374,6 +383,14 @@ body{
 }
 
 
+/* /nuevo media/ */
+
+@media(max-width:770px){
+    header .fila2 .input-responsive{
+display: none !important;
+    }
+}
+
 
 
 @media(max-width:1100px){
@@ -432,6 +449,7 @@ body{
     flex-direction: column;
     width: 20%;
     padding-left: 1vw;
+    align-items: center;
  }
 
  .pie{
@@ -455,8 +473,8 @@ body{
     flex-direction: column;
 }
 .pie2{
-    display: flex;
-    flex-direction: column;
+    display: none;
+    /* flex-direction: column; */
 }
 
 .pie3{
@@ -467,6 +485,17 @@ body{
 .menu2{
     display: none;
 }
+
+body{
+    font-family: Montserrat, sans-serif;
+    /* background: rgb(221, 64, 6); */
+    /* background-image: url("/imagenes/cerveza4.jpeg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20vh;
+    background-color: #2b2b2c !important;
+    background: none;
+  }
 
 }
 
