@@ -31,7 +31,7 @@ app.set('views', path.join(__dirname, '/src/views'));
 
 // const server = app.listen(process.env.PORT || 3100);
 // const portNumber = server.address().port;
-//console.log('Servidor Corriendo');
+// console.log('Servidor Corriendo');
 
 
 //app.use(express.static(__dirname +'/views'));

@@ -15,31 +15,33 @@
     <%- include("../partials/header.ejs") %> 
 
     <main class="container-grid">
+        <% for(let p of obj_literal_products) { %> 
 
         <div class="producto">
-            <img src="/imagenes/jack-daniels.png" alt="Jack Daniels">
+            <img src="/imagenes/<%=p.image%> " alt="Jack Daniels">
             <div class="informacion">
                 <span class="tipo-envio">Ennvio con normalidad</span>
                 <br>
-                <span class="precio">$ 10.080</span>
+                <span class="precio"><%=p.price%> </span>
                 <span class="precio-envio">Envío gratis</span>
-                <span class="descripcion">Jack Daniel's Old No. 7 750 mL</span>
+                <span class="descripcion"><%= p.name %> </span>
                 <div class="calificacion">
                     <span><i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i>
                 <i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i></span>
                     <span>1919</span>
                 </div>
                 <br>
-                <a href="producto" align="center">
+                <a href="producto<%=p.id%>" align="center">
                     <input class="detalle-producto" type="button" value="Detalle Producto">
                     </a>
-                
+            
                 <span class="conStock" align="center">Stock disponible</span>
             </div>
+          
         </div>
+        <% } %> 
 
-
-        <div class="producto">
+   <!--     <div class="producto">
             <img  src="imagenes/Aberlour Single matl 12 Años escoces 700ml.png" alt="Aberlour">
             <div class="informacion">
                 <span class="tipo-envio">Ennvio con normalidad</span>
@@ -107,7 +109,7 @@
                 
             </div>
            
-        </div>
+        </div> -->
 
 
          

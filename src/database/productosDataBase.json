@@ -1,0 +1,39 @@
+[
+ {
+  "id": 1,
+  "name": "Jack Daniels",
+  "price": 10.080,
+  "discount": 50,
+  "category": "Whiskies",
+  "description": "Jack Daniel's Old No. 7 750 mL.",
+  "image": "../../imagenes/jack-daniels.png"
+ },
+ {
+  "id": 2,
+  "name": "Aberlour Malt escocés",
+  "price": 10.800,
+  "discount": 3,
+  "category": "Whiskies",
+  "description": "Aberlour Malt escocés 700 mL",
+  "image": "../../imagenes/Aberlour Single matl 12 Años escoces 700ml.png"
+ },
+ {
+  "id": 3,
+  "name": "Chivas Regal 12 Años",
+  "price": 7.290,
+  "discount": 25,
+  "category": "Whiskies",
+  "description": "Chivas Regal 12 Años Escocia 1 L.",
+  "image": "../../imagenes/Whisky Chivas Regal 12 Años Escocia botella 1 L.png"
+ },
+  {
+  "id": 4,
+  "name": "Ballantine's escocés",
+  "price": 6.480,
+  "discount": 25,
+  "category": "Whiskies",
+  "description": "Ballantine's escocés 750 mL",
+  "image": "../../imagenes/Ballantine's 12 Años escocés 750 mL.png"
+ }
+ 
+]
