@@ -1,17 +1,22 @@
-const productosRoutes = require('./src/routes/mainRoutes');
-
+const mainRoutes = require('./src/routes/mainRoutes');
 const usersRouters = require('./src/routes/userRoutes');
+const productsRouters = require('./src/routes/productsRoutes');
 
 const express = require('express');
 const path = require('path');
-
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, './public')));
+app.use(express.static(__dirname +'/views'));
 
-app.use('/', productosRoutes); // se concatenan las rutas del primer y segundo parámetro 
+
+app.use('/', mainRoutes); // se concatenan las rutas del primer y segundo parámetro 
 
 app.use('/users', usersRouters);
+
+app.use('/products', productsRouters);
+
+
 
 app.use('*', function(req, res) {
     res.send("Error de acceso, esta ruta no existe en el sitio")
@@ -22,57 +27,12 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/src/views'));
 
 
-
 // app.set('views', path.join(__dirname, '/src/views/partials/'))
  const PORT = process.env.PORT || 3100                /* Codigo para Heroku Variable */
  app.listen(PORT, function() {                                   /* Codigo para Heroku*/
-    console.log("Levantando un servidor con Express", PORT); 
- }) //
-
-// const server = app.listen(process.env.PORT || 3100);
-// const portNumber = server.address().port;
-// console.log('Servidor Corriendo');
-
-
-//app.use(express.static(__dirname +'/views'));
+    console.log("Levantando un servidor con Express", PORT);
+}) 
 
 
 const methodOverride = require('method-override');  // para usar put y delete
 app.use(methodOverride('_method'));                 // para usar put y delete
-
-
-
-/*app.get('/', (req, res) => {
-    res.send('ahora si entre')
-})
-
-app.get('/mostrar_home', (req, res) => {
-    res.sendFile((__dirname + '/views/home.html'))
-})
-
-app.get('/mostrar_carrito', (req, res) => {
-    res.sendFile((__dirname + '/views/carrito.html'))
-})
-
-app.get('/mostrar_login', (req, res) => {
-    res.sendFile((__dirname + '/views/login.html'))
-})
-
-app.get('/mostrar_producto', (req, res) => {
-    res.sendFile((__dirname + '/views/producto.html'))
-})
-
-app.get('/mostrar_registro', (req, res) => {
-    res.sendFile((__dirname + '/views/registro.html'))
-})
-
-app.get('*', (req, res) => {
-    res.send('ruta restringida ****')
-})*/
-
-
-/*app.listen(3100, function() {
-    console.log("Levantando un servidor con Express")
-})
-*/
-
