@@ -22,8 +22,18 @@ const controladorProductos =
     },
 
     carrito: (req, res) => {
-        res.render('./products/carrito');
+        res.render(__dirname + './products/carrito');
    },    
+
+    carritoCargado: (req, res) => {
+        res.render("./products/carrito-cargado");
+},
+
+     producto: (req, res) => {
+        res.render("./products/producto1");
+},
+
+
 
    productosTodos: (req, res) => {
     let products_json = fs.readFileSync('./src/database/productosDataBase.json');

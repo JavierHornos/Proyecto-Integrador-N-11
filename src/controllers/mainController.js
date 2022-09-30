@@ -21,15 +21,7 @@ const controlador = {
     },
     
     
-    carritocargado: (req, res) => {
-        res.render("carrito-cargado");
-    },
 
-    producto: (req, res) => {
-        res.render(__dirname + "/../views/products/producto");
-    },
-
-   
     editarProducto: (req, res) => {
         res.render(__dirname + "/../views/products/administracion-producto");
     },
