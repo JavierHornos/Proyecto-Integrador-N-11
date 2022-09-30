@@ -465,6 +465,10 @@ display: none !important;
         display: none;
     }
 
+    #hamnav{
+        display: block;
+    }
+
   .pie1 img{
         height: 50px;
         width: 200px;
@@ -553,4 +557,42 @@ body{
   }
 
 }
+
+.b{
+    color: white;
+  }
+  
+  @media(max-width:1100px){
+    .m1{
+      display: none;
+    }
+  
+    header .fila1 .ayb{
+      display: none;
+  }
+  
+  header .fila2 .input-responsive{
+      display: flex;
+  }
+  
+    .input-responsive .input {
+      flex-grow: 5;
+      width: 40vw;}
+  }
+  
+  @media(max-width:691px){
+  
+    header .b{
+        display: none;
+    }
+  
+  header .logo img{
+     width: 80%;
+    
+  }
+  }
+  
+  header .b{
+    font-size: 18px;
+  }
 

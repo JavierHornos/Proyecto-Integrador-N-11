@@ -168,29 +168,7 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile{
     #hamnav input:checked ~ #hamitems { display: block; }
   }
 
-/*burga*/
 
-
-
-/*header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li{
-    width: max-content;
-    margin: 0 !important;
-    text-align: left !important;
-}
-
-.hamburguesa{
-    background-color: orange;
-    
-}
-
-.boton-desplegable{
-    background-color: orange;
-    border-radius: 20%;
-    border: solid gray 3px;
-    height: 40px;
-    width: 40px;
-    padding-right: 20px;
-}*/
 
 header .fila2 .input-responsive{
     display: none;
@@ -347,12 +325,6 @@ i{
 .derechos{
     text-align: center;
 }
-
-
-
-
-
-
 
 
 
