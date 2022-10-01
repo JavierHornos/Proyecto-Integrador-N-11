@@ -1,10 +1,7 @@
 const productsController = require('./../controllers/productsController')
 
-const path = require('path');
 const express = require('express');
-const { Router } = require('express');
 const router = express.Router();
-
 
 router.get ('/whiskies', productsController.whiskies)
 
@@ -16,6 +13,14 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 
 router.get ('/producto', productsController.producto)
 
+router.get ('/producto/:id', productsController.detalleProducto)
+
+router.get ('/creacion-producto', productsController.crear)
+
+//router.put ("products/creacion-producto", productsController.store)
+
+router.get('/editar-producto/:id', productsController.editarProducto)
+router.put ('/editar-producto/:id', productsController.actualizarProducto)
 
 
 //* CREAR PRODUCTO *//
