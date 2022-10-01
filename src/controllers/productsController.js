@@ -47,10 +47,33 @@ const controladorProductos =
 
 
     editarProducto: (req, res) => {
-        res.render("products/administracion-producto");
+        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
+        let lista_de_objetos_literales_productos = JSON.parse(products_json);
+        let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
+
+        res.render("products/editar-producto", { producto_detallado: productoDetallado });
     },
 
+    actualizarProducto: (req, res) =>{
+		let idProducto = req.params.id;
+		let datosProducto = req.body;
+        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
+        let lista_de_objetos_literales_productos = JSON.parse(products_json);
 
+		for (let objeto_producto of lista_de_objetos_literales_productos){
+			if (objeto_producto.id==idProducto){
+				objeto_producto.name = datosProducto.name;
+				objeto_producto.price = parseInt(datosProducto.price);
+				objeto_producto.discount = parseInt(datosProducto.discount);
+				objeto_producto.category = datosProducto.category;
+				objeto_producto.description = datosProducto.description;
+				break;
+			}
+		}
+
+		fs.writeFileSync('./src/database/productosDataBase.json', JSON.stringify(lista_de_objetos_literales_productos, null, " "), 'utf-8');
+		res.redirect('/');
+    },
 
     productosTodos: (req, res) => {
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
