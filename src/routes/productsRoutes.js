@@ -16,6 +16,8 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 
 router.get ('/producto', productsController.producto)
 
+router.get ('/producto1', productsController.producto)
+
 router.get ('/creacion-producto', productsController.crear)
 
 //router.put ("products/creacion-producto", productsController.store)

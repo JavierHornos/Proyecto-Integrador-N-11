@@ -33,6 +33,11 @@ const controladorProductos =
         res.render("./products/producto1");
 },
 
+
+producto1: (req, res) => {
+    res.render("./products/producto1");
+},
+
      crear: (req, res) => {
         res.render("./products/creacion-producto");
 },
