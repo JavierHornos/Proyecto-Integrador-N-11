@@ -16,5 +16,10 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 
 router.get ('/producto', productsController.producto)
 
+router.get ('/creacion-producto', productsController.crear)
+
+//router.put ("products/creacion-producto", productsController.store)
+
+router.get('/administracion-producto', productsController.editarProducto)
 
 module.exports = router;

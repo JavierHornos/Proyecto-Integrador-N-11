@@ -19,16 +19,8 @@ const controlador = {
     home2: (req, res) => {
         res.render('home2');
     },
-    
-    
 
-    editarProducto: (req, res) => {
-        res.render("products/administracion-producto");
-    },
 
-    crear: (req, res) => {
-		res.render("products/creacion-producto");
-	},
 
     store: (req,res) => {
         let datos = req.body;
