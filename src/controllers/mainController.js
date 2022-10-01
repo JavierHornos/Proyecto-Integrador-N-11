@@ -26,14 +26,7 @@ const controlador = {
         res.render("products/administracion-producto");
     },
 
-    crear: (req, res) => {
-		res.render("products/creacion-producto");
-	},
-
-    store: (req,res) => {
-        let datos = req.body;
-        console.log (datos)
-    }
+    
 
 }
 

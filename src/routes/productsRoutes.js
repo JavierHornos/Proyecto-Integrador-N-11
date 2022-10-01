@@ -17,4 +17,12 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 router.get ('/producto', productsController.producto)
 
 
+
+//* CREAR PRODUCTO *//
+
+router.get ("/crear", productsController.crear);
+
+router.post ("/crear", productsController.store);
+
+
 module.exports = router;

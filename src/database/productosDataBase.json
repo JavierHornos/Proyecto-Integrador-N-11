@@ -26,7 +26,7 @@
   "description": "Chivas Regal 12 Años Escocia 1 L.",
   "image": "../../imagenes/Whisky Chivas Regal 12 Años Escocia botella 1 L.png"
  },
-  {
+ {
   "id": 4,
   "name": "Ballantine's escocés",
   "price": 6480,
@@ -34,6 +34,25 @@
   "category": "Whiskies",
   "description": "Ballantine's escocés 750 mL",
   "image": "../../imagenes/Ballantine's 12 Años escocés 750 mL.png"
+ },
+ {
+  "id": 5,
+  "name": "asd",
+  "price": 1234,
+  "discount": 1234,
+  "category": "in-sale",
+  "description": "asd",
+  "bebida": "in-sale",
+  "image": "../../imagenes/jack-daniels.png"
+ },
+ {
+  "id": 6,
+  "name": "asd",
+  "price": 1234,
+  "discount": 1234,
+  "category": "in-sale",
+  "description": "BOOOOKEEE",
+  "bebida": "whiskies",
+  "image": "../../imagenes/jack-daniels.png"
  }
- 
 ]

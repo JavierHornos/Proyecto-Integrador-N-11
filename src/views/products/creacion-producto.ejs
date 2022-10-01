@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <form action="crear" method="POST">
+                <form action="/products/crear" method="POST">
                     <div class="row product-detail">
                         <div class="col-12 col-md-6">
                             <label for="name" class="form-label">Nombre del producto:</label>
@@ -44,6 +44,15 @@
                                 <option value="in-sale">En oferta</option>
                                 <option value="visited">Últimos agregados</option>
                             </select>
+                            <div class="col-12 col-md-6">
+                                <label for="category" class="form-label">Bebida:</label>
+                                <select name="bebida" id="bebida" class="form-input">
+                                    <option value=""></option>
+                                    <option value="vinos">vinos</option>
+                                    <option value="whiskies">whiskies</option>
+                                    <option value="cervezas">cervezas</option>
+                                    
+                                </select>
                         </div>
                         <div class="col-12">
                             <label for="description" class="form-label">Descipción:</label>
