@@ -41,6 +41,10 @@ header .menu2{
     margin-top: 40px;
 }
 
+.m2{
+    visibility:hidden;
+}
+
 header .ayb input{
     flex-grow: 50;
     height: 40px;

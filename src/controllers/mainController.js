@@ -23,12 +23,17 @@ const controlador = {
     
 
     editarProducto: (req, res) => {
-        res.render(__dirname + "/../views/products/administracion-producto");
+        res.render("products/administracion-producto");
     },
 
     crear: (req, res) => {
-		res.render(__dirname + "/../views/products/creacion-producto");
+		res.render("products/creacion-producto");
 	},
+
+    store: (req,res) => {
+        let datos = req.body;
+        console.log (datos)
+    }
 
 }
 

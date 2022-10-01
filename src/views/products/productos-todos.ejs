@@ -20,9 +20,9 @@
         <div class="producto">
             <img src="/imagenes/<%=p.image%>" alt="Jack Daniels">
             <div class="informacion">
-                <span class="tipo-envio">Ennvio con normalidad</span>
+                <span class="tipo-envio">Envio con normalidad</span>
                 <br>
-                <span class="precio"><%=p.price%></span>
+                <span class="precio">$<%=p.price%></span>
                 <span class="precio-envio">Envío gratis</span>
                 <span class="descripcion"><%= p.name %></span>
                 <div class="calificacion">
@@ -31,11 +31,11 @@
                     <span>1919</span>
                 </div>
                 <br>
-                <a href="producto<%=p.id%>" align="center">
+                <a href="producto" style="align-items:center"> <!--<%=p.id%>-->
                     <input class="detalle-producto" type="button" value="Detalle Producto">
                     </a>
                 
-                <span class="conStock" align="center">Stock disponible</span>
+                <span class="conStock" style="align-items:center">Stock disponible</span>
             </div>
         </div>
         <% } %> 

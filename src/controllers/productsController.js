@@ -22,7 +22,7 @@ const controladorProductos =
     },
 
     carrito: (req, res) => {
-        res.render(__dirname + './products/carrito');
+        res.render('./products/carrito');
    },    
 
     carritoCargado: (req, res) => {
@@ -41,6 +41,7 @@ const controladorProductos =
    res.render('./products/productos-todos', {obj_literal_products: obj_literal_products});
             
 },
+
 
 
 
