@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/producto.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e913f300ec.js" crossorigin="anonymous"></script>
-    <title>Producto</title>
+    <title>Detalle Producto</title>
 </head>
 
 <body>
@@ -17,13 +17,13 @@
         <main class=>
 
             <div class="padre-cajas main-principal">
-                <img class="jack-daniels" width='200' height='350' src="/imagenes/jack-daniels.png"></img>
+                <img class="jack-daniels" width='200' height='350' src="<%= objeto_literal_producto_detallado.image %>"></img>
                 <div class="caja1">
                     <div>Nuevo</div>
-                    <h2>Jack Daniel's Old No. 7 750 mL</h2>
-                    <del>$ 11.200</del>
+                    <h2><%= objeto_literal_producto_detallado.name %></h2>
+                    <del>$<%= objeto_literal_producto_detallado.price %></del>
                     <div class="padre-precio">
-                        <h2 class="precio"> $ 10.080</h2> <span class="off">10% OFF</span>
+                        <h2 class="precio"> $ <%= objeto_literal_producto_detallado.price %></h2> <span class="off"><%= objeto_literal_producto_detallado.discount %>% OFF</span>
                     </div>
                     <div>
                         <label>Cantidad</label></label>
@@ -32,7 +32,7 @@
                     <a href="../products/carrito-cargado">
                         <input class="al-carrito" type="button" value="Agregar Al Carrito">
                     </a>
-                    <span class="cuotas"> En 12x $ 1.488</span>
+                    <span class="cuotas"> En 12x $ <%= objeto_literal_producto_detallado.price / 12 %></span>
                     <span class="litro">El precio por litro es $ 13.440</span>
                     <a href="#medios-pago" class="pago">Ver los medios de pago</a>
                     <div>Volumen: 750 mL</div>

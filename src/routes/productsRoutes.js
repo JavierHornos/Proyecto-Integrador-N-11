@@ -16,7 +16,7 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 
 router.get ('/producto', productsController.producto)
 
-router.get ('/producto1', productsController.producto)
+router.get ('/producto/:id', productsController.detalleProducto)
 
 router.get ('/creacion-producto', productsController.crear)
 
