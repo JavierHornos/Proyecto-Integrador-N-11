@@ -16,9 +16,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controladorProductos =
 {
     whiskies: (req, res) => {
-        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
-        let obj_literal_products = JSON.parse(products_json);
-        res.render('./products/whiskies', { obj_literal_products: obj_literal_products });
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/whiskies', {products: products});
     },
 
     carrito: (req, res) => {
@@ -42,9 +42,9 @@ const controladorProductos =
     },
 
    productosTodos: (req, res) => {
-    let products_json = fs.readFileSync('./src/database/productosDataBase.json');
-    let obj_literal_products = JSON.parse(products_json);
-   res.render('./products/productos-todos', {obj_literal_products: obj_literal_products});
+    const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    res.render('./products/productos-todos', {products: products});
             
     },
 
@@ -58,23 +58,22 @@ const controladorProductos =
 
     store: (req,res) => {
         let datos = req.body;
-		let idNuevoProducto = (products[products.length-1].id)+1;
-		let imagenNuevoProducto = '../../imagenes/jack-daniels.png';
+        let idNuevoProducto = (products[products.length-1].id)+1;
 
 		let nuevoProducto ={
-			"id": idNuevoProducto,
-			"name": datos.name,
-			"price": parseInt(datos.price),
-			"discount": parseInt(datos.discount),
-			"category": datos.category,
-			"description": datos.description,
+            "id": idNuevoProducto,
+            "name": datos.name,
+            "price": parseInt(datos.price),
+            "discount": parseInt(datos.discount),
+            "category": datos.category,
+            "description": datos.description,
             "bebida": datos.bebida,
-			"image": imagenNuevoProducto
-		};
-
-		products.push(nuevoProducto);
-		fs.writeFileSync(productsFilePath,JSON.stringify(products, null, " "),'utf-8');
-        res.redirect ('/products/crear')
+            "image": req.file.filename
+        };
+    
+        products.push(nuevoProducto);
+        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, " "),'utf-8');
+        res.redirect ('/products/crear') 
     },
 
 

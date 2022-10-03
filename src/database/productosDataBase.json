@@ -54,5 +54,14 @@
   "description": "BOOOOKEEE",
   "bebida": "whiskies",
   "image": "../../imagenes/jack-daniels.png"
+ },
+ {
+  "id": 7,
+  "name": "Vino blanco Torrontés Cafayate",
+  "price": 621,
+  "discount": 10,
+  "category": "Vinos",
+  "description": "Vino blanco Torrontés Cafayate Cosecha Tardía bodega Etchart 750 ml",
+  "image": "1664820467047.png"
  }
 ]
