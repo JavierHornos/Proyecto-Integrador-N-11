@@ -36,43 +36,43 @@ const controladorProductos =
     gin: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/gin', {products: products});
     },
 
     licores: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/licores', {products: products});
     },
 
     vodka: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/vodka', {products: products});
     },
 
     ron: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/ron', {products: products});
     },
 
     aperitivos: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/aperitivos', {products: products});
     },
 
     cervezas: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/cervezas', {products: products});
     },
 
     accesorios: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('./products/espumantes', {products: products});
+        res.render('./products/accesorios', {products: products});
     },
 
     carrito: (req, res) => {
