@@ -6,24 +6,31 @@ const path = require('path');
 const multer = require('multer');   // multer
 
 
-
+// Productos//
 router.get ('/whiskies', productsController.whiskies)
-
-router.get ('/vinos', productsController.whiskies)
-
+router.get ('/vinos', productsController.vinos)
 router.get ('/espumantes', productsController.espumantes)
-
-router.get ('/carrito', productsController.carrito)
-
+router.get ('/gin', productsController.gin)
+router.get ('/licores', productsController.licores)
+router.get ('/vodka', productsController.vodka)
+router.get ('/ron', productsController.ron)
+router.get ('/aperitivos', productsController.aperitivos)
+router.get ('/cervezas', productsController.cervezas)
+router.get ('/accesorios', productsController.accesorios)
 router.get('/productos-todos', productsController.productosTodos)
+
+
+// Carrito
+router.get ('/carrito', productsController.carrito)
 
 router.get ('/carrito-cargado', productsController.carritoCargado)
 
-router.get ('/producto', productsController.producto)
+
+router.get ('/producto', productsController.producto) // este no va???
 
 
 //* DETALLE PRODUCTO *//
-router.get ('/detail/:id', productsController.detalleProducto)
+router.get ('/detalle-producto/:id', productsController.detalleProducto)
 
 
 //* CREAR PRODUCTO *//
@@ -33,10 +40,6 @@ router.get ('/creacion-producto', productsController.crear)
 //* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', productsController.editarProducto)
 router.put ('/editar-producto/:id', productsController.actualizarProducto)
-
-
-
-
 
 //* MULTER *//
 const multerDiskStorage = multer.diskStorage({
