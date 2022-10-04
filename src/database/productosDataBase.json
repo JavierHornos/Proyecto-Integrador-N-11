@@ -387,5 +387,23 @@
   "category": "Accesorios",
   "description": "Set Kit Bartender Cooctelera Profesional Tragos Bebidas",
   "image": "1664892029728.png"
+ },
+ {
+  "id": 44,
+  "name": "Cerveza Artesanal Soñada Stout",
+  "price": 5999,
+  "discount": 10,
+  "category": "Cervezas",
+  "description": "Cerveza Artesanal Soñada Stout Negra 500 ml",
+  "image": "1664897823231.png"
+ },
+ {
+  "id": 45,
+  "name": "Cerveza Artesanal Soñada Irish",
+  "price": 5999,
+  "discount": 10,
+  "category": "Cervezas",
+  "description": "Cerveza Artesanal Soñada Irish Red 500 ml",
+  "image": "1664898037847.png"
  }
 ]
