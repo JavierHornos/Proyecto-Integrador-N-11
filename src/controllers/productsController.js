@@ -33,6 +33,48 @@ const controladorProductos =
         res.render('./products/espumantes', {products: products});
     },
 
+    gin: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
+    licores: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
+    vodka: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
+    ron: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
+    aperitivos: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
+    cervezas: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
+    accesorios: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
     carrito: (req, res) => {
         res.render('./products/carrito');
     },
@@ -45,28 +87,17 @@ const controladorProductos =
         res.render("./products/producto");
     },
 
-
     detalleProducto: (req, res) => {
-        req.params.id
-        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
-        let lista_de_objetos_literales_productos = JSON.parse(products_json);
-        let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
-        console.log(productoDetallado)
-        res.render("./products/detalle-producto", { productoDetallado: productoDetallado }); 
-
-
-
-	
-	},
+    req.params.id
+    let products_json = fs.readFileSync('./src/database/productosDataBase.json');
+    let lista_de_objetos_literales_productos = JSON.parse(products_json);
+    let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
+    console.log(productoDetallado)
+    res.render("./products/detalle-producto", { productoDetallado: productoDetallado }); 
+    },
            
-
-
-
-        
-        
-
-
-     productosTodos: (req, res) => {
+    
+    productosTodos: (req, res) => {
      const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
      res.render('./products/productos-todos', {products: products});
