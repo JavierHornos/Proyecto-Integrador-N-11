@@ -8,7 +8,7 @@ const multer = require('multer');   // multer
 
 // Productos//
 router.get ('/whiskies', productsController.whiskies)
-router.get ('/vinos', productsController.whiskies)
+router.get ('/vinos', productsController.vinos)
 router.get ('/espumantes', productsController.espumantes)
 router.get ('/gin', productsController.gin)
 router.get ('/licores', productsController.licores)

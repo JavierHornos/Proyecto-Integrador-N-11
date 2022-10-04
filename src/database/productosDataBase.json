@@ -42,7 +42,7 @@
   "discount": 1234,
   "category": "in-sale",
   "description": "asd",
-  "bebida": "in-sale",
+  "bebida": "Whiskies",
   "image": "../../imagenes/jack-daniels.png"
  },
  {
@@ -395,7 +395,7 @@
   "discount": 10,
   "category": "Cervezas",
   "description": "Cerveza Artesanal Soñada Stout Negra 500 ml",
-  "image": "1664897823231.png"
+  "image": "1664902081483.png"
  },
  {
   "id": 45,
@@ -404,6 +404,6 @@
   "discount": 10,
   "category": "Cervezas",
   "description": "Cerveza Artesanal Soñada Irish Red 500 ml",
-  "image": "1664898037847.png"
+  "image": "1664902106222.png"
  }
 ]
