@@ -23,7 +23,7 @@ router.get ('/producto', productsController.producto)
 
 
 //* DETALLE PRODUCTO *//
-router.get ('/detail/:id', productsController.detalleProducto)
+router.get ('/detalle-producto/:id', productsController.detalleProducto)
 
 
 //* CREAR PRODUCTO *//
