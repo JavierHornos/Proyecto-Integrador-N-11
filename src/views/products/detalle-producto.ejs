@@ -12,12 +12,12 @@
 
 <body>
 
-    <%- include("../partials/header.ejs") %>
+    <%- include("../partials/header.ejs", {title: 'Detalle Producto'}) %>
 
         <main class=>
 
             <div class="padre-cajas main-principal">
-                <img class="jack-daniels" width='200' height='350' src="<%= objeto_literal_producto_detallado.image %>"></img>
+                <img class="jack-daniels" width='200' height='350' src="/"></img>
                 <div class="caja1">
                     <div>Nuevo</div>
                     <h2><%= objeto_literal_producto_detallado.name %></h2>

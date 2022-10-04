@@ -16,9 +16,21 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controladorProductos =
 {
     whiskies: (req, res) => {
-        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
-        let obj_literal_products = JSON.parse(products_json);
-        res.render('./products/whiskies', { obj_literal_products: obj_literal_products });
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/whiskies', {products: products});
+    },
+
+    vinos: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/vinos', {products: products});
+    },
+
+    espumantes: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
     },
 
     carrito: (req, res) => {
@@ -35,22 +47,28 @@ const controladorProductos =
 
 
     detalleProducto: (req, res) => {
+            req.params.id;
+            res.render('./products/detalle-producto');
+
+
+
+        /*
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
         let lista_de_objetos_literales_productos = JSON.parse(products_json);
         let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
-        res.render("./products/detalle-producto", { objeto_literal_producto_detallado: productoDetallado });
+        res.render("./products/detalle-producto", { objeto_literal_producto_detallado: productoDetallado }); */
     },
 
    productosTodos: (req, res) => {
-    let products_json = fs.readFileSync('./src/database/productosDataBase.json');
-    let obj_literal_products = JSON.parse(products_json);
-   res.render('./products/productos-todos', {obj_literal_products: obj_literal_products});
+    const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    res.render('./products/productos-todos', {products: products});
             
-    },
+   },
 
-    index:(req, res) => {
-        res.render('productos-todos',{productos: productos-todos})
-    },
+    // index:(req, res) => {
+    //     res.render('productos-todos',{products: productos-todos})
+    // },
 
     crear: (req, res) => {
         res.render("./products/creacion-producto");
@@ -58,23 +76,22 @@ const controladorProductos =
 
     store: (req,res) => {
         let datos = req.body;
-		let idNuevoProducto = (products[products.length-1].id)+1;
-		let imagenNuevoProducto = '../../imagenes/jack-daniels.png';
+        let idNuevoProducto = (products[products.length-1].id)+1;
 
 		let nuevoProducto ={
-			"id": idNuevoProducto,
-			"name": datos.name,
-			"price": parseInt(datos.price),
-			"discount": parseInt(datos.discount),
-			"category": datos.category,
-			"description": datos.description,
+            "id": idNuevoProducto,
+            "name": datos.name,
+            "price": parseInt(datos.price),
+            "discount": parseInt(datos.discount),
+            "category": datos.category,
+            "description": datos.description,
             "bebida": datos.bebida,
-			"image": imagenNuevoProducto
-		};
-
-		products.push(nuevoProducto);
-		fs.writeFileSync(productsFilePath,JSON.stringify(products, null, " "),'utf-8');
-        res.redirect ('/products/crear')
+            "image": req.file.filename
+        };
+    
+        products.push(nuevoProducto);
+        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, " "),'utf-8');
+        res.redirect ('/products/crear') 
     },
 
 
