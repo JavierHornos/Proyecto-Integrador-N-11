@@ -42,7 +42,7 @@ const controladorProductos =
     },
 
     producto: (req, res) => {
-        res.render("./products/producto1");
+        res.render("./products/producto");
     },
 
 
