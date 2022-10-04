@@ -21,6 +21,18 @@ const controladorProductos =
         res.render('./products/whiskies', {products: products});
     },
 
+    vinos: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/vinos', {products: products});
+    },
+
+    espumantes: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/espumantes', {products: products});
+    },
+
     carrito: (req, res) => {
         res.render('./products/carrito');
     },
@@ -35,10 +47,16 @@ const controladorProductos =
 
 
     detalleProducto: (req, res) => {
+            req.params.id;
+            res.render('./products/detalle-producto');
+
+
+
+        /*
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
         let lista_de_objetos_literales_productos = JSON.parse(products_json);
         let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
-        res.render("./products/detalle-producto", { objeto_literal_producto_detallado: productoDetallado });
+        res.render("./products/detalle-producto", { objeto_literal_producto_detallado: productoDetallado }); */
     },
 
    productosTodos: (req, res) => {
@@ -46,11 +64,11 @@ const controladorProductos =
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     res.render('./products/productos-todos', {products: products});
             
-    },
+   },
 
-    index:(req, res) => {
-        res.render('productos-todos',{productos: productos-todos})
-    },
+    // index:(req, res) => {
+    //     res.render('productos-todos',{products: productos-todos})
+    // },
 
     crear: (req, res) => {
         res.render("./products/creacion-producto");

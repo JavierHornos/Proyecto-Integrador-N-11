@@ -5,7 +5,13 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');   // multer
 
+
+
 router.get ('/whiskies', productsController.whiskies)
+
+router.get ('/vinos', productsController.whiskies)
+
+router.get ('/espumantes', productsController.espumantes)
 
 router.get ('/carrito', productsController.carrito)
 
@@ -15,17 +21,24 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 
 router.get ('/producto', productsController.producto)
 
-router.get ('/producto/:id', productsController.detalleProducto)
 
+//* DETALLE PRODUCTO *//
+router.get ('/detail/:id', productsController.detalleProducto)
+
+
+//* CREAR PRODUCTO *//
 router.get ('/creacion-producto', productsController.crear)
 
-//router.put ("products/creacion-producto", productsController.store)
 
+//* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', productsController.editarProducto)
 router.put ('/editar-producto/:id', productsController.actualizarProducto)
 
 
 
+
+
+//* MULTER *//
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
      cb(null, path.join(__dirname,'../../public/imagenes'));    // Ruta donde almacenamos el archivo
@@ -39,11 +52,13 @@ const multerDiskStorage = multer.diskStorage({
 const uploadFile = multer({ storage: multerDiskStorage });
 
 
-//* CREAR PRODUCTO *//
-
+//* CREAR PRODUCTO CON FOTO MULTER *//
 router.get ("/crear", productsController.crear);
 
 router.post ("/crear", uploadFile.single('cImage') ,productsController.store);
+
+
+
 
 
 module.exports = router;
