@@ -26,7 +26,7 @@ router.get ('/carrito', productsController.carrito)
 router.get ('/carrito-cargado', productsController.carritoCargado)
 
 
-router.get ('/producto', productsController.producto) // este no va???
+// router.get ('/producto', productsController.producto) // ESTE VA???
 
 
 //* DETALLE PRODUCTO *//
@@ -40,6 +40,11 @@ router.get ('/creacion-producto', productsController.crear)
 //* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', productsController.editarProducto)
 router.put ('/editar-producto/:id', productsController.actualizarProducto)
+
+//* BORRAR PRODUCTO *//
+router.get('/detalle-producto/:id', productsController.borrarProducto)
+
+
 
 //* MULTER *//
 const multerDiskStorage = multer.diskStorage({

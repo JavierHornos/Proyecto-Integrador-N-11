@@ -40,9 +40,8 @@
   "name": "asd",
   "price": 1234,
   "discount": 1234,
-  "category": "in-sale",
-  "description": "asd",
-  "bebida": "Whiskies",
+  "category": "Whiskies",
+  "description": "Ballantine's escocés 750 mL",
   "image": "../../imagenes/jack-daniels.png"
  },
  {
@@ -50,9 +49,8 @@
   "name": "asd",
   "price": 1234,
   "discount": 1234,
-  "category": "in-sale",
+  "category": "Whiskies",
   "description": "BOOOOKEEE",
-  "bebida": "whiskies",
   "image": "../../imagenes/jack-daniels.png"
  },
  {

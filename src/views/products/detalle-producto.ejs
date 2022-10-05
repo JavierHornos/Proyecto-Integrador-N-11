@@ -12,7 +12,7 @@
 
 <body>
 
-    <%- include("../partials/header.ejs", {title: 'Detalle Producto'}) %>
+    <%- include("../partials/header-datalle.ejs") %> 
     
         <main class=>
 
@@ -29,7 +29,7 @@
                         <label>Cantidad</label></label>
                         <input class="cantidades" type="number" value="0">
                     </div>
-                    <a href="../products/carrito-cargado">
+                    <a href="../carrito-cargado">
                         <input class="al-carrito" type="button" value="Agregar Al Carrito">
                     </a>
                     <span class="cuotas"> En 12x $ <%= productoDetallado.price / 12 %></span>
@@ -41,16 +41,20 @@
                         <input type="button" value="500 mL">
                         <input type="button" value="750 mL">
                     </div>
-                    <div class="descuento">. 40% de graduación alcoholica.</div>
+
+                    <a href="/products/editar-producto/<%= productoDetallado.id %>" class="al-carrito"  >EDITAR PRODUCTO</a>
+					<form action="/products/<%= productoDetallado.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+					<button type="submit" class="al-carrito">ELIMINAR</button>
+                    </form>
                 </div>
            
             </div>
 
-              <div class="caja3">
+           <!--   <div class="caja3">
                 <span class="pagos-tarjetas">Tarjetas de crédito</span>
                 <div>¡Cuotas sin interés con bancos seleccionados!</div>
                 <img class="bancos-seleccionados" width="100" height="60" src="/imagenes/bancos-seleccionados.png">
-              </div>
+              </div> -->
 
             
 
