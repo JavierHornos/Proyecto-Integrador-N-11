@@ -133,10 +133,6 @@ const controladorProductos =
         res.render("./products/carrito-cargado");
     },
 
-    // producto: (req, res) => {                    // ESTE VA???
-    //     res.render("./products/producto");
-    // },
-
     
     //* CREAR Y GUARDAR *//
     crear: (req, res) => {

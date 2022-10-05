@@ -26,9 +26,6 @@ router.get ('/carrito', productsController.carrito)
 router.get ('/carrito-cargado', productsController.carritoCargado)
 
 
-// router.get ('/producto', productsController.producto) // ESTE VA???
-
-
 //* DETALLE PRODUCTO *//
 router.get ('/detalle-producto/:id', productsController.detalleProducto)
 
