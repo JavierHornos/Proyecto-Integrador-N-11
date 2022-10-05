@@ -23,7 +23,7 @@
                     <h2><%= productoDetallado.name %></h2>
                     <del>$<%= productoDetallado.price %></del>
                     <div class="padre-precio">
-                        <h2 class="precio"> $ <%= productoDetallado.price %></h2> <span class="off"><%= productoDetallado.discount %>% OFF</span>
+                        <h2 class="precio"> $ <%=( ( (100-productoDetallado.discount) * productoDetallado.price ) / 100  )%></h2> <span class="off"><%= productoDetallado.discount %>% OFF</span>
                     </div>
                     <div>
                         <label>Cantidad</label></label>

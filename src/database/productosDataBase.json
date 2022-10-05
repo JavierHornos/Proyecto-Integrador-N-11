@@ -46,11 +46,11 @@
  },
  {
   "id": 6,
-  "name": "asd",
-  "price": 1234,
-  "discount": 1234,
+  "name": "Wizcacho",
+  "price": 5900,
+  "discount": 10,
   "category": "Whiskies",
-  "description": "BOOOOKEEE",
+  "description": "wizcacho",
   "image": "../../imagenes/jack-daniels.png"
  },
  {

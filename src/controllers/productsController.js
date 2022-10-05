@@ -168,7 +168,6 @@ const controladorProductos =
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
         let lista_de_objetos_literales_productos = JSON.parse(products_json);
         let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
-
         res.render("products/editar-producto", { producto_detallado: productoDetallado });
     },
 
