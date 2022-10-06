@@ -39,7 +39,7 @@ router.get('/editar-producto/:id', productsController.editarProducto)
 router.put ('/editar-producto/:id', productsController.actualizarProducto)
 
 //* BORRAR PRODUCTO *//
-router.get('/detalle-producto/:id', productsController.borrarProducto)
+router.delete('/detalle-producto/:id', productsController.borrarProducto)
 
 
 

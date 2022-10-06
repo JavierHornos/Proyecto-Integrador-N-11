@@ -36,24 +36,6 @@
   "image": "../../imagenes/Ballantine's 12 Años escocés 750 mL.png"
  },
  {
-  "id": 5,
-  "name": "asd",
-  "price": 1234,
-  "discount": 1234,
-  "category": "Whiskies",
-  "description": "Ballantine's escocés 750 mL",
-  "image": "../../imagenes/jack-daniels.png"
- },
- {
-  "id": 6,
-  "name": "Wizcacho",
-  "price": 5900,
-  "discount": 10,
-  "category": "Whiskies",
-  "description": "wizcacho",
-  "image": "../../imagenes/jack-daniels.png"
- },
- {
   "id": 7,
   "name": "Vino blanco Torrontés Cafayate",
   "price": 621,

@@ -191,10 +191,10 @@ const controladorProductos =
    //* BORRAR *//
 
     borrarProducto: (req, res) => {
-        let idProductoX = req.params.id;
+        let idProducto = req.params.id;
 		
 		let NuevaListaProductos = products.filter(function(e){
-			return e.id!=idProductoX;
+			return e.id!=idProducto;
 		});
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(NuevaListaProductos, null, " "),'utf-8');
