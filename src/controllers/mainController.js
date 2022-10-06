@@ -16,8 +16,8 @@ const controlador = {
         res.render('home');
     },
 
-    home2: (req, res) => {
-        res.render('home2');
+    homeAdmin: (req, res) => {
+        res.render('home-admin');
     },
 
 }

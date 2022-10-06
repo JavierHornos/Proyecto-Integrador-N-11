@@ -18,6 +18,7 @@ router.get ('/aperitivos', productsController.aperitivos)
 router.get ('/cervezas', productsController.cervezas)
 router.get ('/accesorios', productsController.accesorios)
 router.get('/productos-todos', productsController.productosTodos)
+router.get('/productos-todos-admin', productsController.productosTodosAdmin)
 
 
 // Carrito
@@ -28,6 +29,8 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 
 //* DETALLE PRODUCTO *//
 router.get ('/detalle-producto/:id', productsController.detalleProducto)
+
+router.get ('/detalle-producto-admin/:id', productsController.detalleProductoAdmin)
 
 
 //* CREAR PRODUCTO *//

@@ -18,8 +18,8 @@ const controladorProductos =
     
     //* PRODUCTOS *//
     whiskies: (req, res) => {
-        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');    // leemos el json y la guardamos en productFilesPath
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));                // parseamos el json y lo guardamos en products
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');    // path del json y lo guardamos en productFilesPath
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));                // leemos y parseamos el json y lo guardamos en products
         let soloWhiskies = products.filter((prod) => prod.category == 'Whiskies')               // filtramos products solo wiskies y la guardamos en soloWhiskies
         // console.log(soloWhiskies)
         res.render('./products/whiskies', {soloWhiskies: soloWhiskies});                        // mandamos a la vista whiskies solo los whiskies.
@@ -114,6 +114,13 @@ const controladorProductos =
                
       },
 
+      productosTodosAdmin: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('./products/productos-todos-admin', {products: products});
+               
+      },  
+
 
     detalleProducto: (req, res) => {
         req.params.id
@@ -123,6 +130,15 @@ const controladorProductos =
         // console.log(productoDetallado)
         res.render("./products/detalle-producto", { productoDetallado: productoDetallado }); 
         },  
+
+    detalleProductoAdmin: (req, res) => {
+        req.params.id
+        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
+        let lista_de_objetos_literales_productos = JSON.parse(products_json);
+        let productoDetallado = lista_de_objetos_literales_productos.filter((prod) => prod.id == req.params.id)[0]
+        // console.log(productoDetallado)
+        res.render("./products/detalle-producto-admin", { productoDetallado: productoDetallado }); 
+        },     
 
     //* CARRITO *//
     carrito: (req, res) => {
@@ -156,7 +172,7 @@ const controladorProductos =
     
         products.push(nuevoProducto);
         fs.writeFileSync(productsFilePath,JSON.stringify(products, null, " "),'utf-8');
-        res.redirect ('/products/crear') 
+        res.redirect ('/home-admin') 
     },
 
     //* EDITAR Y ACTUALIZAR *//
@@ -185,7 +201,7 @@ const controladorProductos =
 		}
 
 		fs.writeFileSync('./src/database/productosDataBase.json', JSON.stringify(lista_de_objetos_literales_productos, null, " "), 'utf-8');
-		res.redirect('/');
+		res.redirect('/home-admin');
     },
 
    //* BORRAR *//
@@ -199,7 +215,7 @@ const controladorProductos =
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(NuevaListaProductos, null, " "),'utf-8');
 
-		res.redirect('/');
+		res.redirect('/home-admin');
         
     },
         

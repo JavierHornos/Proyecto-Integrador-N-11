@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get ('/' , mainController.home)
 
-router.get ('/home2' , mainController.home2)
+router.get ('/home-admin' , mainController.homeAdmin)
 
 
 

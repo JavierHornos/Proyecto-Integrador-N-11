@@ -1,0 +1,344 @@
+.encabezado {
+    background-color: BLACK;
+    color: white;
+    /* height: 17vh;  */
+    padding-top: 40px;
+    font-size: 14px;
+
+}
+
+.ingresa a {
+    text-decoration: none;
+    color: white;
+}
+
+.ingresa a {
+    text-decoration: none;
+    color: white;
+}
+
+.registrate a {
+    text-decoration: none;
+    color: white;
+}
+
+.carrito a {
+    text-decoration: none;
+    color: white;
+}
+
+.hipervinculos a {
+    text-decoration: none;
+    color: white;
+}
+
+.hipervinculos {
+    font-size: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-left: 220px;
+    margin-right: 220px;
+    padding: 16px;
+    border-top: 18px solid orangered;
+    margin-top: 6px !important;
+}
+
+.medio {
+    background-color: orangered;
+    color: white;
+    /* height:65vh;  */
+    padding: 0px !important;
+    margin: 0;
+}
+
+.pie {
+    background-color: BLACK;
+    color: white;
+    height: 20vh;
+    padding: 20px;
+
+}
+
+.iconosf {
+    padding: 10px
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.tope-de-arriba {
+    background-color: orangered;
+    height: 5vh;
+    display: flex;
+
+}
+
+.boton-busqueda {
+    display: inline;
+    /* height: 80%; */
+    font-size: 0.7em !important;
+    margin-top: -1em;
+
+}
+
+.buscador {
+    display: inline !important;
+    width: 75% !important;
+    height: 30px;
+    margin-left: 0.5em;
+
+
+
+}
+
+.centrar-buscador {
+    text-align: center;
+
+    margin-top: -1em !important;
+    padding-bottom: 1em;
+}
+
+.mensaje {
+    color: white;
+    text-align: center;
+    flex: 0.9;
+    margin-top: 5px;
+
+}
+
+.fondo-imagenes {
+    background-image: url("../imagenes/primera.jpeg");
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: ; */
+    background-attachment: fixed;
+
+}
+
+.logo {
+    margin-top: -1.5em !important;
+    padding-bottom: 0.5em;
+}
+
+.item {
+    margin-left: 1em;
+}
+
+.separador {
+    margin-left: 1em;
+}
+
+.arriba {
+    margin-top: -1em !important;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.primera-opcion,
+.segunda-opcion,
+.tercera-opcion,
+.cuarta-opcion {
+    width: 25%;
+    position: relative;
+    text-align: center !important;
+
+}
+
+.imagen-centrada {
+    width: 100%;
+    /* object-fit: cover; */
+    height: 300px;
+}
+
+.texto-centrado {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.vinculo-inferior {
+    color: aliceblue !important;
+}
+
+.mobile {
+    display: none !important;
+}
+
+.grande {
+    display: block;
+}
+
+@media (min-width: 577px) and (max-width: 1258px) {
+    .logo{
+        display: none;
+    }
+    .tope-de-arriba{
+        height: 8vh;
+    }
+
+    .pie{
+        height: 40vh;
+    }
+
+    .acomodar-logo{
+        display: none;
+        
+    }
+}
+
+@media (max-width: 628px) {
+    .imagen-logo {
+        width: 100%;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+
+    .grande {
+        display: none !important;
+    }
+
+    .iconos {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hipervinculos {
+        display: none !important;
+    }
+
+    .tope-de-arriba {
+        height: auto;
+        /* text-align: center; */
+        padding-left: 1.5em;
+
+    }
+
+    .arriba {
+        margin-top: 1em !important;
+        /* text-align: center; */
+        display: flex;
+        /* align-items: center; */
+    }
+
+    .centrar-buscador {
+        margin-top: 1em !important;
+    }
+
+    .encabezado {
+        padding-top: 0.2em;
+    }
+
+    .flex-container {
+        display: none;
+    }
+
+    .pie {
+        height: auto;
+    }
+
+    .logo-abajo {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 2em;
+    }
+
+    .acomodar-logo {
+        justify-content: center;
+        display: flex;
+    }
+
+    .fondo-imagenes {
+        background-image: url("../imagenes/cerveza4.jpeg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        /* background-size: 100% 100%; */
+        background-position: center center;
+        background-attachment: fixed;
+
+    }
+
+    .condiciones-arreglando {
+        margin-bottom: 0.5em;
+    }
+
+    #hamitens a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+        color: white;
+    }
+
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        background: orangered;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 5px;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+    }
+
+    #hamitens {
+        display: none;
+    }
+
+    #hamnav input:checked~#hamitens {
+        display: block;
+    }
+
+    #hamnav {
+        width: 100%;
+        background: #000;
+    }
+
+    /*#hamitens {
+         display: flex; 
+    }*/
+
+    #hamitens a {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #hamitens a:hover {
+        background: orangered;
+    }
+
+    #hamnav #hamburger {
+        display: none;
+    }
+
+}
+
+a {
+    color: white !important;
+}
+
+.inferior-mensaje {
+    position: fixed;
+    bottom: 6%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+}

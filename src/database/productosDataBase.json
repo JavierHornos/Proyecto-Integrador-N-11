@@ -373,8 +373,8 @@
   "name": "Cerveza Artesanal Soñada Stout",
   "price": 5999,
   "discount": 10,
-  "category": "Cervezas",
-  "description": "Cerveza Artesanal Soñada Stout Negra 500 ml",
+  "category": "Whiskies",
+  "description": "Cerveza Artesanal Soñada Stout Negra 500 ML",
   "image": "1664976740152.png"
  },
  {
@@ -382,8 +382,8 @@
   "name": "Cerveza Artesanal Soñada Irish",
   "price": 5999,
   "discount": 10,
-  "category": "Cervezas",
-  "description": "Cerveza Artesanal Soñada Irish Red 500 ml",
+  "category": "Whiskies",
+  "description": "Cerveza Artesanal Soñada Irish Red 500 ML",
   "image": "1664976763098.png"
  }
 ]
