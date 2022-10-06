@@ -66,7 +66,7 @@ const controladorProductos =
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let soloVodka = products.filter((prod) => prod.category == 'Vodka')
-        console.log(soloVodka)
+        //console.log(soloVodka)
         res.render('./products/vodka', {soloVodka: soloVodka});
     },
 
