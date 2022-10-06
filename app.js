@@ -26,7 +26,7 @@ app.use('/products', productsRouters);
 
 
 app.use('*', function(req, res) {
-    res.send("Error de acceso, esta ruta no existe en el sitio")
+    res.render("./error-404")
 });
 
 app.set('view engine', 'ejs')
