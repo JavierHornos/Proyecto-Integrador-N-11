@@ -12,7 +12,7 @@
 
 <body>
 
-    <%- include("../partials/header.ejs") %>
+    <%- include("../partials/header.ejs")%>
 
     <main>
 
@@ -23,8 +23,8 @@
                 </div>
             </div>
             <div class="col-12">
-                <form action="/products/editar-producto/<%= producto_detallado.id %>" method="post">
-                    <input name="_method" type="hidden" value="PUT">
+                <form action="/products/editar-producto/<%=producto_detallado.id%>?_method=PUT" method="POST">
+                   <!-- <input name="_method" type="hidden" value="PUT"> -->
                     <div class="row product-detail">
                         <div class="col-12 col-md-6">
                             <label for="name" class="form-label">Nombre del producto:</label>
@@ -44,6 +44,16 @@
                               
                                     <option value="">Elegí</option>
                                     <option value="Whiskies" <% if (producto_detallado.category == "Whiskies") { %>selected <% } %> > Whiskies</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Promociones") { %>selected <% } %> > Promociones</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Vinos") { %>selected <% } %> > Vinos</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Espumantes") { %>selected <% } %> > Espumantes</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "gin") { %>selected <% } %> > gin</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Licores") { %>selected <% } %> > Licores</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Vodka") { %>selected <% } %> > Vodka</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Ron") { %>selected <% } %> > Ron</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Aperitivos") { %>selected <% } %> > Aperitivos</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Cervezas") { %>selected <% } %> > Cervezas</option>
+                                    <option value="Whiskies" <% if (producto_detallado.category == "Accesorios") { %>selected <% } %> > Accesorios</option>
                             </select>
                         </div>
                         <div class="col-12">
@@ -53,88 +63,13 @@
                         <div class="col-12">
                             <button type="submit" class="buy-now-button">Guardar producto</button>                        
                         </div>
+
+                
                     </div>
                 </form>
             </div>
     
         </div>
-
-       <!--  <section>
-            <form>
-                <label for="nombre-apellido">Nombre y apellido:</label>
-                <input type="text" id="nombre-apellido" required minlength="2" placeholder="Nombre y Apellido">
-
-                <label for="nombre-de-usuario">Nombre De Usuario:</label>
-                <input type="text" id="nombre-de-usuario" required minlength="2" placeholder="Nombre De Usuario">
-
-                <label for="e-mail">E-mail:</label>
-                <input type="email" id="e-mail" required placeholder="E-mail">
-
-                <h3>Fecha De Nacimiento</h3>
-
-                <label for="fecha-de-nacimiento">mm/dd/yyyy:</label>
-                <input type="date" required id="fecha-de-nacimiento">
-
-                <label for="domicilio">Domicilio:</label>
-                <input type="text" id="domicilio" required minlength="2" placeholder="Domicilio">
-
-                <h3>Perfil Del Usuario</h3>
-
-                <div class="separar-perfil"><label for="para-comprar">Comprador</label>
-                    <input value="comprador" type="radio" id="para-comprar">
-
-                    <label for="para-vender">Vendedor</label>
-                    <input value="vendedor" type="radio" id="para-vender">
-                </div>
-                <h3>Intereses</h3>
-                <div class="estetica-intereses"><label for="intereses-de-electro">
-                        <input value="primer-checkbox" type="checkbox" id="intereses-de-electro">
-                        Electro
-                    </label>
-
-                    <label for="intereses-moda">
-                        <input value="segunda-checkbox" type="checkbox" id="intereses-moda">
-                        Moda
-                    </label>
-
-                    <label for="intereses-hogar">
-                        <input value="tercer-checkbox" type="checkbox" id="intereses-hogar">
-                        Hogar
-                    </label>
-
-                    <label for="intereses-jugueteria">
-                        <input value="cuarto-checkbox" type="checkbox" id="intereses-jugueteria">
-                        Jugueteria
-                    </label>
-
-                    <label for="intereses-vida-sana">
-                        <input value="quinto-checkbox" type="checkbox" id="intereses-vida-sana">
-                        Vida Sana
-                    </label>
-                </div>
-
-
-
-                <div class="separar-img-usuario"><label for="imagen-usuario">Foto De Usuario</label>
-                    <input type="file" id="imagen-usuario" required accept="image/png,image/jpeg">
-
-                </div>
-
-                <label for="contrasenia">Contraseña:</label>
-                <input type="password" id="contrasenia" required minlength="2" placeholder="contraseña">
-
-                <label for="confirmar-contrasenia">Confirmar Contraseña:</label>
-                <input type="password" id="confirmar-contrasenia" required minlength="2" placeholder="confirmar-contrasenia">
-
-                <div class="ultimos-botones"><a class="boton-enviar" href="home"><input type="submit"
-                            value="Enviar"></a>
-
-                    <input type="reset" value="Borrar">
-                </div>
-
-
-            </form>
-        </section> -->
 
 
     </main>

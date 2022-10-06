@@ -40,19 +40,17 @@
   "name": "asd",
   "price": 1234,
   "discount": 1234,
-  "category": "in-sale",
-  "description": "asd",
-  "bebida": "Whiskies",
+  "category": "Whiskies",
+  "description": "Ballantine's escocés 750 mL",
   "image": "../../imagenes/jack-daniels.png"
  },
  {
   "id": 6,
-  "name": "asd",
-  "price": 1234,
-  "discount": 1234,
-  "category": "in-sale",
-  "description": "BOOOOKEEE",
-  "bebida": "whiskies",
+  "name": "Wizcacho",
+  "price": 5900,
+  "discount": 10,
+  "category": "Whiskies",
+  "description": "wizcacho",
   "image": "../../imagenes/jack-daniels.png"
  },
  {
@@ -395,7 +393,7 @@
   "discount": 10,
   "category": "Cervezas",
   "description": "Cerveza Artesanal Soñada Stout Negra 500 ml",
-  "image": "1664902081483.png"
+  "image": "1664976740152.png"
  },
  {
   "id": 45,
@@ -404,6 +402,6 @@
   "discount": 10,
   "category": "Cervezas",
   "description": "Cerveza Artesanal Soñada Irish Red 500 ml",
-  "image": "1664902106222.png"
+  "image": "1664976763098.png"
  }
 ]

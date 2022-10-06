@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/producto.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e913f300ec.js" crossorigin="anonymous"></script>
+    <title>Detalle Producto</title>
+</head>
+
+<body>
+
+    <%- include("../partials/header.ejs", {title: 'Detalle Producto'}) %>
+
+    <main class=>
+
+		<div class="padre-cajas main-principal">
+			<img class="jack-daniels" width='200' height='350' src="/imagenes/<%=productoDetallado.image%>"></img>
+			<div class="caja1">
+				<div>Nuevo</div>
+				<h2><%= productoDetallado.name %></h2>
+				<del>$<%= productoDetallado.price %></del>
+				<div class="padre-precio">
+					<h2 class="precio"> $ <%= productoDetallado.price %></h2> <span class="off"><%= productoDetallado.discount %>% OFF</span>
+				</div>
+				<div>
+					<label>Cantidad</label></label>
+					<input class="cantidades" type="number" value="0">
+				</div>
+				<a href="../products/carrito-cargado">
+					<input class="al-carrito" type="button" value="Agregar Al Carrito">
+				</a>
+				<span class="cuotas"> En 12x $ <%= productoDetallado.price / 12 %></span>
+				<span class="litro">El precio por litro es $ 13.440</span>
+				<a href="#medios-pago" class="pago">Ver los medios de pago</a>
+				<div>Volumen: 750 mL</div>
+				<div class="botones-ml">
+					<input type="button" value="200 mL">
+					<input type="button" value="500 mL">
+					<input type="button" value="750 mL">
+				</div>
+				<div class="descuento">. 40% de graduación alcoholica.</div>
+			</div>
+	   
+		</div>
+
+		  <div class="caja3">
+			<span class="pagos-tarjetas">Tarjetas de crédito</span>
+			<div>¡Cuotas sin interés con bancos seleccionados!</div>
+			<img class="bancos-seleccionados" width="100" height="60" src="/imagenes/bancos-seleccionados.png">
+		  </div>
+
+		
+
+
+	
+	</main>
+
+
+
+
+
+
+
+
+
+
+    
+        
+       
+        <footer>
+
+            <%- include("../partials/footer.ejs") %>
+
+        </footer>
+
+</body>
+
+</html>
