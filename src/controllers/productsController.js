@@ -192,6 +192,7 @@ const controladorProductos =
     },
 
     actualizarProducto: (req, res) =>{
+
 		let idProducto = req.params.id;
 		let datosProducto = req.body;
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
