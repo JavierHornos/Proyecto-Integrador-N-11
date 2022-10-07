@@ -131,16 +131,26 @@
     margin-top: -1em !important;
 }
 
+
+
 .flex-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
 }
 
-.primera-opcion,
-.segunda-opcion,
-.tercera-opcion,
-.cuarta-opcion {
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 401px);
+    grid-template-rows: 2fr;
+    grid-gap: 6em;
+
+}
+
+.producto-home {
     width: 25%;
+    /* max-width: 25%; */
     position: relative;
     text-align: center !important;
 
@@ -154,15 +164,16 @@
 
 .texto-centrado {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 22%;
+    /* position: absolute; */
+    /* top: 90%; */
+    /* left: 10%; */
     font-weight: bold;
-    font-size: 23px;
+    font-size: 15px;
+    padding: 1em;
 }
 
 .vinculo-inferior {
-    color: aliceblue !important;
+    color: black !important;
 }
 
 .mobile {
@@ -337,3 +348,27 @@ a {
     width: 100px;
     height: 100px;
 }
+
+/* Flickity */
+.gallery {
+    background: #EEE;
+    margin-bottom: 2em;
+  }
+  
+  .gallery-cell {
+    width: 20%;
+    height: 340px;
+     margin-right: 5px; 
+    background: orangered;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    /* content: counter(gallery-cell); */
+    line-height: 200px;
+    /* font-size: ; */
+    color: orangered;
+  }
+  

@@ -13,7 +13,9 @@ let obj_literal_products = JSON.parse(products_json);
 
 const controlador = {
     home: (req, res) => {
-        res.render('home');
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('home', {products: products}) ;
     },
 
     homeAdmin: (req, res) => {
