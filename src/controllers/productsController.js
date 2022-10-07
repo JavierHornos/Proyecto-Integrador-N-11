@@ -189,31 +189,59 @@ const controladorProductos =
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
         let lista_de_objetos_literales_productos = JSON.parse(products_json);
 
+        let nombreImagenAntigua = "";
+
 		for (let objeto_producto of lista_de_objetos_literales_productos){
 			if (objeto_producto.id==idProducto){
+
+                nombreImagenAntigua = objeto_producto.image;
+
 				objeto_producto.name = datosProducto.name;
 				objeto_producto.price = parseInt(datosProducto.price);
 				objeto_producto.discount = parseInt(datosProducto.discount);
 				objeto_producto.category = datosProducto.category;
 				objeto_producto.description = datosProducto.description;
+                objeto_producto.image = req.file.filename
 				break;
 			}
 		}
 
 		fs.writeFileSync('./src/database/productosDataBase.json', JSON.stringify(lista_de_objetos_literales_productos, null, " "), 'utf-8');
-		res.redirect('/home-admin');
+
+        
+
+        fs.unlinkSync(__dirname+'/../../public/imagenes/'+nombreImagenAntigua)
+        
+            res.redirect('/home-admin');
     },
 
    //* BORRAR *//
 
     borrarProducto: (req, res) => {
         let idProducto = req.params.id;
+        let products_json = fs.readFileSync('./src/database/productosDataBase.json');
+        let obj_literal_products = JSON.parse(products_json);
+
+        let nombreImagenAntigua = "";
+
+        for (let objeto_producto of obj_literal_products){
+			if (objeto_producto.id==idProducto){
+                nombreImagenAntigua = objeto_producto.image;
+            }
+
+				
+		}
 		
 		let NuevaListaProductos = products.filter(function(e){
 			return e.id!=idProducto;
+        
 		});
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(NuevaListaProductos, null, " "),'utf-8');
+
+        fs.unlinkSync(__dirname+'/../../public/imagenes/'+nombreImagenAntigua)
+
+        
 
 		res.redirect('/home-admin');
         

@@ -6,6 +6,20 @@ const path = require('path');
 const multer = require('multer');   // multer
 
 
+//* MULTER *//
+const multerDiskStorage = multer.diskStorage({
+    destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
+     cb(null, path.join(__dirname,'../../public/imagenes'));    // Ruta donde almacenamos el archivo
+    },
+    filename: function(req, file, cb) {          // request, archivo y callback que almacena archivo en destino
+     let imageName = Date.now() + path.extname(file.originalname);   // milisegundos y extensión de archivo original
+     cb(null, imageName);         
+    }
+});
+
+const uploadFile = multer({ storage: multerDiskStorage });
+
+
 // Productos//
 router.get ('/whiskies', productsController.whiskies)
 router.get ('/vinos', productsController.vinos)
@@ -39,25 +53,10 @@ router.get ('/creacion-producto', productsController.crear)
 
 //* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', productsController.editarProducto)
-router.put ('/editar-producto/:id', productsController.actualizarProducto)
+router.put ('/editar-producto/:id', uploadFile.single('cImage'), productsController.actualizarProducto)
 
 //* BORRAR PRODUCTO *//
 router.delete('/detalle-producto/:id', productsController.borrarProducto)
-
-
-
-//* MULTER *//
-const multerDiskStorage = multer.diskStorage({
-    destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
-     cb(null, path.join(__dirname,'../../public/imagenes'));    // Ruta donde almacenamos el archivo
-    },
-    filename: function(req, file, cb) {          // request, archivo y callback que almacena archivo en destino
-     let imageName = Date.now() + path.extname(file.originalname);   // milisegundos y extensión de archivo original
-     cb(null, imageName);         
-    }
-});
-
-const uploadFile = multer({ storage: multerDiskStorage });
 
 
 //* CREAR PRODUCTO CON FOTO MULTER *//
