@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fa3a2d0319.js" crossorigin="anonymous"></script>
+    <link href="/css/productos-todos.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <%- include("../partials/header.ejs") %> 
+
+         <main class="container-grid">
+        <% for(let p of promociones) { %>
+
+        <div class="producto">
+            <img src="/imagenes/<%=p.image%>" alt="Jack Daniels">
+            <div class="informacion">
+                <span class="tipo-envio">Envio con normalidad</span>
+                <br>
+                <span class="precio">$<%=p.price%></span>
+                <span class="precio-envio">Envío gratis</span>
+                <span class="descripcion"><%= p.description %></span>
+                <div class="calificacion">
+                    <span><i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i>
+                <i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i></span>
+                    <span>1919</span>
+                </div>
+                <br>
+                <a href="./detalle-producto/<%=p.id%>" style="align-items:center"> 
+                    <input class="detalle-producto" type="button" value="Detalle Producto">
+                    </a>
+                
+                <span class="conStock" style="align-items:center">Stock disponible</span>
+            </div>
+        </div>
+        <% } %> 
+
+      
+
+    </main>
+
+    
+    <footer> 
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+
+</body>
+
+</html>

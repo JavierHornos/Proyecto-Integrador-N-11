@@ -14,19 +14,19 @@
     <%- include("../partials/header.ejs") %>
 
     <main>
-        <form class="tyc">
+        <form action="/users/registro" methdo="POST" class="tyc">
             <div class="container1">
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required>
+                        <input type="text" class="form-control" placeholder="Nombre" name="Nombre" aria-label="Nombre" required>
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                        <input type="text" class="form-control" placeholder="Apellido" name="Apellido" aria-label="Apellido">
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Nombre de Usuario" aria-label="Nombre de usuario" required >
+                        <input type="text" class="form-control" placeholder="Nombre de Usuario" name="Usuario" aria-label="Nombre de usuario" required >
                     </div>
                     <div class="col-6">
-                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" required>
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password"  aria-label="Contraseña" required>
                     </div>
                 
                     <div class="col-6">
@@ -35,7 +35,7 @@
                     </div>
                     
                     <div class="col-6">
-                        <input type="email" class="form-control" placeholder="Mail" aria-label="mail">
+                        <input type="email" class="form-control" placeholder="Mail" name="email" aria-label="mail">
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" placeholder="Dni" aria-label="dni">

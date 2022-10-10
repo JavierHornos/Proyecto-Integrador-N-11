@@ -106,6 +106,14 @@ const controladorProductos =
         res.render('./products/accesorios', {soloAccesorios: soloAccesorios});
     },
 
+    promociones: (req, res) => {
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let promociones = products.filter((prod) => prod.discount > 3)
+        res.render('./products/promociones', {promociones: promociones});
+               
+      },
+
 
     productosTodos: (req, res) => {
         const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
@@ -142,7 +150,7 @@ const controladorProductos =
 
     //* CARRITO *//
     carrito: (req, res) => {
-        res.render('./products/carrito');
+        res.render('./products/carrito',);
     },
 
     carritoCargado: (req, res) => {

@@ -1,9 +1,14 @@
 const productsController = require('./../controllers/productsController')
+let adminMiddleware = require('../middlewares/adminMiddleware')         // Middleares para restringir administradores
 
 const express = require('express');
 const router = express.Router();
+const app = express();
 const path = require('path');
 const multer = require('multer');   // multer
+const logDBMiddleware = require('../middlewares/logDBMiddleware')
+
+
 
 
 //* MULTER *//
@@ -31,8 +36,9 @@ router.get ('/ron', productsController.ron)
 router.get ('/aperitivos', productsController.aperitivos)
 router.get ('/cervezas', productsController.cervezas)
 router.get ('/accesorios', productsController.accesorios)
+router.get('/promociones', productsController.promociones)
 router.get('/productos-todos', productsController.productosTodos)
-router.get('/productos-todos-admin', productsController.productosTodosAdmin)
+router.get('/productos-todos-admin', adminMiddleware, productsController.productosTodosAdmin)
 
 
 // Carrito
@@ -44,25 +50,25 @@ router.get ('/carrito-cargado', productsController.carritoCargado)
 //* DETALLE PRODUCTO *//
 router.get ('/detalle-producto/:id', productsController.detalleProducto)
 
-router.get ('/detalle-producto-admin/:id', productsController.detalleProductoAdmin)
+router.get ('/detalle-producto-admin/:id', adminMiddleware, productsController.detalleProductoAdmin)
 
 
 //* CREAR PRODUCTO *//
-router.get ('/creacion-producto', productsController.crear)
+router.get ('/creacion-producto', adminMiddleware, logDBMiddleware, productsController.crear)
 
 
 //* EDITAR PRODUCTO *//
-router.get('/editar-producto/:id', productsController.editarProducto)
-router.put ('/editar-producto/:id', uploadFile.single('cImage'), productsController.actualizarProducto)
+router.get('/editar-producto/:id', adminMiddleware, productsController.editarProducto)
+router.put ('/editar-producto/:id', adminMiddleware, uploadFile.single('cImage'), logDBMiddleware, productsController.actualizarProducto)
 
 //* BORRAR PRODUCTO *//
-router.delete('/detalle-producto/:id', productsController.borrarProducto)
+router.delete('/detalle-producto/:id', adminMiddleware, productsController.borrarProducto)
 
 
 //* CREAR PRODUCTO CON FOTO MULTER *//
 router.get ("/crear", productsController.crear);
 
-router.post ("/crear", uploadFile.single('cImage') ,productsController.store);
+router.post ("/crear", uploadFile.single('cImage'), productsController.store);
 
 
 

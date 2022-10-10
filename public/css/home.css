@@ -356,8 +356,8 @@ a {
   }
   
   .gallery-cell {
-    width: 20%;
-    height: 340px;
+    width: 200px;
+    height: 400px;
      margin-right: 5px; 
     background: orangered;
     counter-increment: gallery-cell;
