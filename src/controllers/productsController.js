@@ -192,7 +192,6 @@ const controladorProductos =
     },
 
     actualizarProducto: (req, res) =>{
-
 		let idProducto = req.params.id;
 		let datosProducto = req.body;
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
@@ -217,16 +216,23 @@ const controladorProductos =
 
 		fs.writeFileSync('./src/database/productosDataBase.json', JSON.stringify(lista_de_objetos_literales_productos, null, " "), 'utf-8');
 
+<<<<<<< HEAD
         
 
         fs.unlinkSync(__dirname+'/../../public/imagenes/'+nombreImagenAntigua)
         
             res.redirect('/home-admin');
+=======
+        fs.unlinksync(__dirname,'/../../public/imagenes/' + imagenAntigua)
+
+		res.redirect('/home-admin');
+>>>>>>> 298d835 (no va)
     },
 
    //* BORRAR *//
 
     borrarProducto: (req, res) => {
+
         let idProducto = req.params.id;
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
         let obj_literal_products = JSON.parse(products_json);
@@ -248,9 +254,13 @@ const controladorProductos =
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(NuevaListaProductos, null, " "),'utf-8');
 
+<<<<<<< HEAD
         fs.unlinkSync(__dirname+'/../../public/imagenes/'+nombreImagenAntigua)
 
         
+=======
+        fs.unlinksync(__dirname,'/../../public/imagenes/' + imagenAntigua)
+>>>>>>> 298d835 (no va)
 
 		res.redirect('/home-admin');
         
