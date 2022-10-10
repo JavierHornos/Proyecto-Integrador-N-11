@@ -358,10 +358,11 @@ a {
     padding-top: 0.7em;
 
   }
-
-  .flickity-prev-next-button .flickity-prev-next-button {
+  .flickity-prev-next-button.previous .flickity-prev-next-button.next{
     background-color: #000;
   }
+
+  
 
   .flickity-prev-next-button .flickity-button-icon {
     
