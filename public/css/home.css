@@ -164,6 +164,7 @@ body{
     width: 100%;
     /* object-fit: cover; */
     height: 300px;
+    border-radius: 8px;
 }
 
 .texto-centrado {
@@ -357,6 +358,15 @@ a {
     padding-top: 0.7em;
 
   }
+
+  .flickity-prev-next-button .flickity-prev-next-button {
+    background-color: #000;
+  }
+
+  .flickity-prev-next-button .flickity-button-icon {
+    
+    color: orangered;
+  }
   
   .dot.is-selected{
 background-color: orangered !important;
@@ -368,6 +378,7 @@ background-color: orangered !important;
      margin-right: 5px; 
     background: orangered;
     text-align: center;
+    border-radius: 8px;
     
   }
   
