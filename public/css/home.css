@@ -110,7 +110,7 @@ body{
 
 .fondo-imagenes {
     background-image: url("../imagenes/cerveza4.jpeg");
-    height: 90vh;
+    height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: ; */
