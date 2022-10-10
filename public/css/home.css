@@ -367,6 +367,10 @@ a {
     
     color: orangered;
   }
+
+  .flickity-page-dots{
+    display: none;
+  }
   
   .dot.is-selected{
 background-color: orangered !important;
