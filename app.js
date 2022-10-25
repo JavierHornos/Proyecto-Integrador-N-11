@@ -21,12 +21,12 @@ app.use(express.urlencoded({ extended: false }));  // necesario para recibir la 
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(logMiddleware);
-//app.use(session({secret: 'Secreto'}));  //express-session a nivel apliacion, para todas las paginas
-app.use(session({
+app.use(session({secret: 'Secreto'}));  //express-session a nivel apliacion, para todas las paginas
+/*app.use(session({
     secret:'secreto',
     resave: true,
     saveUninitialized: true
-}));
+}));*/
 
 app.use(cookieParser());
 
