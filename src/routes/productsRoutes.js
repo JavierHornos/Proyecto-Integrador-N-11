@@ -6,7 +6,6 @@ const router = express.Router();
 const app = express();
 const path = require('path');
 const multer = require('multer');   // multer
-const logDBMiddleware = require('../middlewares/logMiddleware')
 
 
 
