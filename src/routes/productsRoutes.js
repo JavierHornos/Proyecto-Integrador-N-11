@@ -70,6 +70,11 @@ router.get ("/crear", productsController.crear);
 
 router.post ("/crear", uploadFile.single('cImage'), productsController.store);
 
+//* EDITAR PRODUCTO CON FOTO MULTER *//
+router.get("/editar-producto/:id", productsController.editarProducto)
+router.put ("/editar-producto/:id", uploadFile.single('cImage'), productsController.actualizarProducto)
+
+
 
 
 

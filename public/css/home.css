@@ -110,7 +110,7 @@ body{
 
 .fondo-imagenes {
     background-image: url("../imagenes/cerveza4.jpeg");
-    height: 90vh;
+    height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: ; */
@@ -164,6 +164,7 @@ body{
     width: 100%;
     /* object-fit: cover; */
     height: 300px;
+    border-radius: 8px;
 }
 
 .texto-centrado {
@@ -357,6 +358,22 @@ a {
     padding-top: 0.7em;
 
   }
+  .flickity-prev-next-button.previous {
+    background-color: #000;
+  }
+
+  .flickity-prev-next-button.next{
+    background-color: #000;
+  }
+
+  .flickity-prev-next-button .flickity-button-icon {
+    
+    color: orangered;
+  }
+
+  .flickity-page-dots{
+    display: none;
+  }
   
   .dot.is-selected{
 background-color: orangered !important;
@@ -368,6 +385,7 @@ background-color: orangered !important;
      margin-right: 5px; 
     background: orangered;
     text-align: center;
+    border-radius: 8px;
     
   }
   

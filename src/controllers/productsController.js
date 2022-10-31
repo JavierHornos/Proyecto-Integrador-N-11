@@ -226,6 +226,7 @@ const controladorProductos =
    //* BORRAR *//
 
     borrarProducto: (req, res) => {
+
         let idProducto = req.params.id;
         let products_json = fs.readFileSync('./src/database/productosDataBase.json');
         let obj_literal_products = JSON.parse(products_json);
