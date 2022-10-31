@@ -119,6 +119,13 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     text-align: left !important;
 }
 
+.tyc{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
 /*burga*/
 #hamnav{
     display: none;
