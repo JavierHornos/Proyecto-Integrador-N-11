@@ -53,12 +53,12 @@ router.get ('/detalle-producto-admin/:id', adminMiddleware, productsController.d
 
 
 //* CREAR PRODUCTO *//
-router.get ('/creacion-producto', adminMiddleware, logDBMiddleware, productsController.crear)
+router.get ('/creacion-producto', adminMiddleware, productsController.crear)
 
 
 //* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', adminMiddleware, productsController.editarProducto)
-router.put ('/editar-producto/:id', adminMiddleware, uploadFile.single('cImage'), logDBMiddleware, productsController.actualizarProducto)
+router.put ('/editar-producto/:id', adminMiddleware, uploadFile.single('cImage'), productsController.actualizarProducto)
 
 //* BORRAR PRODUCTO *//
 router.delete('/detalle-producto/:id', adminMiddleware, productsController.borrarProducto)
