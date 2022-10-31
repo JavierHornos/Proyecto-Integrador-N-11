@@ -1,6 +1,6 @@
 const path = require('path');
 let fs = require('fs');
-const { validationResult } = require('express-validator');
+//const { validationResult } = require('express-validator');
 
 let user_json = fs.readFileSync('./src/database/usuariosDataBase.json');
 let obj_literal_users = JSON.parse(user_json);
