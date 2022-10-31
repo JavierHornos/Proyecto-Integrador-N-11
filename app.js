@@ -5,7 +5,6 @@ const methodOverride =  require('method-override');              // Pasar poder 
 const express = require('express');                            
 const path = require('path');                                   
 const app = express();
-const logMiddleware = require('./src/middlewares/logMiddleware')   // requiero el logMiddleware Global
 const session = require('express-session');                     // express-session
 const cookieParser = require('cookie-parser');                  //cookie parser
 
@@ -20,7 +19,6 @@ app.use(express.static(path.join(__dirname, '../public')));  // Necesario para l
 app.use(express.urlencoded({ extended: false }));  // necesario para recibir la info que viaja en un formulario
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use(logMiddleware);
 app.use(session({secret: 'Secreto'}));  //express-session a nivel apliacion, para todas las paginas
 /*app.use(session({
     secret:'secreto',
