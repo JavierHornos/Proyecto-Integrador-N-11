@@ -1,4 +1,4 @@
-[{"id":1,"Nombre":"Francisco","Apellido":"Valenza","Usuario":"Fran","email":"Franciscovalenza@gmail.com","Password":"Fran2022","image": "../../imagenes/Fran.jpeg"},
+[{"id":1,"Nombre":"Francisco","Apellido":"Valenza","Usuario":"Fran","email":"franciscovalenza@gmail.com","Password":"Fran2022","image": "../../imagenes/Fran.jpeg"},
 {"id":2,"Nombre":"Lucas","Apellido":"Vallone","Usuario":"Lucas","email":"Lucasvallone@gmail.com","Password":"Lucas2022","image": "../../imagenes/Lucas.jpeg"},
 {"id":3,"Nombre":"Laura","Apellido":"Nunez","Usuario":"Laura","email":"lauranunez1412@gmail.com","Password":"Laura2022","image": "../../imagenes/Laura.jpeg"},
 {"id":4,"Nombre":"Javier","Apellido":"Hornos","Usuario":"Javi","email":"hjavih@gmail.com","Password":"Javier2022","image": "../../imagenes/Javi.jpeg"},
