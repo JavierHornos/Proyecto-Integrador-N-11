@@ -19,14 +19,14 @@ app.use(express.static(path.join(__dirname, '../public')));  // Necesario para l
 app.use(express.urlencoded({ extended: false }));  // necesario para recibir la info que viaja en un formulario
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use(session({secret: 'Secreto'}));  //express-session a nivel apliacion, para todas las paginas
-/*app.use(session({
+app.use(cookieParser());
+/// app.use(session({secret: 'Secreto'}));  //express-session a nivel apliacion, para todas las paginas
+app.use(session({
     secret:'secreto',
     resave: true,
     saveUninitialized: true
-}));*/
+}));
 
-app.use(cookieParser());
 
 
 app.use('/', mainRoutes); // se concatenan las rutas del primer y segundo parámetro 
@@ -34,6 +34,7 @@ app.use('/', mainRoutes); // se concatenan las rutas del primer y segundo parám
 app.use('/users', usersRouters);
 
 app.use('/products', productsRouters);
+
 
 
 

@@ -71,7 +71,10 @@ const controladorUsers =
                
 
         perfil: (req, res) => {
-                res.render('./users/perfil',);
+                res.render('./users/perfil',  {user: req.session.usuarioLogueado},)
+                // console.log(req.session.usuarioLogueado);
+                 
+                // res.render('./users/perfil',);
         },
 }
 

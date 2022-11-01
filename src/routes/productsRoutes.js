@@ -10,6 +10,7 @@ const multer = require('multer');   // multer
 
 
 
+
 //* MULTER *//
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
@@ -68,11 +69,6 @@ router.delete('/detalle-producto/:id', adminMiddleware, productsController.borra
 router.get ("/crear", productsController.crear);
 
 router.post ("/crear", uploadFile.single('cImage'), productsController.store);
-
-//* EDITAR PRODUCTO CON FOTO MULTER *//
-router.get("/editar-producto/:id", productsController.editarProducto)
-router.put ("/editar-producto/:id", uploadFile.single('cImage'), productsController.actualizarProducto)
-
 
 
 
