@@ -1,7 +1,76 @@
-[{"id":1,"Nombre":"Francisco","Apellido":"Valenza","Usuario":"Fran","email":"franciscovalenza@gmail.com","Password":"Fran2022","image": "../../imagenes/Fran.jpeg"},
-{"id":2,"Nombre":"Lucas","Apellido":"Vallone","Usuario":"Lucas","email":"Lucasvallone@gmail.com","Password":"Lucas2022","image": "../../imagenes/Lucas.jpeg"},
-{"id":3,"Nombre":"Laura","Apellido":"Nunez","Usuario":"Laura","email":"lauranunez1412@gmail.com","Password":"Laura2022","image": "../../imagenes/Laura.jpeg"},
-{"id":4,"Nombre":"Javier","Apellido":"Hornos","Usuario":"Javi","email":"hjavih@gmail.com","Password":"Javier2022","image": "../../imagenes/Javi.jpeg"},
-{"id":5,"Nombre":"Jeronimo","Apellido":"Sola","Usuario":"Jero","email":"jsola@digitalhouse.com","Password":"Jero2022","image": "../../imagenes/Jero.png"},
-{"id":6,"Nombre":"Emilio","Apellido":"Baudracco","Usuario":"Emi","email":"emilio.baudracco@digitalhouse.com","Password":"Emi2022","image": "../../imagenes/Emi.jpeg"},
-{"id":7,"Nombre":"Nicolas","Apellido":"Gomez","Usuario":"Nico","email":"nicolas.gomez@digitalhouse.com","Password":"Nico2022","image": "../../imagenes/Nico.jpeg"}]
+[
+ {
+  "id": 1,
+  "Nombre": "Francisco",
+  "Apellido": "Valenza",
+  "Usuario": "Fran",
+  "email": "franciscovalenza@gmail.com",
+  "Password": "Fran2022",
+  "image": "../../imagenes/Fran.jpeg"
+ },
+ {
+  "id": 2,
+  "Nombre": "Lucas",
+  "Apellido": "Vallone",
+  "Usuario": "Lucas",
+  "email": "Lucasvallone@gmail.com",
+  "Password": "Lucas2022",
+  "image": "../../imagenes/Lucas.jpeg"
+ },
+ {
+  "id": 3,
+  "Nombre": "Laura",
+  "Apellido": "Nunez",
+  "Usuario": "Laura",
+  "email": "lauranunez1412@gmail.com",
+  "Password": "Laura2022",
+  "image": "../../imagenes/Laura.jpeg"
+ },
+ {
+  "id": 4,
+  "Nombre": "Javier",
+  "Apellido": "Hornos",
+  "Usuario": "Javi",
+  "email": "hjavih@gmail.com",
+  "Password": "Javier2022",
+  "image": "../../imagenes/Javi.jpeg"
+ },
+ {
+  "id": 5,
+  "Nombre": "Jeronimo",
+  "Apellido": "Sola",
+  "Usuario": "Jero",
+  "email": "jsola@digitalhouse.com",
+  "Password": "Jero2022",
+  "image": "../../imagenes/Jero.png"
+ },
+ {
+  "id": 6,
+  "Nombre": "Emilio",
+  "Apellido": "Baudracco",
+  "Usuario": "Emi",
+  "email": "emilio.baudracco@digitalhouse.com",
+  "Password": "Emi2022",
+  "image": "../../imagenes/Emi.jpeg"
+ },
+ {
+  "id": 7,
+  "Nombre": "Nicolas",
+  "Apellido": "Gomez",
+  "Usuario": "Nico",
+  "email": "nicolas.gomez@digitalhouse.com",
+  "Password": "Nico2022",
+  "image": "../../imagenes/Nico.jpeg"
+ },
+ {
+  "id": 8,
+  "Nombre": "sr",
+  "Apellido": "lopez",
+  "Password": "$2b$10$Hu8RWCo6fJoIi23Ptx.KteA8P1N1PcGTOF09nTlr2NNKW67r3zkbq",
+  "dni": "1233366455",
+  "usuario": "troloman",
+  "email": "lol@lol.es",
+  "domicilio": "calle ciega 12",
+  "nacimiento": "1985-12-04"
+ }
+]
