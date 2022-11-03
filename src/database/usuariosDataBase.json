@@ -72,5 +72,16 @@
   "email": "lol@lol.es",
   "domicilio": "calle ciega 12",
   "nacimiento": "1985-12-04"
+ },
+ {
+  "id": 9,
+  "Nombre": "carlos",
+  "Apellido": "carleti",
+  "Password": "$2b$10$gmZuwyzZ3CQmPt23hlGBser92HtkjWuPJYCdx.HpL8dad7FMMqkmS",
+  "dni": "123456789",
+  "usuario": "carlos",
+  "email": "carlos.carleti@gmail.com",
+  "domicilio": "cf 123",
+  "nacimiento": "1901-01-01"
  }
 ]
