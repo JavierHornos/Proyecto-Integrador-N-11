@@ -382,7 +382,7 @@
   "name": "Cerveza Artesanal Soñada Irish",
   "price": 5999,
   "discount": 10,
-  "category": "Whiskies",
+  "category": "Cervezas",
   "description": "Cerveza Artesanal Soñada Irish Red 500 Ml",
   "image": "1665156554781.png"
  },
@@ -403,5 +403,14 @@
   "category": "Vinos",
   "description": "fdfdfdfdfd",
   "image": "1667677307392.JPG"
+ },
+ {
+  "id": 48,
+  "name": "vinito",
+  "price": 10000,
+  "discount": 20,
+  "category": "Vinos",
+  "description": "asdasd",
+  "image": "1667689974189.jpg"
  }
 ]

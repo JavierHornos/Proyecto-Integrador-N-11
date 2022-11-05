@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const router = express.Router();
 const {check} = require('express-validator');   // usamos check del express validator
+const multerAvatar = require('../middlewares/multerAvatar')
 
 
 router.get('/login', usersController.iniciarSesion);
@@ -28,11 +29,7 @@ router.get('/registro', usersController.registrarse);
 router.post('/registro',[                                                                                                         
                         check('mail').isEmail().withMessage('Email invalido'),                                                 // validamos email
                         check('password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
-                    ], usersController.procesoRegistro)
-
+                    ],multerAvatar.single('cImage'), usersController.procesoRegistro)
 
 router.get ('/perfil', usersController.perfil)
-
-
-
 module.exports = router;

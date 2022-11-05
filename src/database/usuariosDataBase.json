@@ -83,5 +83,29 @@
   "email": "carlos.carleti@gmail.com",
   "domicilio": "cf 123",
   "nacimiento": "1901-01-01"
+ },
+ {
+  "id": 10,
+  "Nombre": "lucas",
+  "Apellido": "vallone",
+  "password": "$2b$10$THUMp85wDgbpB/vMXIITAuVaO3we5AdbxE2MdlrI23dfocNpg2fvi",
+  "dni": "37542385",
+  "usuario": "vallonel",
+  "email": "luks.dvt@gmail.com",
+  "domicilio": "calle falsa",
+  "nacimiento": "2022-11-09",
+  "image": "1667686054584.jpg"
+ },
+ {
+  "id": 11,
+  "Nombre": "lucas",
+  "Apellido": "vallone2",
+  "password": "$2b$10$3H0GYbuObFz/DjxtCgu.vu.nyDjnc2MQdo1qdaUx2ZgsMMwx5vOQm",
+  "dni": "37542385",
+  "usuario": "vallonel3",
+  "email": "luks.dvt1@gmail.com",
+  "domicilio": "calle falsa",
+  "nacimiento": "2022-11-18",
+  "image": "1667689656262.jpg"
  }
 ]

@@ -1,3 +1,7 @@
+const multer = require('multer')
+const path = require ('path')
+
+
 //* MULTER *//
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino

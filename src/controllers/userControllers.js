@@ -1,6 +1,7 @@
 const path = require('path');
 let fs = require('fs');
 const { validationResult } = require('express-validator');
+const bcrypt=require ('bcrypt')
 
 let user_json = fs.readFileSync('./src/database/usuariosDataBase.json');
 let obj_literal_users = JSON.parse(user_json);
@@ -30,7 +31,7 @@ const controladorUsers =
                                 if (users[i].email == req.body.email) { // comparamos email del json con lo que viene del formulario
 
                                         // usamos encriptado para comparar la clave
-                                        bcrypt.compare(req.body.password, users[i].Password, function(err, laClaveEsCorrecta) {
+                                        bcrypt.compare(req.body.password, users[i].password, function(err, laClaveEsCorrecta) {
                                                 if (laClaveEsCorrecta == true) {
                                                         usuarioALoguearse = users[i]; // encontramos al usuario y lo agregamos a usuarioALoguearse
 
@@ -63,7 +64,8 @@ const controladorUsers =
         procesoRegistro: (req, res) => {
                 let errors = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
 
-                if (errors.isEmpty()) { // si no hay errores hacemos toda la logica
+                if (errors.isEmpty());
+                { // si no hay errores hacemos toda la logica
                         // // ** VALIDANDO A USUARIO ** 
                         const usersFilePath = path.join(__dirname, '../database/usuariosDataBase.json');  
                         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -77,12 +79,13 @@ const controladorUsers =
                                         "id": idNuevoUsuario,
                                         "Nombre": req.body.nombre,
                                         "Apellido": req.body.apellido,
-                                        "Password": hash,
+                                        "password": hash,
                                         "dni": req.body.dni,
                                         "usuario": req.body.usuario,
                                         "email": req.body.mail,
                                         "domicilio": req.body.domicilio,
-                                        "nacimiento": req.body.nacimiento
+                                        "nacimiento": req.body.nacimiento,
+                                        "image": req.file.filename
                                 }
         
                                 users.push(nuevoUsuario);
