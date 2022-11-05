@@ -15,15 +15,13 @@
     <%- include("../partials/header.ejs") %>
 
         <main>
-            <form action="/users/registro" class="formlogin">
-
-
+            <form action="/users/registro" method="post" class="formlogin">
                 <div class="container">
                     <input class="form" type="text" id="name" name="usuario" required>
                     <label class="label" for="name">Usuario</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="password" id="name" name="contraseña" required>
+                    <input class="form" type="password" id="name" name="password" required>
                     <label class="label" for="name">Contraseña</label>
                 </div>
                 <div class="container">
@@ -44,7 +42,7 @@
                     <label class="label" for="name">Mail</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="text" id="name" name="Domicilio" required>
+                    <input class="form" type="text" id="name" name="domicilio" required>
                     <label class="label" for="name">Domicilio</label>
                 </div>
                 <div class="container">

@@ -2,12 +2,22 @@ const mainController= require('./../controllers/mainController')
 let adminMiddleware = require('../middlewares/adminMiddleware')         // Middleares para restringir administradores
 
 
+
+
 const express = require ('express');
 const router = express.Router();
 
 router.get ('/' , mainController.home)
 
 router.get ('/home-admin' , adminMiddleware, mainController.homeAdmin)
+
+router.get ('/contacto', mainController.contacto)
+
+router.post ('/contacto', mainController.enviando)
+
+
+
+
 
 
 
