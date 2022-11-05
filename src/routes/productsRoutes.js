@@ -5,14 +5,14 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 const path = require('path');
-const multer = require('multer');   // multer
-
+/*const multer = require('multer');   // multer*/
+const multerProductos = require('../middlewares/multerProducto')
 
 
 
 
 //* MULTER *//
-const multerDiskStorage = multer.diskStorage({
+/*const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
      cb(null, path.join(__dirname,'../../public/imagenes'));    // Ruta donde almacenamos el archivo
     },
@@ -22,7 +22,7 @@ const multerDiskStorage = multer.diskStorage({
     }
 });
 
-const uploadFile = multer({ storage: multerDiskStorage });
+const uploadFile = multer({ storage: multerDiskStorage });*/
 
 
 // Productos//
@@ -59,16 +59,16 @@ router.get ('/creacion-producto', adminMiddleware, productsController.crear)
 
 //* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', adminMiddleware, productsController.editarProducto)
-router.put ('/editar-producto/:id', adminMiddleware, uploadFile.single('cImage'), productsController.actualizarProducto)
+router.put ('/editar-producto/:id', adminMiddleware, multerProductos.single('cImage')/*uploadFile.single('cImage')*/, productsController.actualizarProducto)
 
 //* BORRAR PRODUCTO *//
 router.delete('/detalle-producto/:id', adminMiddleware, productsController.borrarProducto)
 
 
 //* CREAR PRODUCTO CON FOTO MULTER *//
-router.get ("/crear", productsController.crear);
+router.get ("/crear",multerProductos.single('cImage'), productsController.crear);
 
-router.post ("/crear", uploadFile.single('cImage'), productsController.store);
+router.post ("/crear",multerProductos.single('cImage'), /*uploadFile.single('cImage')*/productsController.store);
 
 
 
