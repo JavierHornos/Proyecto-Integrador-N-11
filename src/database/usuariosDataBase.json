@@ -3,109 +3,84 @@
   "id": 1,
   "Nombre": "Francisco",
   "Apellido": "Valenza",
-  "Usuario": "Fran",
+  "password": "$2b$10$cy9CH9UIcRO/p8Bupeh7n.K2nKg1bLQE67UJ93pirVLlLBN6BU6v.",
+  "dni": "99999999",
+  "usuario": "Fran",
   "email": "franciscovalenza@gmail.com",
-  "Password": "Fran2022",
-  "image": "../../imagenes/Fran.jpeg"
+  "domicilio": "Carmelo Benito 69",
+  "nacimiento": "1989-11-11",
+  "image": "1667745576735.jpeg"
  },
  {
   "id": 2,
   "Nombre": "Lucas",
   "Apellido": "Vallone",
-  "Usuario": "Lucas",
+  "password": "$2b$10$yopIrCLboV/xEIqGsA7J6Ogbh.D3lz2Aa8JATpn2XfVXvTcnwEtLq",
+  "dni": "37542385",
+  "usuario": "Vallone",
   "email": "Lucasvallone@gmail.com",
-  "Password": "Lucas2022",
-  "image": "../../imagenes/Lucas.jpeg"
+  "domicilio": "calle falsa",
+  "nacimiento": "2018-12-09",
+  "image": "1667745773706.jpeg"
  },
  {
   "id": 3,
   "Nombre": "Laura",
   "Apellido": "Nunez",
-  "Usuario": "Laura",
+  "password": "$2b$10$gc5aI6g6b6zf4HEJxH/JruM4MeExNx4E7TfzA7Hxc1RbFxSk4iGbC",
+  "dni": "99999999",
+  "usuario": "Laura",
   "email": "lauranunez1412@gmail.com",
-  "Password": "Laura2022",
-  "image": "../../imagenes/Laura.jpeg"
+  "domicilio": "Calle falsa 222",
+  "nacimiento": "1980-03-19",
+  "image": "1667745943738.jpeg"
  },
  {
   "id": 4,
   "Nombre": "Javier",
   "Apellido": "Hornos",
-  "Usuario": "Javi",
+  "password": "$2b$10$IKTyw6iCWF3C8WFxbNj6x.B2s8nnhgUTAyGw.731tUtMIN7kL2oSa",
+  "dni": "28285186",
+  "usuario": "hjavih",
   "email": "hjavih@gmail.com",
-  "Password": "Javier2022",
-  "image": "../../imagenes/Javi.jpeg"
+  "domicilio": "Honduras 4076",
+  "nacimiento": "1979-05-15",
+  "image": "1667744632235.jpeg"
  },
  {
   "id": 5,
   "Nombre": "Jeronimo",
   "Apellido": "Sola",
-  "Usuario": "Jero",
+  "password": "$2b$10$22fxTxa62myiwzDrw6BvN.1NKikJBrzG0bc3K4tFJQibUQbgPzo5e",
+  "dni": "99999999",
+  "usuario": "Jero",
   "email": "jsola@digitalhouse.com",
-  "Password": "Jero2022",
-  "image": "../../imagenes/Jero.png"
+  "domicilio": "Calle falsa",
+  "nacimiento": "1985-06-15",
+  "image": "1667746042653.png"
  },
  {
   "id": 6,
-  "Nombre": "Emilio",
+  "Nombre": "Emiliano",
   "Apellido": "Baudracco",
-  "Usuario": "Emi",
+  "password": "$2b$10$7n1TiYSFGNuElIvOXMJ.ee6Ch1TzJ89EQ4XMuM6daXpkRtX6cc9pq",
+  "dni": "99999999",
+  "usuario": "Emi",
   "email": "emilio.baudracco@digitalhouse.com",
-  "Password": "Emi2022",
-  "image": "../../imagenes/Emi.jpeg"
+  "domicilio": "Calle falsa",
+  "nacimiento": "1989-12-22",
+  "image": "1667746116163.jpeg"
  },
  {
   "id": 7,
-  "Nombre": "Nicolas",
+  "Nombre": "Nico",
   "Apellido": "Gomez",
-  "Usuario": "Nico",
+  "password": "$2b$10$gwNIL1Ffb2ZXei6DO/LHd.0MoAzClWqsX50PssTwQcLE.9vlSOJHu",
+  "dni": "99999999",
+  "usuario": "Nico",
   "email": "nicolas.gomez@digitalhouse.com",
-  "Password": "Nico2022",
-  "image": "../../imagenes/Nico.jpeg"
- },
- {
-  "id": 8,
-  "Nombre": "sr",
-  "Apellido": "lopez",
-  "Password": "$2b$10$Hu8RWCo6fJoIi23Ptx.KteA8P1N1PcGTOF09nTlr2NNKW67r3zkbq",
-  "dni": "1233366455",
-  "usuario": "troloman",
-  "email": "lol@lol.es",
-  "domicilio": "calle ciega 12",
-  "nacimiento": "1985-12-04"
- },
- {
-  "id": 9,
-  "Nombre": "carlos",
-  "Apellido": "carleti",
-  "Password": "$2b$10$gmZuwyzZ3CQmPt23hlGBser92HtkjWuPJYCdx.HpL8dad7FMMqkmS",
-  "dni": "123456789",
-  "usuario": "carlos",
-  "email": "carlos.carleti@gmail.com",
-  "domicilio": "cf 123",
-  "nacimiento": "1901-01-01"
- },
- {
-  "id": 10,
-  "Nombre": "lucas",
-  "Apellido": "vallone",
-  "password": "$2b$10$THUMp85wDgbpB/vMXIITAuVaO3we5AdbxE2MdlrI23dfocNpg2fvi",
-  "dni": "37542385",
-  "usuario": "vallonel",
-  "email": "luks.dvt@gmail.com",
-  "domicilio": "calle falsa",
-  "nacimiento": "2022-11-09",
-  "image": "1667686054584.jpg"
- },
- {
-  "id": 11,
-  "Nombre": "lucas",
-  "Apellido": "vallone2",
-  "password": "$2b$10$3H0GYbuObFz/DjxtCgu.vu.nyDjnc2MQdo1qdaUx2ZgsMMwx5vOQm",
-  "dni": "37542385",
-  "usuario": "vallonel3",
-  "email": "luks.dvt1@gmail.com",
-  "domicilio": "calle falsa",
-  "nacimiento": "2022-11-18",
-  "image": "1667689656262.jpg"
- }
+  "domicilio": "Calle Falsa",
+  "nacimiento": "1987-03-22",
+  "image": "1667746180381.jpeg"
+}
 ]

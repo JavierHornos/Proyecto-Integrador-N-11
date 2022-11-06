@@ -6,7 +6,7 @@
   "discount": 50,
   "category": "Whiskies",
   "description": "Jack Daniel's Old No. 7 750 mL.",
-  "image": "../../imagenes/jack-daniels.png"
+  "image": "jack-daniels.png"
  },
  {
   "id": 2,
@@ -15,7 +15,7 @@
   "discount": 3,
   "category": "Whiskies",
   "description": "Aberlour Malt escocés 700 mL",
-  "image": "../../imagenes/Aberlour Single matl 12 Años escoces 700ml.png"
+  "image": "Aberlour Single matl 12 Años escoces 700ml.png"
  },
  {
   "id": 3,
@@ -24,7 +24,7 @@
   "discount": 25,
   "category": "Whiskies",
   "description": "Chivas Regal 12 Años Escocia 1 L.",
-  "image": "../../imagenes/Whisky Chivas Regal 12 Años Escocia botella 1 L.png"
+  "image": "Whisky Chivas Regal 12 Años Escocia botella 1 L.png"
  },
  {
   "id": 4,
@@ -33,7 +33,7 @@
   "discount": 25,
   "category": "Whiskies",
   "description": "Ballantine's escocés 750 mL",
-  "image": "../../imagenes/Ballantine's 12 Años escocés 750 mL.png"
+  "image": "Ballantine's 12 Años escocés 750 mL.png"
  },
  {
   "id": 7,
@@ -385,32 +385,5 @@
   "category": "Cervezas",
   "description": "Cerveza Artesanal Soñada Irish Red 500 Ml",
   "image": "1665156554781.png"
- },
- {
-  "id": 46,
-  "name": "veneeeto",
-  "price": 99999,
-  "discount": 10,
-  "category": "Vinos",
-  "description": "sdfsddfsdfsdf",
-  "image": "1667676670460.JPG"
- },
- {
-  "id": 47,
-  "name": "veneeeto",
-  "price": 99999,
-  "discount": 10,
-  "category": "Vinos",
-  "description": "fdfdfdfdfd",
-  "image": "1667677307392.JPG"
- },
- {
-  "id": 48,
-  "name": "vinito",
-  "price": 10000,
-  "discount": 20,
-  "category": "Vinos",
-  "description": "asdasd",
-  "image": "1667689974189.jpg"
  }
 ]
