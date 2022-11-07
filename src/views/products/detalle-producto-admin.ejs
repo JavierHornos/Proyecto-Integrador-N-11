@@ -41,8 +41,9 @@
                         <input type="button" value="500 mL">
                         <input type="button" value="750 mL">
                     </div>
-
-                    <a href="/products/editar-producto/<%= productoDetallado.id %>" class="al-carrito"  >EDITAR PRODUCTO</a>
+                    <a href="/products/editar-producto/<%= productoDetallado.id %>">
+                        <input class="al-carrito" type="button" value="EDITAR">
+                    </a>
 					<form action="/products/detalle-producto/<%= productoDetallado.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit"  class="al-carrito">ELIMINAR</button>
                     </form>
