@@ -1,5 +1,9 @@
 /*header*/
 
+body{
+    margin: 0%;
+}
+
 header{   
     background-color: black;
     align-items: center;
@@ -12,7 +16,7 @@ header .fila1{
 display: flex;
 justify-content: space-around;
 align-items: center;
-margin-bottom: 20px;
+margin-bottom: 14px;
 }
 
 header .ayb{
@@ -23,8 +27,11 @@ flex-grow: 3;
 height: 100%;
 }
 
+
 header .logo{
     flex-grow: 1;
+    /* margin-left: 2em; */
+    margin-top: 0.5em;
 }
 
 header .b{
@@ -212,7 +219,7 @@ header .fila2 .input-responsive button i:hover{
 
 
 a{
-    text-decoration: none;
+
     color: white;
 }
 a:hover{
@@ -240,7 +247,7 @@ li{
     padding-right: 15px;
     position: absolute;
     top: 25px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .fa:hover{
