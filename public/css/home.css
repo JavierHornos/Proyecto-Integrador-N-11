@@ -1,3 +1,6 @@
+.body{
+    background-color: black;
+}
 .encabezado {
     background-color: BLACK;
     color: white;
@@ -6,7 +9,6 @@
     font-size: 14px;
 
 }
-
 .ingresa a {
     text-decoration: none;
     color: white;
@@ -106,7 +108,7 @@
 
 .fondo-imagenes {
     background-image: url("../imagenes/cerveza4.jpeg");
-    height: 90vh;
+    height: 65vh;
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: ; */
@@ -351,16 +353,24 @@ a {
 
 /* Flickity */
 .gallery {
-    background: #EEE;
+    background: rgb(10, 10, 10);
     margin-bottom: 2em;
   }
   
+  .flickity-page-dots{
+    display: none
+  }
+
+  .flickity-button{
+    background:hsl(0deg 0% 0% / 75%);
+    color: orangered;
+  }
+
   .gallery-cell {
     width: 200px;
     height: 400px;
      margin-right: 5px; 
     background: orangered;
-    counter-increment: gallery-cell;
   }
   
   /* cell number */
