@@ -518,8 +518,8 @@ margin: 0;
  .container-grid{
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
-    margin-left: 180px;
+    justify-content: center;
+    margin-left: 20px;
     margin-bottom: 50px;
 
  }

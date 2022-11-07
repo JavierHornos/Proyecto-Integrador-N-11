@@ -508,6 +508,8 @@ header .b{
 header .menu2{
     flex-grow: 1;
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header .ayb input{
@@ -523,12 +525,21 @@ header .ayb button{
 
 }
 
+.acol-12{
+  margin: 7vh;
+}
+
 header .ayb button i{
     color: black !important;
 }
 
 header .ayb button i:hover{
     color: orange !important;
+}
+
+.contb{
+  display: flex;
+  justify-content: center;
 }
 
 header .fila2 {
