@@ -44,8 +44,11 @@ const controladorUsers =
                                                         if (req.body.recordame != undefined) {                                     // si el recordame del formulario no es undefined es porque fue tildado
                                                                 res.cookie('recordame', usuarioALoguearse.email, { maxAge: 300000 })  // las cookie viajan en el response, creamos una cookie, le damos un nombre y valor, y expiracion   
                                                         }
+
+                                                        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+                                                        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
                                 
-                                                        res.render('home-admin'); // lo mandamos a la vista final                                
+                                                        res.render('home-admin', { products: products}); // lo mandamos a la vista final                                
                                                 } else {
                                                         // clave es invalida!
                                                         return res.render('./users/login', {errors: [                 // mando array de errors a la vista de login

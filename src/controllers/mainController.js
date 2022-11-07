@@ -20,7 +20,9 @@ const controlador = {
     },
 
     homeAdmin: (req, res) => {
-        res.render('home-admin');
+        const productsFilePath = path.join(__dirname, '../database/productosDataBase.json');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('home-admin', {products: products} );
     },
 
     contacto: (req, res) => {

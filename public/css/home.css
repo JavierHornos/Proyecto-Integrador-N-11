@@ -1,11 +1,10 @@
 body{
-    background-color: rgb(10, 10, 10) !important;
+    background-color: #101010 !important;
 }
 
 .encabezado {
     background-color: BLACK;
     color: white;
-    /* height: 17vh;  */
     padding-top: 40px;
     font-size: 14px;
 
@@ -46,14 +45,12 @@ body{
     margin-left: 220px;
     margin-right: 220px;
     padding: 16px;
-    /* border-top: 18px solid black; */
-    /* margin-top: 6px !important; */
+
 }
 
 .medio {
     background-color: orangered;
     color: white;
-    /* height:65vh;  */
     padding: 0px !important;
     margin: 0;
 }
@@ -75,7 +72,6 @@ body{
 }
 
 .tope-de-arriba {
-    /* background-color: orangered; */
     height: 4vh;
     display: flex;
 
@@ -83,7 +79,6 @@ body{
 
 .boton-busqueda {
     display: inline;
-    /* height: 80%; */
     font-size: 0.85em !important;
     margin-top: -0.5em;
     background-color: #f0f0f0 !important;
@@ -103,9 +98,6 @@ border: #000 !important;
     height: 30px;
     margin-left: 0.5em;
     border-radius: 0% !important;
-
-
-
 }
 
 .centrar-buscador {
@@ -128,7 +120,6 @@ border: #000 !important;
     height: 65vh;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: ; */
     background-attachment: fixed;
 
 }
@@ -158,7 +149,6 @@ border: #000 !important;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
 }
 
 .container-grid{
@@ -171,7 +161,6 @@ border: #000 !important;
 
 .producto-home {
     width: 25%;
-    /* max-width: 25%; */
     position: relative;
     text-align: center !important;
 
@@ -179,7 +168,6 @@ border: #000 !important;
 
 .imagen-centrada {
     width: 100%;
-    /* object-fit: cover; */
     height: 300px;
 }
 
@@ -253,16 +241,13 @@ border: #000 !important;
 
     .tope-de-arriba {
         height: auto;
-        /* text-align: center; */
         padding-left: 1.5em;
 
     }
 
     .arriba {
         margin-top: 1em !important;
-        /* text-align: center; */
         display: flex;
-        /* align-items: center; */
     }
 
     .centrar-buscador {
@@ -338,10 +323,6 @@ border: #000 !important;
         background: #000;
     }
 
-    /*#hamitens {
-         display: flex; 
-    }*/
-
     #hamitens a {
         flex-grow: 1;
         flex-basis: 0;
@@ -378,10 +359,7 @@ a {
     background: rgb(10, 10, 10);
     margin-bottom: 2em;
   }
-  
-  .flickity-page-dots{
-    display: none
-  }
+
 
   .flickity-button{
     background:hsl(0deg 0% 0% / 75%);
@@ -400,9 +378,7 @@ a {
   /* cell number */
   .gallery-cell:before {
     display: block;
-    /* content: counter(gallery-cell); */
     line-height: 200px;
-    /* font-size: ; */
     color: orangered;
   }
   
