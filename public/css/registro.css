@@ -43,12 +43,11 @@ header .menu2 {
 
 header .ayb input {
     flex-grow: 50;
-    height: 40px;
+    height: 42px;
 }
 
 header .ayb button {
     flex-grow: 1;
-    height: 40px;
     color: black;
     cursor: pointer;
 
@@ -112,17 +111,30 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile {
     margin-inline-end: 0px !important;
     padding-inline-start: 20px !important;
 }
-
+.boton-busqueda{
+    background: white;
+    border: none;
+    position: absolute;
+    margin-left: 52rem;   
+    height: 37px;
+}
 header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     width: max-content;
     margin: 0 !important;
     text-align: left !important;
 }
+.myr{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
 
 .tyc{
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
     margin-bottom: 3vh;
 }
 
@@ -166,7 +178,7 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     #hamnav label { 
       display: inline-block; 
       color: white;
-      background: orange;
+      background: orangered;
       font-style: normal;
       font-size: 1.2em;
       padding: 10px;
@@ -181,12 +193,12 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
 
 /*burga*/
 .hamburguesa {
-    background-color: orange;
+    background-color: orangered;
 
 }
 
 .boton-desplegable {
-    background-color: orange;
+    background-color: orangered;
     border-radius: 20%;
     border: solid gray 3px;
     height: 40px;
@@ -329,6 +341,14 @@ i {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+  }
+  
+  .avatar{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .button {
