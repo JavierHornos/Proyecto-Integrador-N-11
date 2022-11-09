@@ -17,14 +17,21 @@ header .fila1 {
 
 header .ayb {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     flex-grow: 3;
     height: 100%;
 }
+.prb {
+   /* position: absolute;*/
+    color: #000;
+    right: 48px;
+}
 
 header .logo {
     flex-grow: 1;
+    padding-left: 2vw;
 }
 
 header .b {
@@ -111,12 +118,13 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile {
     margin-inline-end: 0px !important;
     padding-inline-start: 20px !important;
 }
-.boton-busqueda{
+ .boton-busqueda{
     background: white;
     border: none;
-    position: absolute;
-    margin-left: 52rem;   
-    height: 37px;
+     position: absolute; 
+    right: 2px;
+    height: 15px;
+    bottom:19px;
 }
 header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     width: max-content;
@@ -215,9 +223,10 @@ header .fila2 .input-responsive input {
 }
 
 header .fila2 .input-responsive button {
-    height: 40px;
+    height: 35px;
     color: black;
     cursor: pointer;
+    bottom: 6px;
 }
 
 header .fila2 .input-responsive button i {
@@ -347,8 +356,9 @@ i {
     position: relative;
     padding-top: 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
   }
   
   .button {
@@ -513,7 +523,7 @@ i {
         display: flex;
         flex-direction: column;
         width: 20%;
-        padding-left: 1vw;
+        padding-left: 2vw;
     }
 
     .pie {
