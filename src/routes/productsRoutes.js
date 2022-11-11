@@ -59,16 +59,16 @@ router.get ('/creacion-producto', adminMiddleware, productsController.crear)
 
 //* EDITAR PRODUCTO *//
 router.get('/editar-producto/:id', adminMiddleware, productsController.editarProducto)
-router.put ('/editar-producto/:id', adminMiddleware, multerProductos.single('cImage')/*uploadFile.single('cImage')*/, productsController.actualizarProducto)
+router.put ('/editar-producto/:id', adminMiddleware, multerProductos.single('imagen')/*uploadFile.single('cImage')*/, productsController.actualizarProducto)
 
 //* BORRAR PRODUCTO *//
 router.delete('/detalle-producto/:id', adminMiddleware, productsController.borrarProducto)
 
 
 //* CREAR PRODUCTO CON FOTO MULTER *//
-router.get ("/crear",multerProductos.single('cImage'), productsController.crear);
+router.get ("/crear",multerProductos.single('imagen'), productsController.crear);
 
-router.post ("/crear",multerProductos.single('cImage'), /*uploadFile.single('cImage')*/productsController.store);
+router.post ("/crear",multerProductos.single('imagen'), /*uploadFile.single('cImage')*/productsController.store);
 
 
 

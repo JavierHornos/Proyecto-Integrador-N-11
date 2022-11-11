@@ -20,22 +20,33 @@ justify-content: space-around;
 align-items: center;
 margin-bottom: 20px;
 }
-
-header .ayb{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-grow: 3;
-height: 100%;
+.boton-busqueda{
+    background: white;
+    border: none;
+     position: absolute; 
+    right: 2px;
+    height: 15px;
+    bottom:19px;
 }
 
-.logo{
-    margin-top: 1em;
-}
 
-header .logo{
+header .ayb {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+    height: 100%;
+}
+header .logo {
     flex-grow: 1;
+    padding-left: 2vw;
 }
+.prb {
+    /* position: absolute;*/
+     color: #000;
+     right: 48px;
+ }
 
 header .b{
     flex-grow: 1;
@@ -51,16 +62,18 @@ header .menu2{
     margin-top: 40px;
 }
 
-header .ayb input{
+header .ayb input {
     flex-grow: 50;
-    height: 40px;
-    }
+    height: 42px;
+    border-radius: 11px;
+}
 
-header .ayb button{
+header .ayb button {
     flex-grow: 1;
     height: 46px;
     color: black;
-    cursor:pointer;
+    cursor: pointer;
+    border-radius: 16px;
 
 }
 
@@ -191,6 +204,48 @@ header .fila2 .input-responsive button{
     color: black;
     cursor:pointer;
 }
+.menu a {
+    position: relative;
+    display: block;
+  }
+  
+  .menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #e2883e, #e06343, #FA4500);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .menu a:hover::before {
+    transform: scaleX(1);
+  }
+  
+/* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .menu[data-animation="to-left"] a::before {
+    transform-origin: right;
+  }
+  
+  .menu[data-animation="center"] a::before {
+    transform-origin: center;
+  }
+  
+  .menu[data-animation="bonus"] a::before {
+    transform-origin: right;
+  }
+  
+  .menu[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+  }
 
 header .fila2 .input-responsive button i{
     color: black !important;
@@ -208,6 +263,7 @@ a{
 a:hover{
     text-decoration: none;
     color: orange;
+    transition: .7s;
 }
 
 li{
@@ -335,7 +391,9 @@ i{
 }
 
 
-
+body {
+    margin: 0;
+}
 /* footer */
 
 .pie{

@@ -17,8 +17,8 @@
         <main>
             <form action="/users/registro" method="POST" class="formlogin" enctype="multipart/form-data">
                 <div class="container">
-                    <input class="form" type="text" id="name" name="usuario" required>
-                    <label class="label" for="name">Usuario</label>
+                    <input class="form" type="email" id="mail" name="mail" required>
+                    <label class="label" for="name">Mail</label>
                 </div>
                 <div class="container">
                     <input class="form" type="password" id="password" name="password" required>
@@ -34,24 +34,17 @@
                     <label class="label" for="name">Apellido</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="text" id="dni" name="dni" required>
-                    <label class="label" for="name">Dni</label>
-                </div>
-                <div class="container">
-                    <input class="form" type="email" id="mail" name="mail" required>
-                    <label class="label" for="name">Mail</label>
-                </div>
-                <div class="container">
                     <input class="form" type="text" id="domicilio" name="domicilio" required>
                     <label class="label" for="name">Domicilio</label>
-                </div>
-                <div class="container">
-                    <input class="form" type="date" id="nacimiento" name="nacimiento" required>
-                </div>
-
-                <div class="container">
+                <div class="avatar">
                     <label for="cImage" class="form-label">Cargar imagen:</label>
                     <input type="file" name="cImage" id="cImage" required ></input>
+                </div>
+                <div class="myr">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" required="">
+                    <label class="form-check-label" for="gridCheck">
+                        Soy mayor de 18 años.
+                    </label>
                 </div>
                 <div class="tyc">
                     <input class="form-check-input" type="checkbox" id="gridCheck" required="">

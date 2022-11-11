@@ -17,13 +17,13 @@
         <main class=>
 
             <div class="padre-cajas main-principal">
-                <img class="jack-daniels" width='200' height='350' src="/imagenes/productos/<%=productoDetallado.image%>"></img>
+                <img class="jack-daniels" width='200' height='350' src="/imagenes/productos/<%=productoDetallado.imagen%>"></img>
                 <div class="caja1">
                     <div>Nuevo</div>
-                    <h2><%= productoDetallado.name %></h2>
-                    <del>$<%= productoDetallado.price %></del>
+                    <h2><%= productoDetallado.nombre %></h2>
+                    <del>$<%= productoDetallado.precio %></del>
                     <div class="padre-precio">
-                        <h2 class="precio"> $ <%=( ( (100-productoDetallado.discount) * productoDetallado.price ) / 100  )%></h2> <span class="off"><%= productoDetallado.discount %>% OFF</span>
+                        <h2 class="precio"> $ <%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%></h2> <span class="off"><%= productoDetallado.descuento %>% OFF</span>
                     </div>
                     <div>
                         <label>Cantidad</label></label>
@@ -32,7 +32,7 @@
                     <a href="../carrito-cargado">
                         <input class="al-carrito" type="button" value="Agregar Al Carrito">
                     </a>
-                    <span class="cuotas"> En 12x $ <%= productoDetallado.price / 12 %></span>
+                    <span class="cuotas"> En 12x $ <%= productoDetallado.precio / 12 %></span>
                     <span class="litro">El precio por litro es $ 13.440</span>
                     <a href="#medios-pago" class="pago">Ver los medios de pago</a>
                     <div>Volumen: 750 mL</div>
