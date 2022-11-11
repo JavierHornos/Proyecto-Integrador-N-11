@@ -221,14 +221,14 @@ header .fila2 .input-responsive button i:hover{
 a{
 
     color: white;
+    text-decoration: none;
 }
 a:hover{
-    text-decoration: none;
     color: orange;
 }
 
 li{
-    margin: auto 4px;
+    margin: auto 1.5em;
 }
 
 .a{
@@ -247,7 +247,7 @@ li{
     padding-right: 15px;
     position: absolute;
     top: 25px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .fa:hover{
