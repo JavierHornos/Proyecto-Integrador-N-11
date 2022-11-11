@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/fa3a2d0319.js" crossorigin="anonymous"></script>
     <link href="/css/whiskies.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Accesorios</title>
 </head>
 
 <body>
@@ -18,13 +18,13 @@
         <% for(let p of soloAccesorios) { %> 
 
         <div class="producto">
-            <img src="/imagenes/productos/<%=p.image%> " alt="<%=p.name%>">
+            <img src="/imagenes/productos/<%=p.imagen%> " alt="<%=p.nombre%>">
             <div class="informacion">
                 <span class="tipo-envio">Ennvio con normalidad</span>
                 <br>
-                <span class="precio">$<%=p.price%> </span>
+                <span class="precio">$<%=p.precio%> </span>
                 <span class="precio-envio">Envío gratis</span>
-                <span class="descripcion"><%= p.description %> </span>
+                <span class="descripcion"><%= p.descripcion %> </span>
                 <div class="calificacion">
                     <span><i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i>
                 <i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i><i class="fa-solid fa-star celeste"></i></span>
