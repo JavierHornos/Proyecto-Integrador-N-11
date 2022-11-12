@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "digital_drinks",
+    "password": "GrupoN11",
     "database": "digital_db",
-    "host": "127.0.0.1",
+    "host": "db4free.net",
     "dialect": "mysql",
     "port": 3306
   },
