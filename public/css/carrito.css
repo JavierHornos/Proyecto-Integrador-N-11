@@ -70,7 +70,7 @@ header .ayb input {
 
 header .ayb button {
     flex-grow: 1;
-    height: 46px;
+    /*height: 46px;*/
     color: black;
     cursor: pointer;
     border-radius: 16px;
