@@ -1,8 +1,10 @@
 const path = require('path');
 let fs = require('fs');
 const { validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
+const bcrypt=require ('bcrypt')
 const db = require('../database/models');
+
+
 
 let user_json = fs.readFileSync('./src/database/usuariosDataBase.json');
 let obj_literal_users = JSON.parse(user_json);
@@ -10,118 +12,128 @@ let obj_literal_users = JSON.parse(user_json);
 const UsersFilePath = path.join(__dirname, '../database/usuariosDataBase.json');
 const users = JSON.parse(fs.readFileSync(UsersFilePath, 'utf-8'));
 
-
-const controladorUsers =
+ 
+const controladorUsers = 
 {
-    iniciarSesion: (req, res) => {
-        res.render('./users/login');
-    },
 
-    procesoSesion: (req, res) => {
-        let usuarioALoguearse;
-        let errors = validationResult(req);                                      // resultados de errores de formulario y lo guardamos en errors
+       iniciarSesion: (req, res) => {
+                res.render('./users/login');
+        },  
+          
+          
+          
 
-        if (errors.isEmpty()) { // si no hay errores hacemos toda la logica                        
-            // // ** VALIDANDO A USUARIO ** 
+        procesoSesion: (req, res) => {
+                let datos = req.body                                                    // capturo lo que viene por formulario y lo guardo de DATOS
+                PasswordPlano = datos.Password;                                         // guardo el password Plano
+               // console.log(PasswordPlano)
+                let usuarioALoguearse;
+                let errors = validationResult(req);                                      // resultados de errores de formulario y lo guardamos en errors
 
-            db.usuarios.findAll().then((listaUsuarios) => {
-                // comparamos email del json con lo que viene del formulario
-                let usuario = listaUsuarios.filter((usuario) => usuario.Email == req.body.email)[0];
+                if (errors.isEmpty()) {                                                 // si no hay errores hacemos toda la logica
+                        
+                        // // ** VALIDANDO A USUARIO ** 
+                        
+                        db.usuarios.findAll().then((listaUsuarios) =>{                                  // traemos todos los usuarios de la base de datos
+                                        
+                        let userbuscado = listaUsuarios.filter((prod) => prod.Email  == datos.Email);   // comparamos email y guardamos en userbuscado
 
-                console.log(usuario)
+                        for (let p of userbuscado) {                                                    // for para buscar el Password de la bae de datos
 
-                // usamos encriptado para comparar la clave
-                bcrypt.compare(req.body.password, usuario.Password, (err, laClaveEsCorrecta) => {
-                    if (laClaveEsCorrecta == true) {
-                        // encontramos al usuario y lo agregamos a usuarioALoguearse
-                        usuarioALoguearse = usuario;
+                              let PasswordHash = p.Password                                             // guardamos el password en la variable PasswordHash
 
-                        // guardamos en el session el usuario a loguearse
-                        req.session.usuarioLogueado = usuarioALoguearse;
+                          //    console.log(PasswordHash)
 
-                        // ** ACA TERMINA LA VALIDACION DE USUARIO **
 
-                        //** ACA CREAMOS LA COOKIE **
-                        if (req.body.recordame != undefined) { 
-                            // si el recordame del formulario no es undefined es porque fue tildado
-                            res.cookie('recordame', usuarioALoguearse.Email, { maxAge: 300000 });  // las cookie viajan en el response, creamos una cookie, le damos un nombre y valor, y expiracion   
-                        }
+                               // usamos encriptado para comparar la clave
+                                                        
+                               bcrypt.compare(PasswordPlano, PasswordHash, function(err, laClaveEsCorrecta) {           // le pasamos la pass plana y hasheada
+                                if (laClaveEsCorrecta == true) {
+                                        usuarioALoguearse = userbuscado;                                                // encontramos al usuario y lo agregamos a usuarioALoguearse
 
-                        db.productos.findAll().then((productos) => {
-                            res.render('home-admin', { products: productos }); // lo mandamos a la vista final
-                        });
-                    } else {
-                        // clave es invalida!
-                        return res.render('./users/login', {
-                            errors: [                 // mando array de errors a la vista de login
-                                { msg: 'credenciales invalida' }                        // (con propiedad msg: credenciales invalida)
-                            ]
-                        });
-                    }
+                                        req.session.usuarioLogueado = usuarioALoguearse;                                // guardamos en el session el usuario a loguearse
+        
+                                        // ** ACA TERMINA LA VALIDACION DE USUARIO **
+                
+                
+                                        //** ACA CREAMOS LA COOKIE **
+                                        if (req.body.recordame != undefined) {                                      // si el recordame del formulario no es undefined es porque fue tildado
+                                                res.cookie('recordame', usuarioALoguearse.email, { maxAge: 300000 })  // las cookie viajan en el response, creamos una cookie, le damos un nombre y valor, y expiracion   
+                                        }
+
+                                        db.productos.findAll().then((products) =>{                                      // treamos todos los productos
+       
+                                                res.render('home-admin', {products: products});                         // y lo mandamos a la vista final  
+                                             });
+
+                                        
+                                                                       
+                                } else {
+                                        // clave es invalida!                                           // si no funciona la clave
+                                        return res.render('./users/login', {errors: [                 // mando array de errors a la vista de login
+                                                { msg: 'credenciales invalida'}                        // (con propiedad msg: credenciales invalida)
+                                        ]});
+                                        }
+                               });
+
+                        }                          
+                                                       
                 });
+                        } else {
+                                                                                                        
+                                return res.render('./users/login', {errors: errors.errors});    // si no anda nada, mandamos errores a la vista
+                }
+                              
+                        
+                
+        },
 
-            });
 
-        } else {
-            // si no mandamos errores a la vista
-            return res.render('./users/login', { errors: errors.errors });
-        }
-    },
 
-    procesoRegistro: (req, res) => {
-        let errors = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
 
-        console.log("ALALLA")
+        registrarse: (req, res) => {
+                res.render("./users/registro");
+        },
 
-        if (errors.isEmpty()) {
-            // si no hay errores hacemos toda la logica
-            // ** VALIDANDO A USUARIO **
 
-            console.log(db.usuario)
-            console.log(db.usuarios)
 
-            db.usuarios.findAll().then((listaUsuarios) => {
-                let idNuevoUsuario = (listaUsuarios[listaUsuarios.length - 1].Id) + 1;
 
-                const saltRounds = 10;
+        procesoRegistro: (req, res) => {
 
-                bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
-                    let nuevoUsuario = {
-                        "id": idNuevoUsuario,
-                        "Nombre": req.body.nombre,
-                        "Apellido": req.body.apellido,
-                        "Email": req.body.mail,
+                let errors = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
+
+                let textoPlano = req.body.Password;
+                          
+                let hash = bcrypt.hashSync(textoPlano, 10);
+
+                let datos = req.body
+               // console.log(datos)
+
+                db.usuarios.create({
+                        "Nombre": req.body.Nombre,
+                        "Apellido": req.body.Apellido,
+                        "Email": req.body.Email,
                         "Password": hash,
-                        "Dirección": req.body.domicilio,
-                        "Imagen": req.file.cImage,
-                        "Administrador": 1,
-                        "Local_FK": 1
-                        // "dni": req.body.dni,
-                        // "usuario": req.body.usuario,
-                        // "nacimiento": req.body.nacimiento,
-                    }
+                        "Direccion": req.body.Direccion,
+                        "Imagen": req.file.filename,
+                        "Administrador": 0,                                        
+                        "Local_FK": req.body.Local_FK,
+                                                                
+                });                                                       
 
-                    db.usuarios.create(nuevoUsuario);
-                    res.redirect('/users/login');
-                });
+                res.redirect ('/users/login');
+        },
 
-            });
-        }
-    },
+        
+       
 
-    registrarse: (req, res) => {
-        res.render("./users/registro");
-    },
+        perfil: (req, res) => {
+
+                res.render('./users/perfil',  {usuarios: req.session.usuarioLogueado},)
+               
+        },
 
 
-
-
-    perfil: (req, res) => {
-        res.render('./users/perfil', { user: req.session.usuarioLogueado },)
-        // console.log(req.session.usuarioLogueado);
-
-        // res.render('./users/perfil',);
-    },
 }
 
 module.exports = controladorUsers;

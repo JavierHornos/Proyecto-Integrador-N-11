@@ -10,8 +10,8 @@ const multerAvatar = require('../middlewares/multerAvatar')
 router.get('/login', usersController.iniciarSesion);
 
 router.post('/login', [                                                                                                         
-                        check('email').isEmail().withMessage('Email invalido'),                                                 // validamos email
-                        check('password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
+                        check('Email').isEmail().withMessage('Email invalido'),                                                 // validamos email
+                        check('Password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
                       ], usersController.procesoSesion);                                                                          // sigue su ruta
 
 
@@ -27,9 +27,9 @@ router.get('/check', function (req, res) {                                      
 
 router.get('/registro', usersController.registrarse);
 router.post('/registro',[                                                                                                         
-                        check('mail').isEmail().withMessage('Email invalido'),                                                 // validamos email
-                        check('password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
-                    ],multerAvatar.single('cImage'), usersController.procesoRegistro)
+                        check('Email').isEmail().withMessage('Email invalido'),                                                 // validamos email
+                        check('Password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
+                    ],multerAvatar.single('Imagen'), usersController.procesoRegistro)
 
 router.get ('/perfil', usersController.perfil)
 module.exports = router;

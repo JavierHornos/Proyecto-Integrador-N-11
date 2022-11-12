@@ -3,9 +3,7 @@ let fs = require('fs');
 const db = require('../database/models');
 
 
-let user_json = fs.readFileSync('./src/database/usuariosDataBase.json');
-let obj_literal_users = JSON.parse(user_json);
-//console.log(obj_literal_users);
+
 
 
 
@@ -20,8 +18,7 @@ const controladorProductos =
 
 	    let soloWhiskies = listaProductos.filter((prod) => prod.Categoria_FK  == 3);
 		
-			// console.log(soloWhiskies);
-
+			 
 		 	res.render('./products/whiskies',{soloWhiskies: soloWhiskies});
 
 		});
@@ -186,40 +183,33 @@ const controladorProductos =
 
      promociones: (req, res) => {
        
-
-
         db.productos.findAll().then((listaProductos) =>{
 
-	
-            let promociones = listaProductos.filter((prod) => prod.descuento > 3);
+            let promociones = listaProductos.filter((prod) => prod.descuento < 10);
 		
+		      	res.render('./products/promociones',{Promociones: promociones});
 
-			// console.log(promociones);
-
-			res.render('./products/promociones',{Promociones: promociones});
-
-		});
-
-      
-               
+		        });
+       
       },
+
 
 
     productosTodos: (req, res) => {
      
-       db.productos.findAll().then((products) =>{
+          db.productos.findAll().then((products) =>{
        
-       res.render('./products/productos-todos', {products: products});
-    });
+            res.render('./products/productos-todos', {products: products});
+          });
                
       },
 
       productosTodosAdmin: (req, res) => {
       
-      db.productos.findAll().then((products) =>{
+             db.productos.findAll().then((products) =>{
        
-        res.render('./products/productos-todos-admin', {products: products});
-     });
+            res.render('./products/productos-todos-admin', {products: products});
+           });
         
                
       },  

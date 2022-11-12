@@ -15,12 +15,13 @@
     <%- include("../partials/header-productos-todos-admin.ejs") %>
 
     <main>
+        <%  for (let user of usuarios) {%> 
         <div class="container">
             <div class="cover-photo">
-                <img src="/imagenes/avatares/<%=user.image%>" class="profile">
+                <img src="/imagenes/avatares/<%=user.Imagen%>" class="profile">
             </div> <br>
             <div class="profile-name"><%=user.Nombre + " " + user.Apellido%></div> <br>
-            <p class="about"><%=user.email%></p><br>
+            <p class="about"><%=user.Email%></p><br>
             <a href="../products/productos-todos" <button class="msg-btn">Ir de compras</button></a>
            <a href="../products/carrito" <button class="follow-btn">Mi carrito</button> </a>
            
@@ -31,6 +32,7 @@
               <i class="fab fa-twitter"></i>
             </div>
           </div>
+          <% } %> 
 
     </main>
     <footer>
