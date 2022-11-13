@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 const session = require('express-session');                     // express-session
 const cookieParser = require('cookie-parser');                  //cookie parser
+const MemoryStore = require('memorystore')(session)
 
  
 
@@ -28,21 +29,13 @@ app.use(cookieParser());
 //}));
 
 app.use(session({
-    cookie:{
-        secure: true,
-        maxAge:60000
-           },
-        secret: 'secret',
-    saveUninitialized: true,
-    resave: false
-    }));
-    
-    app.use(function(req,res,next){
-    if(!req.session){
-        return next(new Error('Oh no')) //handle error
-    }
-    next() //otherwise continue
-    });
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
+    resave: false,
+    secret: 'secreto'
+}))
 
 
 
