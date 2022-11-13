@@ -128,7 +128,7 @@ const controladorUsers =
        
 
         perfil: (req, res) => {
-
+                
                 res.render('./users/perfil',  {usuarios: req.session.usuarioLogueado},)
                
         },

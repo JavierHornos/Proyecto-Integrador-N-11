@@ -7,7 +7,6 @@ const db = require('../database/models');
 
 
 
-
 const controladorProductos =
 {   
     
@@ -16,9 +15,11 @@ const controladorProductos =
 
         db.productos.findAll().then((listaProductos) =>{
 
+         
+
 	    let soloWhiskies = listaProductos.filter((prod) => prod.Categoria_FK  == 3);
 		
-			 
+      
 		 	res.render('./products/whiskies',{soloWhiskies: soloWhiskies});
 
 		});
@@ -185,7 +186,7 @@ const controladorProductos =
        
         db.productos.findAll().then((listaProductos) =>{
 
-            let promociones = listaProductos.filter((prod) => prod.descuento < 10);
+            let promociones = listaProductos.filter((prod) => prod.descuento > 10);
 		
 		      	res.render('./products/promociones',{Promociones: promociones});
 
