@@ -5,14 +5,9 @@ const bcrypt=require ('bcrypt')
 const db = require('../database/models');
 
 
-
-let user_json = fs.readFileSync('./src/database/usuariosDataBase.json');
-let obj_literal_users = JSON.parse(user_json);
-
 const UsersFilePath = path.join(__dirname, '../database/usuariosDataBase.json');
-const users = JSON.parse(fs.readFileSync(UsersFilePath, 'utf-8'));
 
- 
+
 const controladorUsers = 
 {
 
