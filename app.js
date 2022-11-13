@@ -34,6 +34,7 @@ app.use(session({
       checkPeriod: 86400000 // prune expired entries every 24h
     }),
     resave: false,
+    saveUninitialized: true,
     secret: 'secreto'
 }))
 
