@@ -21,11 +21,29 @@ app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(cookieParser());
 /// app.use(session({secret: 'Secreto'}));  //express-session a nivel apliacion, para todas las paginas
+//app.use(session({
+//    secret:'secreto',
+//    resave: true,
+//    saveUninitialized: true
+//}));
+
 app.use(session({
-    secret:'secreto',
-    resave: true,
-    saveUninitialized: true
-}));
+    cookie:{
+        secure: true,
+        maxAge:60000
+           },
+    store: new RedisStore(),
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: false
+    }));
+    
+    app.use(function(req,res,next){
+    if(!req.session){
+        return next(new Error('Oh no')) //handle error
+    }
+    next() //otherwise continue
+    });
 
 
 
