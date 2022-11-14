@@ -1,5 +1,3 @@
-const path = require('path');
-let fs = require('fs');
 const db = require('../database/models');
 
 
