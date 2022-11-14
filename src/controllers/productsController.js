@@ -1,3 +1,6 @@
+let fs = require('fs');
+const path = require('path'); 
+
 const db = require('../database/models');
 
 
@@ -279,6 +282,7 @@ const controladorProductos =
     editarProducto: (req, res) => {
       db.productos.findByPk(req.params.id)
             .then(function(productoDetallado) {
+              console.log(productoDetallado.imagen)
               res.render("products/editar-producto", { producto_detallado: productoDetallado });
             }) 
 
@@ -286,6 +290,15 @@ const controladorProductos =
 
     
     actualizarProducto: (req, res) =>{
+
+      db.productos.findByPk(req.params.id)
+            .then(function(productoDetallado) {
+              
+              nombreImagenAntigua = productoDetallado.imagen
+
+             // console.log(nombreImagenAntigua)
+            
+      
            db.productos.update({
           
            "nombre": req.body.nombre,
@@ -305,7 +318,13 @@ const controladorProductos =
         }
       });
 
-      
+      fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
+        if (error) {
+                console.log(error.message);
+        }})
+
+
+      }) 
      
       res.redirect ('../../users/login') 
 		
@@ -317,12 +336,33 @@ const controladorProductos =
    //* BORRAR *//
 
     borrarProducto: (req, res) => {
+
+      db.productos.findByPk(req.params.id)
+      .then(function(productoDetallado) {
+        
+        nombreImagenAntigua = productoDetallado.imagen
+
+        console.log(nombreImagenAntigua)
+      
+      
  
          db.productos.destroy({
             where: {
               id: req.params.id
             }
           })
+
+
+          fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
+            if (error) {
+                    console.log(error.message);
+            }})
+    
+
+        });
+
+
+        
           
           res.redirect ('../../users/login') 
 

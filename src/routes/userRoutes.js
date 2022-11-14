@@ -35,5 +35,11 @@ router.post('/registro',[
                         check('Password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
                     ],multerAvatar.single('Imagen'), usersController.procesoRegistro)
 
+
 router.get ('/perfil', usersController.perfil)
+
+router.get ('/editar-perfil', usersController.verPerfil)
+
+router.post ('/editar-perfil', multerAvatar.single('Imagen'), usersController.cambiarPerfil)
+
 module.exports = router;

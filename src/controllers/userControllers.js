@@ -1,3 +1,7 @@
+let fs = require('fs');
+const path = require('path'); 
+
+
 const { validationResult } = require('express-validator');
 const bcrypt=require ('bcrypt')
 const db = require('../database/models');
@@ -126,6 +130,55 @@ const controladorUsers =
         },
 
 
+        
+        verPerfil: (req, res) => {
+                                
+                
+                res.render('./users/editar-perfil',  {user: req.session.usuarioLogueado},)
+
+        },
+
+
+        cambiarPerfil: (req, res) => {
+            let user = req.session.usuarioLogueado
+                
+                    for (let p of  user) {
+                        Emailplano = p.Email
+                        passplano = p.Password
+                        nombreImagenAntigua = p.Imagen
+                         
+                db.usuarios.update({
+          
+                        "Nombre": req.body.Nombre,
+                        "Apellido": req.body.Apellido,
+                        "Email": Emailplano,
+                        "Password": passplano,
+                        "Direccion": req.body.Direccion,
+                        "Imagen": req.file.filename,
+                        "Administrador": 0,
+                        "Local_FK": req.body.Local_FK,
+              
+                   },{
+                       where: {
+                      Email: Emailplano
+                     }
+                });
+
+                
+           }
+                
+           fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
+                if (error) {
+                        console.log(error.message);
+                }})
+                
+                res.redirect ('/users/login');
+                                                 
+        }
+                     
+                  
+                
+        
 }
 
 module.exports = controladorUsers;
