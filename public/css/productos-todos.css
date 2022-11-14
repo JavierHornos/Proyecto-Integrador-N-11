@@ -394,10 +394,10 @@ margin: 0;
 
 
 .container-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 401px);
-    grid-template-rows: 2fr;
-    grid-gap: 6em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
 
 }
 
