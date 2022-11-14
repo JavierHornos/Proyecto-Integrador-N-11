@@ -6,12 +6,6 @@ const db = require('../database/models');
 
 
 
-let user_json = fs.readFileSync('./src/database/usuariosDataBase.json');
-let obj_literal_users = JSON.parse(user_json);
-
-const UsersFilePath = path.join(__dirname, '../database/usuariosDataBase.json');
-const users = JSON.parse(fs.readFileSync(UsersFilePath, 'utf-8'));
-
  
 const controladorUsers = 
 {
@@ -49,9 +43,9 @@ const controladorUsers =
                                                         
                                bcrypt.compare(PasswordPlano, PasswordHash, function(err, laClaveEsCorrecta) {           // le pasamos la pass plana y hasheada
                                 if (laClaveEsCorrecta == true) {
-                                        usuarioALoguearse = userbuscado;                                                // encontramos al usuario y lo agregamos a usuarioALoguearse
+                                       let usuarioALoguearse = userbuscado;                                                // encontramos al usuario y lo agregamos a usuarioALoguearse
 
-                                        req.session.usuarioLogueado = usuarioALoguearse;                                // guardamos en el session el usuario a loguearse
+                                       req.session.usuarioLogueado = usuarioALoguearse;                              // guardamos en el session el usuario a loguearse
         
                                         // ** ACA TERMINA LA VALIDACION DE USUARIO **
                 

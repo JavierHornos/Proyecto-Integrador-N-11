@@ -16,12 +16,16 @@ router.post('/login', [
 
 
 router.get('/check', function (req, res) {                                              // para chequear si estamos logueados ingresamos a users/check
-        if (req.session.usuarioLogueado == undefined) {
-            res.send('no estas logueado');
-        } else {
-            res.send("El usuario logueado es " + req.session.usuarioLogueado.email)
-        } 
-});             
+            if (req.session.usuarioLogueado == undefined) {
+                res.send('no estas logueado');
+            } else {    
+                    let mailLogueado = req.session.usuarioLogueado
+                    for (let p of  mailLogueado)
+                        email = p.Email
+                              
+                        res.send("El usuario logueado es " + email)
+                    } 
+                });               
 
 
 
