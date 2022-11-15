@@ -50,11 +50,17 @@ const controladorUsers =
                                        req.session.usuarioLogueado = usuarioALoguearse;                              // guardamos en el session el usuario a loguearse
         
                                         // ** ACA TERMINA LA VALIDACION DE USUARIO **
-                
+                                        
                 
                                         //** ACA CREAMOS LA COOKIE **
                                         if (req.body.recordame != undefined) {                                      // si el recordame del formulario no es undefined es porque fue tildado
-                                                res.cookie('recordame', usuarioALoguearse.email, { maxAge: 300000 })  // las cookie viajan en el response, creamos una cookie, le damos un nombre y valor, y expiracion   
+
+                                                let user = req.session.usuarioLogueado
+                
+                                        for (let p of  user) {
+                                                 Emailplano = p.Email
+                                                
+                                                res.cookie('recordame', Emailplano, { maxAge: 300000 })  // las cookie viajan en el response, creamos una cookie, le damos un nombre y valor, y expiracion   
                                         }
 
                                         db.productos.findAll().then((products) =>{                                      // treamos todos los productos
@@ -62,7 +68,7 @@ const controladorUsers =
                                                 res.render('home-admin', {products: products});                         // y lo mandamos a la vista final  
                                              });
 
-                                        
+                                        }
                                                                        
                                 } else {
                                         // clave es invalida!                                           // si no funciona la clave
