@@ -10,30 +10,14 @@ body{
 
 }
 
+.inferior-mensaje:hover{
+    filter: drop-shadow(0px 1px 29px rgb(2, 248, 2));
+}
+
 .iconos{
     color: #EEE;
     margin-left: 1em;
     margin-top: -0.1em;
-}
-
-.ingresa a {
-    text-decoration: none;
-    color: white;
-}
-
-.registrate a {
-    text-decoration: none;
-    color: white;
-}
-
-.carrito a {
-    text-decoration: none;
-    color: white;
-}
-
-.hipervinculos a {
-    text-decoration: none;
-    color: white;
 }
 
 .hipervinculos {
@@ -88,20 +72,19 @@ body{
     position: relative;
     right: 46px;
     top: 2px;
-
-}
-.fa-magnifying-glass:before, .fa-search:before {
-    font-size: 15px;
 }
 
 .boton-busqueda :hover{
     color: orangered;
 }
+.fa-magnifying-glass:before, .fa-search:before {
+    font-size: 15px;
+}
 
 .buscador {
     display: inline !important;
     width: 75% !important;
-    height: 34px;
+    height: 30px;
     margin-left: 0.5em;
 }
 
@@ -128,6 +111,94 @@ body{
     background-attachment: fixed;
 
 }
+header{   
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    min-height:15vh;
+    padding: 10px;
+}
+
+header .fila1{
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-bottom: 14px;
+}
+
+header .ayb {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+    height: 100%;
+}
+
+.prb {
+    /* position: absolute;*/
+     color: #000;
+     right: 48px;
+ }
+ 
+
+a:hover{
+    color:orangered;
+    transition: 1s;
+
+}
+
+ .menu a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white
+  }
+  .menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: orangered;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #e2883e, #e06343, #FA4500);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .menu a:hover::before {
+    transform: scaleX(1);
+  }
+  
+/* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .menu[data-animation="to-left"] a::before {
+    transform-origin: right;
+  }
+  
+  .menu[data-animation="center"] a::before {
+    transform-origin: center;
+  }
+  
+  .menu[data-animation="bonus"] a::before {
+    transform-origin: right;
+  }
+  
+  .menu[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+  }
+
+
+ header .logo {
+    flex-grow: 1;
+    padding-left: 2vw;
+}
+
 
 .logo {
     margin-top: -2em !important;
@@ -136,8 +207,10 @@ body{
     padding-bottom: 0.5em;
 }
 
-.item {
+.item{
     margin-left: 1em;
+    color:white;
+    text-decoration: none;
 }
 
 .separador {
@@ -349,6 +422,7 @@ body{
 
 a {
     color: white !important;
+    text-decoration: none !important;
 }
 
 .inferior-mensaje {
