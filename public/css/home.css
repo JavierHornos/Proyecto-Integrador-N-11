@@ -77,18 +77,21 @@ body{
 
 }
 
-.boton-busqueda {
+.boton-busqueda { 
     display: inline;
-    font-size: 0.85em !important;
-    margin-top: -0.5em;
-    background-color: #f0f0f0 !important;
+    font-size: 8px !important;
+    margin-top: -1.2em;
+    background-color: white !important;
     color: #000 !important;
-    border-radius: 0% !important;
-border: #000 !important;
-position: relative;
-right: 5px;
-top: 1px;
+    border-radius: 3% !important;
+    border: #000 !important;
+    position: relative;
+    right: 46px;
+    top: 2px;
 
+}
+.fa-magnifying-glass:before, .fa-search:before {
+    font-size: 15px;
 }
 
 .boton-busqueda :hover{
@@ -98,9 +101,8 @@ top: 1px;
 .buscador {
     display: inline !important;
     width: 75% !important;
-    height: 30px;
+    height: 34px;
     margin-left: 0.5em;
-    border-radius: 0% !important;
 }
 
 .centrar-buscador {
