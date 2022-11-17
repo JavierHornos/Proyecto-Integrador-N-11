@@ -24,6 +24,12 @@
                     <input class="form" type="password" id="password" name="Password" required>
                     <label class="label" for="password">Contraseña</label>
                 </div>
+
+                <div class="container">
+                    <input class="form" type="password" id="comfirm_password" name="comfirm_password" required>
+                    <label class="label" for="confirm_password">Confirmar Contraseña</label>
+                </div>
+
                 <div class="container">
                     <input class="form" type="text" id="nombre" name="Nombre" required>
                     <label class="label" for="nombre">Nombre</label>
@@ -37,7 +43,7 @@
                     <input class="form" type="text" id="domicilio" name="Direccion" required>
                     <label class="label" for="domicilio">Domicilio</label>
                 </div>
-                
+
                 <div class="container">
                     <label for="category" class="form-label">Creador:</label>
                     <select name="Local_FK" id="category" class="form-input">
@@ -47,14 +53,14 @@
                         <option value="3">Parque Centenario</option>
                     </select>
                 </div>
-                
+
 
                 <div class="avatar">
                     <label for="cImage" class="form-label">Cargar imagen:</label>
-                    <input type="file" name="Imagen" id="cImage" required ></input>
+                    <input type="file" name="Imagen" id="cImage" required></input>
                 </div>
-                
-                    
+
+
                 <div class="myr">
                     <input class="form-check-input" type="checkbox" id="gridCheck" required="">
                     <label class="form-check-label" for="gridCheck">
@@ -78,6 +84,7 @@
             </form>
         </main>
 
+        <script src="/js/validador.js"></script>
 </body>
 
 </html>
