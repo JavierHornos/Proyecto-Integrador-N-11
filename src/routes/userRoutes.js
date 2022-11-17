@@ -10,7 +10,7 @@ const multerAvatar = require('../middlewares/multerAvatar')
 router.get('/login', usersController.iniciarSesion);
 
 router.post('/login', [                                                                                                         
-                        check('Email').isEmail().withMessage('Email invalido'),                                                 // validamos email
+                        check('Email').isEmail().withMessage('Email invalido').bail(),                                                 // validamos email
                         check('Password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
                       ], usersController.procesoSesion);                                                                          // sigue su ruta
 
@@ -31,7 +31,7 @@ router.get('/check', function (req, res) {                                      
 
 router.get('/registro', usersController.registrarse);
 router.post('/registro',[                                                                                                         
-                        check('Email').isEmail().withMessage('Email invalido'),                                                 // validamos email
+                        check('Email').isEmail().withMessage('Email invalido').bail(),                                                 // validamos email
                         check('Password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
                     ],multerAvatar.single('Imagen'), usersController.procesoRegistro)
 
