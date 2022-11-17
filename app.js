@@ -8,6 +8,7 @@ const app = express();
 const session = require('express-session');                     // express-session
 const cookieParser = require('cookie-parser');                  //cookie parser
 const MemoryStore = require('memorystore')(session)
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
 
  
 
@@ -33,10 +34,12 @@ app.use(session({
     store: new MemoryStore({
       checkPeriod: 86400000 // prune expired entries every 24h
     }),
-    resave: true,
-    saveUninitialized: true, 
-    secret: 'keyboard cat'
+    resave: false,
+    saveUninitialized: false, 
+    secret: 'secreto'
 }))
+
+app.use(userLoggedMiddleware);
 
 
 

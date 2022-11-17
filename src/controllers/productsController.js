@@ -318,10 +318,10 @@ const controladorProductos =
         }
       });
 
-      fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
-        if (error) {
-                console.log(error.message);
-        }})
+     // fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
+     //   if (error) {
+     //           console.log(error.message);
+     //   }})
 
 
       }) 

@@ -5,9 +5,11 @@ const express = require('express');
 const router = express.Router();
 const {check} = require('express-validator');   // usamos check del express validator
 const multerAvatar = require('../middlewares/multerAvatar')
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 
-router.get('/login', usersController.iniciarSesion);
+router.get('/login', guestMiddleware, usersController.iniciarSesion);
 
 router.post('/login', [                                                                                                         
                         check('Email').isEmail().withMessage('Email invalido').bail(),                                                 // validamos email
@@ -29,17 +31,25 @@ router.get('/check', function (req, res) {                                      
 
 
 
-router.get('/registro', usersController.registrarse);
+router.get('/registro', guestMiddleware, usersController.registrarse);
 router.post('/registro',[                                                                                                         
                         check('Email').isEmail().withMessage('Email invalido').bail(),                                                 // validamos email
                         check('Password').isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres')     // validamos password
                     ],multerAvatar.single('Imagen'), usersController.procesoRegistro)
 
 
-router.get ('/perfil', usersController.perfil)
+router.get ('/perfil',adminMiddleware, usersController.perfil)
 
 router.get ('/editar-perfil', usersController.verPerfil)
 
 router.post ('/editar-perfil', multerAvatar.single('Imagen'), usersController.cambiarPerfil)
+
+
+router.get ('/desloguear', usersController.desloguear)
+
+
+
+
+
 
 module.exports = router;

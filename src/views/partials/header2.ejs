@@ -57,7 +57,8 @@
 
         <div class="row grande">
             <div class="col-12 col-sm-3 logo"><a href="/"> <img class="imagen-logo" width='200'
-                        height='100%' src="/imagenes/logo-dd.png"></img></a></div>
+                        height='100%' src="/imagenes/logo-dd.png"></img></a>
+            </div>
             <div class="col-12 col-sm-6 centrar-buscador ">
                 <input class="form-control buscador" list="datalistOptions" id="exampleDataList"
                     placeholder="¿Qué estas buscando?">
@@ -71,15 +72,24 @@
                 <span class="item carrito"><a href="../products/carrito"><i
                             class="fa-solid fa-cart-shopping"></i></a></span>
                 <span class="separador">|</span>
+
+                <% if (!locals.isLogged) { %>
                 <span class=" item ingresa"><a href="../users/login">INGRESÁ</a></span>
                 <span class="separador">|</span>
                 <span class="item registrate"><a href="../users/registro">REGISTRATE</a></span>
-
+                
+                <% } else { %>
+                <span class="item ingresa"><a href="../users/perfil">PERFIL</a></span>
+                <span class="separador">|</span>
+                <span class=" item ingresa"><a href="../products/creacion-producto">CREAR</a></span>
+                <span class="separador">|</span>
+                <span class="item registrate"><a href="../products/productos-todos-admin">EDITAR</a></span>
+                <% } %>
             </div>
 
-
-
         </div>
+
+
 
         <div class="row hipervinculos menu">
 

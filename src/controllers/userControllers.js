@@ -13,87 +13,69 @@ const controladorUsers =
 {
 
        iniciarSesion: (req, res) => {
-                res.render('./users/login');
+               
+        res.render('./users/login');
         },  
           
           
           
 
         procesoSesion: (req, res) => {
-                let datos = req.body                                                    // capturo lo que viene por formulario y lo guardo de DATOS
-                PasswordPlano = datos.Password;                                         // guardo el password Plano
-               // console.log(PasswordPlano)
-                let usuarioALoguearse;
-                let errors = validationResult(req);                                      // resultados de errores de formulario y lo guardamos en errors
+                let datos = req.body                                                    
+                PasswordPlano = datos.Password;                                         
+              // console.log(PasswordPlano)
+           
+                db.usuarios.findAll().then((listaUsuarios) =>{
+                let userToLogin = listaUsuarios.filter((prod) => prod.Email  == datos.Email);
 
-                if (errors.isEmpty()) {                                                 // si no hay errores hacemos toda la logica
-                        
-                        // // ** VALIDANDO A USUARIO ** 
-                        
-                        db.usuarios.findAll().then((listaUsuarios) =>{                                  // traemos todos los usuarios de la base de datos
-                                        
-                        let userbuscado = listaUsuarios.filter((prod) => prod.Email  == datos.Email);   // comparamos email y guardamos en userbuscado
+                for (let p of userToLogin) {
+                let PasswordHash = p.Password   
+               
+                if(userToLogin) {
+                        let isOkThePassword = bcrypt.compareSync(PasswordPlano, PasswordHash)
+                        if (isOkThePassword) {
+                                delete userToLogin.Password;
+                                req.session.userLogged = userToLogin;
 
-                        for (let p of userbuscado) {                                                    // for para buscar el Password de la bae de datos
+                                if(req.body.recordame) {
+                                      res.cookie('recordame', req.body.Email, { maxAge: (1000 * 60) * 5 })  
+                                }
 
-                              let PasswordHash = p.Password                                             // guardamos el password en la variable PasswordHash
-
-                          //    console.log(PasswordHash)
-
-
-                               // usamos encriptado para comparar la clave
-                                                        
-                               bcrypt.compare(PasswordPlano, PasswordHash, function(err, laClaveEsCorrecta) {           // le pasamos la pass plana y hasheada
-                                if (laClaveEsCorrecta == true) {
-                                       let usuarioALoguearse = userbuscado;                                                // encontramos al usuario y lo agregamos a usuarioALoguearse
-
-                                       req.session.usuarioLogueado = usuarioALoguearse;                              // guardamos en el session el usuario a loguearse
-        
-                                        // ** ACA TERMINA LA VALIDACION DE USUARIO **
-                                        
-                
-                                        //** ACA CREAMOS LA COOKIE **
-                                        if (req.body.recordame != undefined) {                                      // si el recordame del formulario no es undefined es porque fue tildado
-
-                                                let user = req.session.usuarioLogueado
-                
-                                        for (let p of  user) {
-                                                 Emailplano = p.Email
-                                                
-                                                res.cookie('recordame', Emailplano, { maxAge: 300000 })  // las cookie viajan en el response, creamos una cookie, le damos un nombre y valor, y expiracion   
-                                        }
-
-                                        db.productos.findAll().then((products) =>{                                      // treamos todos los productos
-       
-                                                res.render('home-admin', {products: products});                         // y lo mandamos a la vista final  
-                                             });
-
-                                        }
-                                                                       
-                                } else {
-                                        // clave es invalida!                                           // si no funciona la clave
-                                        return res.render('./users/login', {errors: [                 // mando array de errors a la vista de login
-                                                { msg: 'credenciales invalida'}                        // (con propiedad msg: credenciales invalida)
-                                        ]});
-                                        }
-                               });
-
-                        }                          
-                                                       
-                });
+                                return res.redirect('./perfil')
                         } else {
-                                                                                                        
-                                return res.render('./users/login', {errors: errors.errors});    // si no anda nada, mandamos errores a la vista
+                                return res.render('./users/login', {
+                                        errors: {
+                                                   password: {
+                                               msg: 'Password incorrecto'
+                                               }
+                                         }
+                                  });
+                        }
                 }
-                              
-                        
-                
+                         return res.render('./users/login', {
+                                 errors: {
+                                            email: {
+                                        msg: 'Email incorrecto'
+                                        }
+                                  }
+                           });
+
+                        }
+
+                });
         },
 
 
 
 
+
+
+
+        
+                              
+
         registrarse: (req, res) => {
+                
                 res.render("./users/registro");
         },
 
@@ -104,7 +86,7 @@ const controladorUsers =
 
                 let errors = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
 
-                let textoPlano = req.body.Password;
+                let textoPlano = req.body.Password; 
                           
                 let hash = bcrypt.hashSync(textoPlano, 10);
 
@@ -130,8 +112,8 @@ const controladorUsers =
        
 
         perfil: (req, res) => {
-                
-                res.render('./users/perfil',  {usuarios: req.session.usuarioLogueado},)
+               
+                res.render('./users/perfil',  {usuarios: req.session.userLogged},)
                
         },
 
@@ -140,13 +122,13 @@ const controladorUsers =
         verPerfil: (req, res) => {
                                 
                 
-                res.render('./users/editar-perfil',  {user: req.session.usuarioLogueado},)
+                res.render('./users/editar-perfil',  {user: req.session.userLogged},)
 
         },
 
 
         cambiarPerfil: (req, res) => {
-            let user = req.session.usuarioLogueado
+            let user = req.session.userLogged
                 
                     for (let p of  user) {
                         Emailplano = p.Email
@@ -173,15 +155,26 @@ const controladorUsers =
                 
            }
                 
-           fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
-                if (error) {
-                        console.log(error.message);
-                }})
+       //     fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
+        //         if (error) {
+         //               console.log(error.message);
+        //        }})
                 
                 res.redirect ('/users/login');
                                                  
+        },                
+         
+        
+
+
+
+
+        desloguear: (req, res) => {
+                res.clearCookie('recordame');
+                req.session.destroy();
+                
+                return res.redirect('/');
         }
-                     
                   
                 
         
