@@ -52,9 +52,13 @@ header .ayb input{
 
 header .ayb button{
     flex-grow: 1;
-    height: 40px !important;
+    height: 38px !important;
     color: black;
     cursor:pointer;
+    position: relative;
+    right: 50px;
+    border: none;
+    background-color: white
 
 }
 
@@ -201,9 +205,15 @@ header .fila2 .input-responsive input{
     }
 
 header .fila2 .input-responsive button{
-    height: 40px;
+    height: 36px;
     color: black;
     cursor:pointer;
+    position: relative;
+    right: 50px;
+    border: none;
+    background-color: white;
+    flex-grow: 1;
+    top: 2px;
 }
 
 header .fila2 .input-responsive button i{
@@ -244,7 +254,8 @@ li{
     padding-right: 15px;
     position: absolute;
     top: 25px;
-    font-size: 12px;
+    font-size: 14px;
+    gap: 5px
 }
 
 .fa:hover{
@@ -499,6 +510,7 @@ display: none !important;
         flex-grow: 5;
         width: 40vw;
     }
+
 }
 
 @media(max-width:691px){
@@ -581,7 +593,7 @@ body{
   
     .input-responsive .input {
       flex-grow: 5;
-      width: 40vw;}
+      width: 60vw;}
   }
   
   @media(max-width:691px){
