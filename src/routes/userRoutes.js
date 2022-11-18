@@ -18,10 +18,10 @@ router.post('/login', [
 
 
 router.get('/check', function (req, res) {                                              // para chequear si estamos logueados ingresamos a users/check
-            if (req.session.usuarioLogueado == undefined) {
+            if (req.session.userLogged == undefined) {
                 res.send('no estas logueado');
             } else {    
-                    let mailLogueado = req.session.usuarioLogueado
+                    let mailLogueado = req.session.userLogged
                     for (let p of  mailLogueado)
                         email = p.Email
                               

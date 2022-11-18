@@ -363,7 +363,7 @@ margin: 0;
     border-radius: 6px;
     box-shadow: 0 0 0.1em rgba(208, 201, 201, 0.2);
     background-color: rgb(255, 255, 255);
-    cursor: pointer;
+    
     
 }
 
@@ -478,6 +478,7 @@ margin: 0;
     margin: 0.2em;
     margin-bottom: 0.5em;
     color: white;
+    cursor: pointer;
 }
 
 /* footer */

@@ -65,20 +65,11 @@ const controladorUsers =
                 });
         },
 
-
-
-
-
-
-
-        
                               
-
         registrarse: (req, res) => {
                 
                 res.render("./users/registro");
         },
-
 
 
 
@@ -110,33 +101,42 @@ const controladorUsers =
 
         
        
-
         perfil: (req, res) => {
-               
+              //  console.log(req.session.userLogged)
+                
                 res.render('./users/perfil',  {usuarios: req.session.userLogged},)
                
         },
 
 
-        
+
         verPerfil: (req, res) => {
-                                
-                
+                             
+        
                 res.render('./users/editar-perfil',  {user: req.session.userLogged},)
 
         },
 
 
-        cambiarPerfil: (req, res) => {
+
+        cambiarPerfil: async (req, res) => {
+        
             let user = req.session.userLogged
-                
-                    for (let p of  user) {
-                        Emailplano = p.Email
-                        passplano = p.Password
-                        nombreImagenAntigua = p.Imagen
+
+                        Emailplano = user[0].Email
+                        passplano = user[0].Password
+                        nombreImagenAntigua = user[0].Imagen
+
+                        console.log(nombreImagenAntigua)
+                      
+                        req.session.userLogged[0].Email = Emailplano
+                        req.session.userLogged[0].Password = passplano 
+                        req.session.userLogged[0].Imagen = req.file.filename
+                        console.log(req.file.filename);
+                       
+
                          
-                db.usuarios.update({
-          
+                await db.usuarios.update({
                         "Nombre": req.body.Nombre,
                         "Apellido": req.body.Apellido,
                         "Email": Emailplano,
@@ -144,30 +144,23 @@ const controladorUsers =
                         "Direccion": req.body.Direccion,
                         "Imagen": req.file.filename,
                         "Administrador": 0,
-                        "Local_FK": req.body.Local_FK,
-              
+                        "Local_FK": req.body.Local_FK,    
                    },{
                        where: {
                       Email: Emailplano
                      }
+                     
                 });
-
-                
-           }
-                
-       //     fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
-        //         if (error) {
-         //               console.log(error.message);
-        //        }})
-                
-                res.redirect ('/users/login');
-                                                 
+           
+                        fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
+                        if (error) {
+                      console.log(error.message);
+                }})
+             
+                res.redirect ('/users/perfil');                                             
         },                
          
         
-
-
-
 
         desloguear: (req, res) => {
                 res.clearCookie('recordame');
@@ -176,7 +169,6 @@ const controladorUsers =
                 return res.redirect('/');
         }
                   
-                
         
 }
 

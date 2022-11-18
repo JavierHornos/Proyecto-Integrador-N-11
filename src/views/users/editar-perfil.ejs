@@ -34,6 +34,15 @@
                     <input class="form" type="text" id="domicilio" name="Direccion" value="<%=p.Direccion%>" required>
                     <label class="label" for="domicilio">Domicilio</label>
                 </div>
+
+                <div class="container">
+                <div class="cover-photo">
+                    <img src="/imagenes/avatares/<%=p.Imagen%>" class="profile" width='50'
+                    height='50%'>
+                </div>
+                </div> <br>
+
+
                 
                 <div class="container">
                     <label for="category" class="form-label" value="<%=p.Local_FK%>" >Creador:</label>
@@ -48,7 +57,10 @@
 
                 <div class="avatar">
                     <label for="cImage" class="form-label">Cargar imagen:</label>
-                    <input type="file" name="Imagen" id="cImage" required ></input>
+
+                    <input type="file" name="Imagen" id="Imagen" required ></input> 
+                    <div id="preview" class="styleImage"></div>
+                    
                 </div>
          
                 
@@ -64,6 +76,9 @@
 
             <%} %> 
         </main>
+
+        <script src="/js/editar-perfil.js"></script>
+        
 
 </body>
 

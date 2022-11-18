@@ -12,9 +12,9 @@ const controladorProductos =
 {   
     
     //* PRODUCTOS *//
-    whiskies: (req, res) => {
+    whiskies: async (req, res) => {
 
-        db.productos.findAll().then((listaProductos) =>{
+      await db.productos.findAll().then((listaProductos) =>{
 
          
 
@@ -253,6 +253,7 @@ const controladorProductos =
         res.render("./products/carrito-cargado");
     },
 
+
     
     //* CREAR Y GUARDAR *//
     crear: (req, res) => {
@@ -275,12 +276,12 @@ const controladorProductos =
             "creador_FK": datos.Creador_FK,
     
       });   
-          res.redirect ('../users/login') 
+       res.render("./products/creacion-producto");
     },
 
     //* EDITAR Y ACTUALIZAR *//
-    editarProducto: (req, res) => {
-      db.productos.findByPk(req.params.id)
+    editarProducto: async (req, res) => {
+     await db.productos.findByPk(req.params.id)
             .then(function(productoDetallado) {
               console.log(productoDetallado.imagen)
               res.render("products/editar-producto", { producto_detallado: productoDetallado });
@@ -289,9 +290,9 @@ const controladorProductos =
     },
 
     
-    actualizarProducto: (req, res) =>{
+    actualizarProducto: async (req, res) =>{
 
-      db.productos.findByPk(req.params.id)
+     await db.productos.findByPk(req.params.id)
             .then(function(productoDetallado) {
               
               nombreImagenAntigua = productoDetallado.imagen
@@ -318,10 +319,10 @@ const controladorProductos =
         }
       });
 
-     // fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
-     //   if (error) {
-     //           console.log(error.message);
-     //   }})
+      fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
+        if (error) {
+                console.log(error.message);
+        }})
 
 
       }) 

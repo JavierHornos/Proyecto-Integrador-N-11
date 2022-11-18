@@ -385,6 +385,9 @@ font-size: 0.8em;
     flex-direction: row;
     justify-content: center;
   }
+
+
+  
   
   .button {
     position: relative;
@@ -395,7 +398,8 @@ font-size: 0.8em;
     outline: none;
     font-size: 18px;
     margin: 1em 0.8em;
-  }
+    }
+
   .button.type1 {
     color: orangered;
   }
