@@ -353,7 +353,30 @@ i {
     display: flex;
     flex-direction: column;
   }
+
+  .container2{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .icono-password i{
+color: black;
+cursor: pointer;
+font-size: 0.8em;
+  }
   
+.icono-password{
+    position: absolute;
+    right: 1em;
+    /* width: 1em; */
+}
+
+.icono-password :hover{
+    color: orangered;
+}
+
   .avatar{
     position: relative;
     padding-top: 20px;
@@ -368,7 +391,7 @@ i {
     padding: 1em 1.5em;
     border: none;
     background-color: transparent;
-    cursor: pointer;
+    cursor: p9, 136, 0)ointer;
     outline: none;
     font-size: 18px;
     margin: 1em 0.8em;
