@@ -358,13 +358,13 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     overflow: hidden;
 }
 
 .form-box{
     width: 100%;
-    padding: 195px;
+    padding: 120px;
     background: rgb(55, 54, 54);
     text-align: center;
     
@@ -494,6 +494,25 @@ main{
         flex-grow: 5;
         width: 40vw;
     }
+
+    header .logo {
+        flex-grow: 1;
+        padding-left: 2vw;
+        margin-left: 2.5em;
+        margin-top: 1em;
+    }
+
+    .input-responsive {
+        display: none !important;
+    }
+
+    .fila2 {
+        /* margin-left: 20em; */
+    }
+
+    #hamnav label{
+        margin-left: 20em;}
+
 }
 
 @media(max-width:691px){
@@ -516,10 +535,10 @@ main{
     flex-flow: column;
     text-align: center;
     
-    
-    
  }
 
-   
+ #hamnav label{
+    margin-left: 10em;
+}
 
 }

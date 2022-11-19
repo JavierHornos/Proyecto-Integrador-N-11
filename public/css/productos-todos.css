@@ -1,124 +1,128 @@
-*{
+* {
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*header*/
-header .fila1{
+header .fila1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 14px;
-    }
-    
-    header .ayb {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 3;
-        height: 100%;
-    }
-    
-    .prb {
-        /* position: absolute;*/
-         color: #000;
-         right: 48px;
-     }
-     .boton-busqueda{
-        background: white;
-        border: none;
-         position: absolute; 
-        right: 2px;
-        height: 15px;
-        bottom:19px;
-    }
-    
-     .menu a {
-        position: relative;
-        display: block;
-      }
-      
-      .menu a::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(to right, #e2883e, #e06343, #FA4500);
-        z-index: 1;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.5s ease-in-out;
-      }
-      
-      .menu a:hover::before {
-        transform: scaleX(1);
-      }
-      
-    /* ANIMATIONS
-      –––––––––––––––––––––––––––––––––––––––––––––––––– */
-      .menu[data-animation="to-left"] a::before {
-        transform-origin: right;
-      }
-      
-      .menu[data-animation="center"] a::before {
-        transform-origin: center;
-      }
-      
-      .menu[data-animation="bonus"] a::before {
-        transform-origin: right;
-      }
-      
-      .menu[data-animation="bonus"] a:hover::before {
-        transform-origin: left;
-        transform: scaleX(1);
-        transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
-      }
+}
 
-      header .ayb button{
-        flex-grow: 1;
-        color: black;
-        cursor:pointer;
-    
-    }
-    header .ayb input{
+header .ayb {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+    height: 100%;
+}
+
+.prb {
+    /* position: absolute;*/
+    color: #000;
+    right: 48px;
+}
+
+.boton-busqueda {
+    background: white;
+    border: none;
+    position: absolute;
+    right: 2px;
+    height: 15px;
+    bottom: 19px;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #e2883e, #e06343, #FA4500);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+}
+
+/* ANIMATIONS
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu[data-animation="to-left"] a::before {
+    transform-origin: right;
+}
+
+.menu[data-animation="center"] a::before {
+    transform-origin: center;
+}
+
+.menu[data-animation="bonus"] a::before {
+    transform-origin: right;
+}
+
+.menu[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
+header .ayb button {
+    flex-grow: 1;
+    color: black;
+    cursor: pointer;
+
+}
+
+header .ayb input {
     flex-grow: 50;
     height: 40px;
     border-radius: 8px;
-    }
+}
 
-header{   
+header {
     background-color: black;
     align-items: center;
     justify-content: space-between;
-    min-height:15vh;
+    min-height: 15vh;
     padding: 10px;
 }
 
 
 
-header .fila1{
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin-bottom: 20px;
+header .fila1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-header .ayb{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-grow: 3;
-height: 100%;
+header .ayb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+    height: 100%;
 }
 
-header .logo{
+header .logo {
     flex-grow: 1;
+    margin-left: 2em;
+    margin-top: 1em;
 }
 
-header .b{
+header .b {
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -127,7 +131,7 @@ header .b{
     margin-top: 30px;
 }
 
-header .menu2{
+header .menu2 {
     flex-grow: 1;
     margin-top: 40px;
 }
@@ -136,11 +140,11 @@ header .menu2{
 
 
 
-header .ayb button i{
+header .ayb button i {
     color: black !important;
 }
 
-header .ayb button i:hover{
+header .ayb button i:hover {
     color: orange !important;
 }
 
@@ -152,94 +156,110 @@ header .fila2 {
     position: relative;
 }
 
-header .fila2 .menu{
+header .fila2 .menu {
     flex-grow: 1;
 }
 
 
-header .fila2  .menu-mobile{
-    display:none ;
+header .fila2 .menu-mobile {
+    display: none;
 }
 
 /*burga*/
-#hamnav{
+#hamnav {
     display: none;
 }
+
 /* [ON BIG SCREEN] */
 /* (A) WRAPPER */
 #hamnav {
     width: 100%;
     background: #000;
-  }
-  
-  /* (B) HORIZONTAL MENU ITEMS */
-  #hamitems { display: flex; }
-  #hamitems a {
+}
+
+/* (B) HORIZONTAL MENU ITEMS */
+#hamitems {
+    display: flex;
+}
+
+#hamitems a {
     flex-grow: 1;
     flex-basis: 0;
     padding: 10px;
     color: white;
     text-decoration: none;
     text-align: center;
-  }
-  #hamitems a:hover { background: orange; }
-  
-  /* (C) HIDE HAMBURGER */
-  #hamnav label, #hamburger { display: none; }
+}
 
-  /* [ON SMALL SCREENS] */
-@media screen and (max-width: 1100px){
+#hamitems a:hover {
+    background: orange;
+}
+
+/* (C) HIDE HAMBURGER */
+#hamnav label,
+#hamburger {
+    display: none;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 1100px) {
+
     /* (A) BREAK INTO VERTICAL MENU */
     #hamitems a {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border-top: 1px solid #333;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
     }
-   
+
     /* (B) SHOW HAMBURGER ICON */
-    #hamnav label { 
-      display: inline-block; 
-      color: white;
-      background: orange;
-      font-style: normal;
-      font-size: 1.2em;
-      padding: 10px;
-      margin-left: 15px;
-      border-radius: 20%;
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        background: orange;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+        margin-left: 15px;
+        border-radius: 20%;
     }
-  
+
     /* (C) TOGGLE SHOW/HIDE MENU */
-    #hamitems { display: none; }
-    #hamnav input:checked ~ #hamitems { display: block; }
-  }
+    #hamitems {
+        display: none;
+    }
+
+    #hamnav input:checked~#hamitems {
+        display: block;
+    }
+}
 
 /*burga*/
 
 
-header .fila2 .menu-mobile .contenedor-lista-mobile{
+header .fila2 .menu-mobile .contenedor-lista-mobile {
     display: none;
     position: absolute;
     top: 40px;
     left: 20px;
     z-index: 9999;
     width: max-content;
-    color:orange;
+    color: orange;
     background-color: black;
     border: gainsboro;
 }
 
-header .fila2 .menu-mobile button:focus + .contenedor-lista-mobile{
-display: block;
+header .fila2 .menu-mobile button:focus+.contenedor-lista-mobile {
+    display: block;
 }
 
-header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile{
+header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile {
     display: flex;
     flex-direction: column;
-    color:white;
+    color: white;
     list-style: none;
     font-size: 12px;
-    gap:10px;
+    gap: 10px;
     text-align: left;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
     border: solid orange 1px;
@@ -251,18 +271,18 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile{
     padding-inline-start: 20px !important;
 }
 
-header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li{
+header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     width: max-content;
     margin: 0 !important;
     text-align: left !important;
 }
 
-.hamburguesa{
+.hamburguesa {
     background-color: orange;
-    
+
 }
 
-.boton-desplegable{
+.boton-desplegable {
     background-color: orange;
     border-radius: 20%;
     border: solid gray 3px;
@@ -271,136 +291,140 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li{
     padding-right: 20px;
 }
 
-header .fila2 .input-responsive{
+header .fila2 .input-responsive {
     display: none;
 }
 
-header .fila2 .input-responsive input{
+header .fila2 .input-responsive input {
     height: 40px;
-    }
-
-header .fila2 .input-responsive button{
-    color: black;
-    cursor:pointer;
 }
 
-header .fila2 .input-responsive button i{
+header .fila2 .input-responsive button {
+    color: black;
+    cursor: pointer;
+}
+
+header .fila2 .input-responsive button i {
     color: black !important;
 }
 
-header .fila2 .input-responsive button i:hover{
+header .fila2 .input-responsive button i:hover {
     color: orange !important;
 }
 
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
     color: orange;
 }
 
-li{
-    margin: auto 4px;
+li {
+    margin: auto 10px;
 }
 
-.a{
+.a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap;
 }
-.menu{
+
+.menu {
     display: flex;
-    margin:0px auto;
+    margin: 0px auto;
     text-align: center;
-    color:white;
+    color: white;
     list-style: none;
     padding-right: 68px;
     position: absolute;
     top: 25px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.fa:hover{
+.fa:hover {
     color: orange;
 }
 
-.menu2{
- display: flex;
- position: relative;
- top:-15px;
- right:15px;
- list-style: none;
+.menu2 {
+    display: flex;
+    position: relative;
+    top: -15px;
+    right: 15px;
+    list-style: none;
 }
 
 
-.b{
+.b {
     display: flex;
     align-items: center;
-    
+
     position: relative;
-    top:-15px;
+    top: -15px;
     right: 10px;
     justify-content: space-between;
 
 }
 
-.form-control{
+.form-control {
     max-width: 1060px;
     display: flex;
 }
 
-i{
-    color:white;
+i {
+    color: white;
     font-size: 20px;
     margin-left: 3px;
 }
 
-body{
-margin: 0;
+body {
+    margin: 0;
 }
+
 /* main */
 
-.main{
+.main {
     border-color: rgb(184, 182, 182);
 }
-.producto{
+
+.producto {
     max-width: 280px;
-    
-    
+
+
     border-radius: 6px;
     box-shadow: 0 0 0.1em rgba(208, 201, 201, 0.2);
     background-color: rgb(255, 255, 255);
-    
-    
-}
 
-.producto:hover{
-    box-shadow: 0 0 1,5em rgba(0, 0, 0, 0.2); 
 
 }
 
-.producto > img{
+.producto:hover {
+    box-shadow: 0 0 1, 5em rgba(0, 0, 0, 0.2);
+
+}
+
+.producto>img {
     width: 100%;
     object-fit: cover;
 }
 
-.informacion{
+.informacion {
     border-top: 1px solid rgb(230, 230, 230);
     padding: 1em;
     display: flex;
     flex-flow: column;
 }
 
-.informacion * + *{
+.informacion *+* {
     margin-bottom: 0.5em;
 }
 
-.tipo-envio{
+.tipo-envio {
     background-color: rgb(52, 131, 250);
     color: rgb(255, 255, 255);
     font-weight: 600;
@@ -409,33 +433,36 @@ margin: 0;
     border-radius: 3px;
 }
 
-.precio{
+.precio {
     font-size: 1.5em;
 }
 
-.precio-envio{
+.precio-envio {
     color: rgb(0, 166, 80);
 
 
 }
 
-.descripcion, .ubicacion{
+.descripcion,
+.ubicacion {
     font-weight: 300;
-   }
+}
 
 
-.precio-envio, .descripcion .ubicacion{
+.precio-envio,
+.descripcion .ubicacion {
     font-size: 0.9em;
 }
 
-.calificacion, .ubicacion{
+.calificacion,
+.ubicacion {
     transition-duration: 0.3s;
     transition-property: opacity;
     opacity: 0;
 }
 
 .producto:hover .calificacion,
-.producto:hover .ubicacion{
+.producto:hover .ubicacion {
     opacity: 1;
 }
 
@@ -446,38 +473,40 @@ margin: 0;
     align-items: flex-end;
 }
 
-.tipo-envio, .calificacion{
+.tipo-envio,
+.calificacion {
     font-size: 0.8m;
 }
 
-.calificacion > span:first-child{
-    color: rgb(52, 131, 250);    
+.calificacion>span:first-child {
+    color: rgb(52, 131, 250);
 
 }
-.celeste{
-    color: rgb(52, 131, 250);  
+
+.celeste {
+    color: rgb(52, 131, 250);
 }
 
-.conStock{
-    color:rgb(0, 166, 80)
+.conStock {
+    color: rgb(0, 166, 80)
 }
 
-.sinStock{
-    color:red
+.sinStock {
+    color: red
 }
 
 
-.container-grid{
+.container-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
-
+    margin-top: 1.5em;
 }
 
 
 
-.detalle-producto{
+.detalle-producto {
     width: 10em;
     height: 2.5em;
     background-color: orangered;
@@ -492,26 +521,26 @@ margin: 0;
 
 /* footer */
 
-.pie{
-    background-color:BLACK; 
-    color: white; 
-    height:20vh; 
+.pie {
+    background-color: BLACK;
+    color: white;
+    height: 20vh;
     padding: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-.iconosf{
+.iconosf {
     padding-right: 10px;
 }
 
-.pie2{
+.pie2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.pie3{
+.pie3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -520,86 +549,116 @@ margin: 0;
 
 
 
-@media(max-width:1100px){
-    header .fila1 .ayb{
+@media(max-width:1100px) {
+    header .fila1 .ayb {
         display: none;
     }
 
-    header .fila2 .input-responsive{
+    header .fila2 .input-responsive {
         display: flex;
     }
 
-    header .fila2 .menu-mobile{
+    header .fila2 .menu-mobile {
         display: block;
     }
 
-    header .fila2 .menu{
+    header .fila2 .menu {
         display: none;
     }
-    #hamnav{display: block;
+
+    #hamnav {
+        display: block;
     }
 
-  .pie1 img{
+    .pie1 img {
         height: 50px;
         width: 200px;
     }
 
-    .pie2{
+    .pie2 {
         font-size: 12px;
         margin-left: 20px;
     }
 
-    .pie3{
+    .pie3 {
         font-size: 12px;
         margin-left: 20px;
-     
+
     }
 
 
-    .pie{
+    .pie {
         display: flex;
-        flex-wrap:wrap
+        flex-wrap: wrap
     }
 
-    .input-responsive .input{
-        flex-grow: 5;
-        width: 40vw;
+   
+    
+    /* aqui */
+
+    header .logo {
+        flex-grow: 1;
+        padding-left: 2vw;
+        margin-left: 2.5em;
+        margin-top: 1em;
     }
+
+    .input-responsive {
+        display: none !important;
+    }
+
+    .fila2 {
+        /* margin-left: 20em; */
+    }
+
+    #hamnav label{
+        margin-left: 20em;}
+/* hasta aqui */
+
+header .b{
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
-@media(max-width:691px){
 
-    header .b{
+}
+
+@media(max-width:691px) {
+
+    header .b {
         display: none;
     }
 
- header .logo img{
-     width: 200px;
- }
+    header .logo img {
+        width: 200px;
+    }
 
- .fila1, .logo, .men2{
-    display: flex;
-    flex-direction: column;
- }
+    .men2 {
+        display: flex;
+        flex-direction: column;
+    }
 
- .pie{
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    
-    
-    
- }
- .container-grid{
-      display: flex;
-      margin-bottom: 50px;
-      flex-direction: column;
-      align-items: center;
+    .pie {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
 
- }
 
- 
 
-   
+    }
+
+    .container-grid {
+        display: flex;
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+#hamnav label{
+    margin-left: 9em;
+}
+
 
 }

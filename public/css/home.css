@@ -290,6 +290,40 @@ a:hover{
         display: none;
         
     }
+    header .logo {
+        flex-grow: 1;
+        padding-left: 2vw;
+        margin-left: 2.5em;
+        margin-top: 1em;
+    }
+
+    .hipervinculos{
+        display: none !important;
+    }
+
+    #hamitens a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+        color: white;
+    }
+
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        background: orangered;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 5px;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+    }
+
+    .flickity-page-dots{
+        display: none;
+    }
+
 }
 
 @media (max-width: 628px) {
@@ -329,7 +363,7 @@ a:hover{
     }
 
     .centrar-buscador {
-        margin-top: 1em !important;
+      display: none;
     }
 
     .encabezado {
@@ -412,11 +446,21 @@ a:hover{
 
     #hamitens a:hover {
         background: orangered;
-    }
+    } 
 
-    #hamnav #hamburger {
-        display: none;
-    }
+.hipervinculos{
+    display: none;
+}
+
+#hamburger{
+    display: none;
+}
+
+.flickity-page-dots{
+    display: none;
+}
+
+
 
 }
 
