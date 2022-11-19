@@ -152,10 +152,10 @@ const controladorUsers =
                      
                 });
            
-                        fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
-                        if (error) {
-                      console.log(error.message);
-                }})
+                //         fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
+                //         if (error) {
+                //       console.log(error.message);
+                // }})
              
                 res.redirect ('/users/perfil');                                             
         },                
