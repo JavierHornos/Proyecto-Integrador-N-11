@@ -5,14 +5,14 @@ header {
     align-items: center;
     justify-content: space-between;
     min-height: 15vh;
-    padding: 10px;
+    padding: 0.5px;
 }
 
 header .fila1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 header .ayb {
@@ -22,16 +22,17 @@ header .ayb {
     align-items: center;
     flex-grow: 3;
     height: 100%;
+    margin-top: 1.2em;
 }
 .prb {
-   /* position: absolute;*/
     color: #000;
     right: 48px;
 }
 
 header .logo {
     flex-grow: 1;
-    padding-left: 2vw;
+    margin-left: 2.5em;
+    margin-top: 1em;
 }
 
 header .b {
@@ -40,12 +41,12 @@ header .b {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 header .menu2 {
     flex-grow: 1;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 header .ayb input {
@@ -74,7 +75,7 @@ header .fila2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -192,7 +193,7 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
       font-style: normal;
       font-size: 1.2em;
       padding: 10px;
-      margin-left: 15px;
+      margin-left: 9em;
       border-radius: 20%;
     }
   
@@ -286,7 +287,7 @@ li {
     display: flex;
     position: relative;
     top: -15px;
-    right: 15px;
+    right: 30px;
     list-style: none;
 }
 
@@ -340,7 +341,7 @@ i {
     padding: 20px 15px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 13px;
-    margin-top: 5vh;
+    margin-top: 7vh;
     margin-bottom: 5vh;
     font-size: 16px;
     font-family: 'Playfair';
@@ -501,11 +502,20 @@ font-size: 0.8em;
     #hamnav{
         display: block;
     }
-
+#hamnav label{
+    margin-left: 19em;
+}
     header .fila2 .menu {
         display: none;
     }
-
+    .input{
+        display: none;
+            }
+        
+            .boton-busqueda{
+                display:none;
+            }
+        
     .pie1 img {
         height: 50px;
         width: 200px;
@@ -528,6 +538,11 @@ font-size: 0.8em;
         flex-wrap: wrap
     }
 
+    .formlogin{
+        max-width: 90vw;
+        margin-top: 3vh;
+    }
+
     .input-responsive .input {
         flex-grow: 5;
         width: 40vw;
@@ -548,8 +563,24 @@ font-size: 0.8em;
         display: flex;
         flex-direction: column;
         width: 20%;
-        padding-left: 2vw;
+        padding-left: 4vw;
     }
+
+    .input{
+display: none;
+    }
+
+    .boton-busqueda{
+        display:none;
+    }
+
+.fila2{
+    margin-top: 1em;
+}
+
+#hamnav label{
+    margin-left: 9em;
+}
 
     .pie {
         display: flex;
@@ -590,5 +621,14 @@ font-size: 0.8em;
 
     .btn-primary {
         min-width: 25vw;
+    }
+
+    .formlogin{
+        max-width: 90vw;
+        margin-top: 3vh;
+    }
+
+    .icono-password i{
+        font-size: 0.95em;
     }
 }
