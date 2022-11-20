@@ -17,10 +17,20 @@
         </div>
 
         <div>
-            <ul class="menu2 m2">
-                <li><a href="../users/registro">Registrarse</a></li> <div style="color:white">|</div>
-                <li class="li"><a href="../users/login">Ingresar</a></li>
-            </ul>
+
+            <% if (!locals.isLogged) { %>
+                <span class=" item ingresa"><a href="../users/login">INGRESÁ</a></span>
+                <span class="separador">|</span>
+                <span class="item registrate"><a href="../users/registro">REGISTRATE</a></span>
+                
+                <% } else { %>
+                <span class="item ingresa"><a href="../users/perfil">PERFIL</a></span>
+                <span class="separador">|</span>
+                <span class=" item ingresa"><a href="../products/creacion-producto">CREAR</a></span>
+                <span class="separador">|</span>
+                <span class="item registrate"><a href="../products/productos-todos-admin">EDITAR</a></span>
+                <% } %>
+           
         </div>
 
 
