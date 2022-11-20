@@ -43,6 +43,8 @@ height: 100%;
 
 header .logo{
     flex-grow: 1;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
 }
 
 header .b{
@@ -264,7 +266,8 @@ a:hover{
 }
 
 li{
-    margin: auto 4px;
+    margin: auto 8px;
+    font-size: 14px;
 }
 
 .a{
@@ -525,6 +528,64 @@ gap: 2px
         width: 40vw;
     }
     
+
+    .input{
+        display: none;
+    }
+    
+    .boton-busqueda{
+        display: none;
+    }
+    
+    .logo{
+        width: 10%;
+        margin-left: 2em;
+    }
+    
+    .b{
+        position: relative;
+        top: 2.90em;
+        right: 23em;
+    }
+    
+    #hamnav label{
+        margin-left: 22em;
+    }
+    
+    #hamnav{
+        margin-top: 1.5em;
+    }
+    
+    .menu2{
+        position: relative;
+        top: 2.90em;
+        right: 5.5em;
+    }
+    
+    .pie1{
+        display: none;
+    }
+    
+    .pie{
+        top: 1em;
+        margin-left: -2.4em;
+    }
+    
+    header .fila2{
+    margin-bottom: 10px;
+    }
+    
+    .fila1{
+        margin-top: 0.5em;
+        margin-left: 15em;
+    }
+    
+    .padre-cajas {
+        margin-top: 8em;
+        margin-left: -3em;
+    }
+    
+
 }
 
 @media(max-width:444px){
@@ -541,4 +602,60 @@ main{
     margin-bottom: 20px;
     overflow: scroll;
 }
+
+.input{
+    display: none;
+}
+
+.boton-busqueda{
+    display: none;
+}
+
+.logo{
+    width: 10%;
+    margin-left: 2em;
+}
+
+.b{
+    position: relative;
+    top: 2.90em;
+    right: 2.5em;
+}
+
+#hamnav label{
+    margin-left: 9em;
+}
+
+#hamnav{
+    margin-top: 1.5em;
+}
+
+.menu2{
+    position: relative;
+    top: 2.90em;
+    right: 2em;
+}
+
+.pie1{
+    display: none;
+}
+
+.pie{
+    top: 1em;
+    margin-left: -2.4em;
+}
+
+header .fila2{
+margin-bottom: 10px;
+}
+
+.fila1{
+    margin-top: 0.5em;
+}
+
+.padre-cajas {
+    margin-top: 8em;
+    margin-left: -3em;
+}
+
 }

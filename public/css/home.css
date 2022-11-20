@@ -195,7 +195,7 @@ a:hover{
 
 
  header .logo {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     padding-left: 2vw;
 }
 
@@ -276,7 +276,7 @@ a:hover{
 
 @media (min-width: 577px) and (max-width: 1258px) {
     .logo{
-        display: none;
+        /* display: none; */
     }
     .tope-de-arriba{
         height: 8vh;
@@ -286,15 +286,11 @@ a:hover{
         height: 40vh;
     }
 
-    .acomodar-logo{
-        display: none;
-        
-    }
     header .logo {
-        flex-grow: 1;
-        padding-left: 2vw;
-        margin-left: 2.5em;
-        margin-top: 1em;
+        /* flex-grow: 1; */
+        /* padding-left: 2vw; */
+        /* margin-left: -2em; */
+        margin-bottom: 1.5em;
     }
 
     .hipervinculos{
@@ -324,11 +320,41 @@ a:hover{
         display: none;
     }
 
+    .arriba{
+        margin-left: 18em;
+    }
+
+.centrar-buscador{
+    margin-bottom: 2em;
+}
+
+.row{
+    padding-top: 6em;
+    margin-left: -2em !important;
+}
+
+.acomodar-logo{
+    margin-top: -4em;
+}
+
+.logo-abajo{
+    margin-top: -6em;
+    margin-left: 1.5em;
+}
+
+.container-fluid{
+    padding-top: 0;
+}
+
+.condiciones-arreglando{
+    margin-left: -7em;
+    
 }
 
 @media (max-width: 628px) {
     .imagen-logo {
-        width: 100%;
+      margin-top: 1em;
+      margin-left: 4.5em;
     }
 
     .mobile {
@@ -344,7 +370,7 @@ a:hover{
     }
 
     .logo {
-        display: none;
+   margin-bottom: -1em;
     }
 
     .hipervinculos {
