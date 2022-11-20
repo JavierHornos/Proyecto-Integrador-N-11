@@ -133,20 +133,7 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     margin: 0 !important;
     text-align: left !important;
 }
-.myr{
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-}
 
-.tyc{
-    display: flex;
-    justify-content: center;
-    margin-top: 1vh;
-    margin-left: 0.5vw;
-    margin-bottom: 3vh;
-}
 
 /*burga*/
 #hamnav{

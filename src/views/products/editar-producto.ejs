@@ -30,6 +30,13 @@
                             <label for="nombre" class="form-label">Nombre del producto:</label>
                             <input type="text" id="name" name="nombre" value="<%= producto_detallado.nombre %>" placeholder="Ej: whiskies, vinos." class="form-input" required>
                         </div>
+
+                        <div class="">
+                            <div class="">
+                                <img src="/imagenes/productos/<%=producto_detallado.imagen%>" class="foto">
+                            </div>
+                            </div> <br>
+
                         <div class="col-12 col-md-6">
                             <label for="price" class="form-label">Precio del producto:</label>
                             <input type="text" id="price" name="precio"  value="<%= producto_detallado.precio %>" placeholder="Ej: 5678" class="form-input" pattern="[0-9]+" title="Ingresá solo numeros" required >
@@ -78,10 +85,14 @@
                             <label for="descripcion" class="form-label">Descripción:</label>
                             <textarea name="descripcion" id="description" class="form-input" required><%= producto_detallado.descripcion %></textarea>
                         </div>
+
                         <div class="col-12">
                             <label for="cImagen" class="form-label">Cargar imagen:</label>
-                            <input type="file" name="imagen" id="cImage" required></input>
+
+                            <input type="file" name="imagen" id="imagen" required></input>
+                            <div id="preview" class="styleImage"></div>
                         </div>
+
                         <div class="col-12">
                             <button type="submit" class="buy-now-button">Guardar producto</button>                        
                         </div>
@@ -95,6 +106,9 @@
 
 
     </main>
+
+
+    <script src="/js/editar-producto.js"></script>
 
 
 </body>
