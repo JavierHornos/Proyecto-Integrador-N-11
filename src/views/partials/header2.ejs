@@ -23,8 +23,8 @@
                     <input type="checkbox" id="hamburger" />
 
                     <div id="hamitens">
+                        <% if (!locals.isLogged) { %>
                         <a href="../users/login">INGRESÁ</a>
-
                         <a href="../users/registro">REGISTRATE</a>
                         <a href="../products/promociones">Promociones</a>
                         <a href="../products/vinos">Vinos</a>
@@ -38,7 +38,26 @@
                         <a href="../products/cervezas">Cervezas</a>
                         <a href="../products/accesorios">Acesorios</a>
                         <a href="#">Especiales</a>
-                        <a href="../products/productos-todos">TODOS</a>
+                        <a href="../products/productos-todos">Todos</a>
+                        <% } else { %>    
+                        <a href="../users/perfil">Perfil</a>
+                        <a href="../products/creacion-producto">Crear</a>
+                        <a href="../products/productos-todos-admin">Editar</a>
+
+                        <a href="../products/promociones">Promociones</a>
+                        <a href="../products/vinos">Vinos</a>
+                        <a href="../products/espumantes">Espumantes</a>
+                        <a href="../products/whiskies">Whiskies</a>
+                        <a href="../products/gin">Gin</a>
+                        <a href="../products/licores">Licores</a>
+                        <a href="../products/vodka">Vodka</a>
+                        <a href="../products/ron">Ron</a>
+                        <a href="../products/aperitivos">Aperitivos</a>
+                        <a href="../products/cervezas">Cervezas</a>
+                        <a href="../products/accesorios">Acesorios</a>
+                        <a href="#">Especiales</a>
+                        <a href="../products/productos-todos">Todos</a>
+                        <% } %>
                     </div>
                 </nav>
                 <span class="item"><i class="fa-solid fa-envelope"></i></span>

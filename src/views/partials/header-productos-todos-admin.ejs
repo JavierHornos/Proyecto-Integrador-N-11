@@ -15,11 +15,18 @@
         </div>
 
         <div>
-            <ul class="menu2 m2">
-                <li><a href="../../users/perfil">PERFIL</a></li> <div style="color:white">|</div>
-                <li><a href="../../products/creacion-producto">CREAR</a>></li> <div style="color:white">|</div>
-                <li class="li"><a href="../../products/productos-todos-admin">EDITAR</a></li>
-            </ul>
+            <% if (!locals.isLogged) { %>
+                <span class=" item ingresa"><a href="../users/login">INGRESÁ</a></span>
+                <span class="separador">|</span>
+                <span class="item registrate"><a href="../users/registro">REGISTRATE</a></span>
+                
+                <% } else { %>
+                <span class="item ingresa"><a href="../users/perfil">PERFIL</a></span>
+                <span class="separador">|</span>
+                <span class=" item ingresa"><a href="../products/creacion-producto">CREAR</a></span>
+                <span class="separador">|</span>
+                <span class="item registrate"><a href="../products/productos-todos-admin">EDITAR</a></span>
+                <% } %>
         </div>
 
 
@@ -53,20 +60,44 @@
    
     <!-- (C) MENU ITEMS -->
     <div id="hamitems">
-     
-      <a href="../products/promociones">PROMOCIONES</a>|
-      <a href="../products/vinos">VINOS</a>|
-      <a href="../products/espumantes">ESPUMANTES </a>|
-      <a href="../products/whiskies">WHISKIES</a>|
-      <a href="../products/gin">GIN</a>|
-      <a href="../products/licores">LICORES</a>|
-      <a href="../products/vodka">VODKA</a>|
-      <a href="../products/ron">RON</a>|
-      <a href="../products/aperitivos">APERITIVOS</a>|
-      <a href="../products/cervezas">CERVEZAS</a>|
-      <a href="../products/accesorios">ACCESORIOS</a>|
-      <a href="../products/productos-todos">TODOS</a>
-    </div>
+    
+            <% if (!locals.isLogged) { %>
+            <a href="../users/login">INGRESÁ</a>
+            <a href="../users/registro">REGISTRATE</a>
+            <a href="../products/promociones">Promociones</a>
+            <a href="../products/vinos">Vinos</a>
+            <a href="../products/espumantes">Espumantes</a>
+            <a href="../products/whiskies">Whiskies</a>
+            <a href="../products/gin">Gin</a>
+            <a href="../products/licores">Licores</a>
+            <a href="../products/vodka">Vodka</a>
+            <a href="../products/ron">Ron</a>
+            <a href="../products/aperitivos">Aperitivos</a>
+            <a href="../products/cervezas">Cervezas</a>
+            <a href="../products/accesorios">Acesorios</a>
+            <a href="#">Especiales</a>
+            <a href="../products/productos-todos">Todos</a>
+            <% } else { %>    
+            <a href="../users/perfil">Perfil</a>
+            <a href="../products/creacion-producto">Crear</a>
+            <a href="../products/productos-todos-admin">Editar</a>
+
+            <a href="../products/promociones">Promociones</a>
+            <a href="../products/vinos">Vinos</a>
+            <a href="../products/espumantes">Espumantes</a>
+            <a href="../products/whiskies">Whiskies</a>
+            <a href="../products/gin">Gin</a>
+            <a href="../products/licores">Licores</a>
+            <a href="../products/vodka">Vodka</a>
+            <a href="../products/ron">Ron</a>
+            <a href="../products/aperitivos">Aperitivos</a>
+            <a href="../products/cervezas">Cervezas</a>
+            <a href="../products/accesorios">Acesorios</a>
+            <a href="#">Especiales</a>
+            <a href="../products/productos-todos">Todos</a>
+            <% } %>
+            
+        </div>
   </nav>
           
 
