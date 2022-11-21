@@ -197,14 +197,7 @@ a:hover{
  header .logo {
     /* flex-grow: 1; */
     padding-left: 2vw;
-}
-
-
-.logo {
-    margin-top: -2em !important;
-    padding-bottom: 0.1em;
-    padding-left: 1.5em !important;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.6em;
 }
 
 .item{
@@ -286,13 +279,6 @@ a:hover{
         height: 40vh;
     }
 
-    header .logo {
-        /* flex-grow: 1; */
-        /* padding-left: 2vw; */
-        /* margin-left: -2em; */
-        margin-bottom: 1.5em;
-    }
-
     .hipervinculos{
         display: none !important;
     }
@@ -355,7 +341,7 @@ a:hover{
 @media (max-width: 628px) {
     .imagen-logo {
       margin-top: 1em;
-      margin-left: 4.5em;
+      margin-left: 2.5em;
     }
 
     .mobile {
@@ -366,12 +352,27 @@ a:hover{
         display: none !important;
     }
 
-    .iconos {
-        display: none;
+    .centrar-buscador {
+        text-align: center;
+        margin-top: 1em !important;
+        padding-bottom: 1em;
     }
 
     .logo {
-   margin-bottom: -1em;
+        padding-bottom: -0.4em!important;
+    }
+    .mensaje {
+        display: none;
+    }
+
+    .item, .separador{
+        display:none;
+    }
+
+    
+
+    .iconos {
+        display: none;
     }
 
     .hipervinculos {
@@ -384,13 +385,12 @@ a:hover{
 
     }
 
-    .arriba {
-        margin-top: 1em !important;
+    .arriba {  
+      margin-top: 0.5em !important;
         display: flex;
-    }
-
-    .centrar-buscador {
-      display: none;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
     }
 
     .encabezado {
@@ -458,7 +458,6 @@ a:hover{
     }
 
     #hamnav {
-        width: 100%;
         background: #000;
     }
 

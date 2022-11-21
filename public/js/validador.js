@@ -11,7 +11,7 @@ function validarContrasena(){
         confirmaContrasena.setCustomValidity("")
 
     } else {
-        confirmaContrasena.setCustomValidity("La Contraseña No Coinciden")
+        confirmaContrasena.setCustomValidity("Las Contraseñas No Coinciden")
     }
 }
 
