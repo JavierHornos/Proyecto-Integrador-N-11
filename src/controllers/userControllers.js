@@ -21,6 +21,16 @@ const controladorUsers =
           
 
         procesoSesion: (req, res) => {
+                const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
+
+                if (resultValidation.errors.length > 0) {
+                        return res.render ('./users/login', {
+                                errors: resultValidation.mapped(),
+                                oldData: req.body
+                        })
+                }
+
+
                 let datos = req.body                                                    
                 PasswordPlano = datos.Password;                                         
               // console.log(PasswordPlano)
@@ -75,7 +85,15 @@ const controladorUsers =
 
         procesoRegistro: (req, res) => {
 
-                let errors = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
+                const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
+
+                if (resultValidation.errors.length > 0) {
+                        return res.render ('./users/registro', {
+                                errors: resultValidation.mapped(),
+                                oldData: req.body
+                        })
+                }
+
 
                 let textoPlano = req.body.Password; 
                           
