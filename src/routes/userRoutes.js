@@ -17,7 +17,7 @@ router.post('/login', validacionLogin, usersController.procesoSesion);          
 
 
 router.get('/registro', guestMiddleware, usersController.registrarse);
-router.post('/registro', multerAvatar.single('Imagen'), validacionRegistro, usersController.procesoRegistro)
+router.post('/registro', validacionRegistro, multerAvatar.single('Imagen'), usersController.procesoRegistro)
 
 
 router.get ('/perfil',adminMiddleware, usersController.perfil)
