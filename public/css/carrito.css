@@ -400,7 +400,7 @@ body {
     background-color:BLACK; 
     color: white; 
     height: 25vh;
-    padding: 20px;
+    padding: 35px;
     display: flex;
     justify-content: space-around;
 }
