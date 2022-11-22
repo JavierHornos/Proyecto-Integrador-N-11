@@ -198,6 +198,8 @@ a:hover{
     /* flex-grow: 1; */
     padding-left: 2vw;
     padding-bottom: 0.6em;
+    position: relative;
+    bottom: 25px;
 }
 
 .item{
