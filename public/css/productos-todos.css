@@ -504,8 +504,6 @@ body {
     margin-top: 1.5em;
 }
 
-
-
 .detalle-producto {
     width: 10em;
     height: 2.5em;
@@ -517,6 +515,19 @@ body {
     margin-bottom: 0.5em;
     color: white;
     cursor: pointer;
+}
+
+.ordenar-producto form{
+text-align: center;
+}
+
+.ordenar-producto{
+    margin-top: 2em;
+}
+
+.boton-ordenar{
+    padding: 0.3em;
+    margin-left: 1em;
 }
 
 /* footer */

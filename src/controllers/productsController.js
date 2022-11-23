@@ -1,3 +1,4 @@
+const e = require('express');
 let fs = require('fs');
 const path = require('path'); 
 
@@ -200,8 +201,14 @@ const controladorProductos =
     productosTodos: (req, res) => {
      
           db.productos.findAll().then((products) =>{
+            let productosOrdenados = products;
+            if (req.query.orden == 0) {
+              productosOrdenados = products.sort((a,b) => a.precio - b.precio);
+            } else if (req.query.orden == 1) {
+              productosOrdenados = products.sort((a,b) => b.precio - a.precio);
+            }
        
-            res.render('./products/productos-todos', {products: products});
+            res.render('./products/productos-todos', {products: productosOrdenados});
           });
                
       },
