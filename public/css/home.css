@@ -242,6 +242,7 @@ a:hover{
 .imagen-centrada {
     width: 100%;
     height: 300px;
+    border-radius: 8px;
 }
 
 .texto-centrado {
@@ -257,7 +258,7 @@ a:hover{
 }
 
 .vinculo-inferior {
-    color: black !important;
+    color: rgb(247, 247, 247) !important;
     text-decoration: none;
 }
 
@@ -420,7 +421,7 @@ a:hover{
 
     .fondo-imagenes {
         background-image: url("../imagenes/cerveza4.jpeg");
-        height: 100vh;
+        height: 65vh;
         background-repeat: no-repeat;
         /* background-size: 100% 100%; */
         background-position: center center;
@@ -524,6 +525,7 @@ a {
     background: orangered;
     counter-increment: gallery-cell;
     text-align: center;
+    border-radius: 8px;
   }
   
   /* cell number */

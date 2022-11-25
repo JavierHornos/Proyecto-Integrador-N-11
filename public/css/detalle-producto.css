@@ -17,6 +17,9 @@ header{
     padding: 10px;
 }
 
+.fa-home:before {
+    display: none;
+}
 .padre-precio{
     display: flex;
     align-items: center;

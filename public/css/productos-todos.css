@@ -281,6 +281,9 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
     background-color: orange;
 
 }
+.fa-home:before {
+    display: none;
+}
 
 .boton-desplegable {
     background-color: orange;

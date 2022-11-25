@@ -25,6 +25,9 @@ header{
 .barr{
     color:white;
 }
+.fa-home:before {
+    display: none;
+}
 
 header .fila1{
 display: flex;

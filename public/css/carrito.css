@@ -269,6 +269,9 @@ a:hover{
 li{
     margin: auto 1.5em;
 }
+.fa-home:before {
+    display: none;
+}
 
 .a{
     display: flex;
