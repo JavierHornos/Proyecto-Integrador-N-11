@@ -14,35 +14,37 @@
 </head>
 
 <body>
-   <%- include("./partials/header2.ejs") %>
-    <main>
-        <div class="container-fluid medio">
-            <div class="fondo-imagenes">
-            </div>
+    <%- include("./partials/header2.ejs") %>
+        <main>
+            <div class="container-fluid medio">
+                <div class="fondo-imagenes">
+                </div>
 
-<!-- Flickity HTML init -->
-            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 2000 }'>
+                <!-- Flickity HTML init -->
+                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 2000 }'>
 
-                <% for(let p of products) { %>
-                    <div class="gallery-cell">
-                        <a href="/products/detalle-producto/<%=p.id%>" class="vinculo-inferior">
-                            <img src="/imagenes/productos/<%=p.imagen%>" class="imagen-centrada" alt="">
-                            <span class="texto-centrado"><%=p.nombre%></span>
-                        </a>
-                    </div>
-                    <% } %> 
-            </div>
+                    <% for(let p of products) { %>
+                        <div class="gallery-cell">
+                            <a href="/products/detalle-producto/<%=p.id%>" class="vinculo-inferior">
+                                <img src="/imagenes/productos/<%=p.imagen%>" class="imagen-centrada" alt="">
+                                <span class="texto-centrado">
+                                    <%=p.nombre%>
+                                </span>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
 
-            <!-- <div class="flex-container"> -->
-            <!-- </div> -->
-    </main>
+                <!-- <div class="flex-container"> -->
+                <!-- </div> -->
+        </main>
 
-    <footer>
-        <div class="container-fluid pie">
-            <div class="row">
-                <div class="col-12 col-sm-2 acomodar-logo"><img width='200' class="logo-abajo" height='50'
-                        src="/imagenes/logo-dd.png"></img></div>
-                <div class="col-12 col-sm-6 condiciones-arreglando">
+        <footer>
+
+            <div class="row text-center text-md-flex align-items-center flex-column flex-md-row justify-content-between text-white">
+
+                <div class="col-4  "><img width='200' class="logo-abajo" height='50' src="/imagenes/logo-dd.png"></img></div>
+                <div class="col-4  ">
                     <div>
                         <a href="#">Terminos y Condiciones</a>
                     </div>
@@ -57,17 +59,18 @@
                     </div>
 
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-4 ">
                     <div>info@digitaldrinks.com</div>
                     <div>1121602249</div>
                     <div>Calle Falsa 123, Vicente Lopez, B1504</div>
-
                 </div>
-    </footer>
+            </div>
 
-    <a href="#" class="inferior-vinculo">
-        <img src="/imagenes/whats.png" class="inferior-mensaje" alt="">
-    </a>
+        </footer>
+
+        <a href="#" class="inferior-vinculo">
+            <img src="/imagenes/whats.png" class="inferior-mensaje" alt="">
+        </a>
 
 </body>
 
