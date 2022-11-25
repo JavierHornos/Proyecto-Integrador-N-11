@@ -14,6 +14,14 @@ body{
     filter: drop-shadow(0px 1px 29px rgb(2, 248, 2));
 }
 
+.row {
+    --bs-gutter-x: 0.5rem !important;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0.5rem !important;
+}
+
 .iconos{
     color: #EEE;
     margin-left: 1em;
@@ -276,159 +284,6 @@ a:hover{
     display: block;
 }
 
-
-
-/*@media (max-width: 628px) {
-    .imagen-logo {
-      margin-top: 1em;
-      margin-left: 2.5em;
-    }
-
-    .mobile {
-        display: block !important;
-    }
-
-    .grande {
-        display: none !important;
-    }
-
-    .centrar-buscador {
-        text-align: center;
-        margin-top: 1em !important;
-        padding-bottom: 1em;
-    }
-
-    .logo {
-        padding-bottom: -0.4em!important;
-    }
-    .mensaje {
-        display: none;
-    }
-
-    .item, .separador{
-        display:none;
-    }
-
-    
-
-    .iconos {
-        display: none;
-    }
-
-    .hipervinculos {
-        display: none !important;
-    }
-
-    .tope-de-arriba {
-        height: auto;
-        padding-left: 1.5em;
-
-    }
-
-    .arriba {  
-      margin-top: 0.5em !important;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .encabezado {
-        padding-top: 0.2em;
-    }
-
-    .flex-container {
-        display: none;
-    }
-
-    .pie {
-        height: auto;
-    }
-
-    .logo-abajo {
-        width: 70%;
-        height: 70%;
-        margin-bottom: 2em;
-    }
-
-    .acomodar-logo {
-        justify-content: center;
-        display: flex;
-    }
-
-    .fondo-imagenes {
-        background-image: url("../imagenes/cerveza4.jpeg");
-        height: 65vh;
-        background-repeat: no-repeat;
-   
-        background-position: center center;
-        background-attachment: fixed;
-
-    }
-
-    .condiciones-arreglando {
-        margin-bottom: 0.5em;
-    }
-
-    #hamitens a {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        border-top: 1px solid #333;
-        color: white;
-    }
-
-    #hamnav label {
-        display: inline-block;
-        color: white;
-        background: orangered;
-        font-style: normal;
-        font-size: 1.2em;
-        padding: 5px;
-        padding-left: 0.7em;
-        padding-right: 0.7em;
-    }
-
-    #hamitens {
-        display: none;
-    }
-
-    #hamnav input:checked~#hamitens {
-        display: block;
-    }
-
-    #hamnav {
-        background: #000;
-    }
-
-    #hamitens a {
-        flex-grow: 1;
-        flex-basis: 0;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    #hamitens a:hover {
-        background: orangered;
-    } 
-
-.hipervinculos{
-    display: none;
-}
-
-#hamburger{
-    display: none;
-}
-
-.flickity-page-dots{
-    display: none;
-}
-
-
-
-}*/
 #hamnav input{
     opacity: 0;
 }
