@@ -21,13 +21,10 @@ const controladorUsers =
           
 
         procesoSesion: (req, res) => {
-                const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
+                const resultValidation = validationResult(req); // resultados de errores de la validacion y lo guardamos en resultValidation
 
                 if (resultValidation.errors.length > 0) {
-                        return res.render ('./users/login', {
-                                errors: resultValidation.mapped(),
-                                oldData: req.body
-                        })
+                        return res.render ('./users/login', {errors: resultValidation.errors})
                 }
 
                 let datos = req.body                                                    
