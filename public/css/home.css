@@ -64,14 +64,20 @@ body{
 .boton-busqueda { 
     display: inline;
     font-size: 8px !important;
-    margin-top: -1.2em;
     background-color: white !important;
     color: #000 !important;
-    border-radius: 3% !important;
     border: #000 !important;
+    border-top-right-radius: 11px !important;
+    border-bottom-right-radius: 11px !important;
     position: relative;
-    right: 46px;
-    top: 2px;
+    right: 0px;
+    top: 0px;
+}
+
+.input-search-header{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border: none !important;
 }
 
 .boton-busqueda :hover{
@@ -270,78 +276,9 @@ a:hover{
     display: block;
 }
 
-@media (min-width: 577px) and (max-width: 1258px) {
-    .logo{
-        /* display: none; */
-    }
-    .tope-de-arriba{
-        height: 8vh;
-    }
 
-    .pie{
-        height: 40vh;
-    }
 
-    .hipervinculos{
-        display: none !important;
-    }
-
-    #hamitens a {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        border-top: 1px solid #333;
-        color: white;
-    }
-
-    #hamnav label {
-        display: inline-block;
-        color: white;
-        background: orangered;
-        font-style: normal;
-        font-size: 1.2em;
-        padding: 5px;
-        padding-left: 0.7em;
-        padding-right: 0.7em;
-    }
-
-    .flickity-page-dots{
-        display: none;
-    }
-
-    .arriba{
-        margin-left: 18em;
-    }
-
-.centrar-buscador{
-    margin-bottom: 2em;
-}
-
-.row{
-    padding-top: 6em;
-    margin-left: -2em !important;
-}
-
-.acomodar-logo{
-    margin-top: -4em;
-}
-
-.logo-abajo{
-    margin-top: -6em;
-    margin-left: 1.5em;
-}
-
-.container-fluid{
-    padding-top: 0;
-}
-
-.condiciones-arreglando{
-    margin-left: -7em;
-}
-    
-}
-
-@media (max-width: 628px) {
+/*@media (max-width: 628px) {
     .imagen-logo {
       margin-top: 1em;
       margin-left: 2.5em;
@@ -423,7 +360,7 @@ a:hover{
         background-image: url("../imagenes/cerveza4.jpeg");
         height: 65vh;
         background-repeat: no-repeat;
-        /* background-size: 100% 100%; */
+   
         background-position: center center;
         background-attachment: fixed;
 
@@ -491,6 +428,42 @@ a:hover{
 
 
 
+}*/
+#hamnav input{
+    opacity: 0;
+}
+#hamnav label {
+    display: inline-block;
+    color: white;
+    background: orangered;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 5px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+
+#hamnav {
+    background: #000;
+    position: relative;
+}
+
+#hamitems{
+    display: none;
+    flex-direction: column;
+    max-width: 300px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    background-color: black;
+    padding: 0 20px 0 10px;
+    gap: 5px;
+  
+}
+
+#hamnav input:checked~#hamitems {
+    display: flex;
 }
 
 a {
