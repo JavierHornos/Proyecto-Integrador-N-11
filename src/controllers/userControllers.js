@@ -21,27 +21,21 @@ const controladorUsers =
           
 
         procesoSesion: (req, res) => {
-                const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
+                const resultValidation = validationResult(req); // resultados de errores de la validacion y lo guardamos en resultValidation
 
                 if (resultValidation.errors.length > 0) {
-                        return res.render ('./users/login', {
-                                errors: resultValidation.mapped(),
-                                oldData: req.body
-                        })
+                        return res.render ('./users/login', {errors: resultValidation.errors})
                 }
-
 
                 let datos = req.body                                                    
                 PasswordPlano = datos.Password;                                         
-              // console.log(PasswordPlano)
-           
+         
                 db.usuarios.findAll().then((listaUsuarios) =>{
                 let userToLogin = listaUsuarios.filter((prod) => prod.Email  == datos.Email);
 
-                for (let p of userToLogin) {
-                let PasswordHash = p.Password   
-               
                 if(userToLogin) {
+                        for (let p of userToLogin) {
+                        let PasswordHash = p.Password 
                         let isOkThePassword = bcrypt.compareSync(PasswordPlano, PasswordHash)
                         if (isOkThePassword) {
                                 delete userToLogin.Password;
@@ -53,24 +47,10 @@ const controladorUsers =
 
                                 return res.redirect('./perfil')
                         } else {
-                                return res.render('./users/login', {
-                                        errors: {
-                                                   password: {
-                                               msg: 'Password incorrecto'
-                                               }
-                                         }
-                                  });
+                                return res.render('./users/login', {errors: {password: {msg: 'Password incorrecto'}}});
                         }
                 }
-                         return res.render('./users/login', {
-                                 errors: {
-                                            email: {
-                                        msg: 'Email incorrecto'
-                                        }
-                                  }
-                           });
-
-                        }
+                        } return res.render('./users/login', {errors: {email: {msg: 'Email incorrecto'}}});
 
                 });
         },
