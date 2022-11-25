@@ -5,27 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <link href="/css/login.css" rel="stylesheet">    
 <script src="https://kit.fontawesome.com/e913f300ec.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<script src="https://kit.fontawesome.com/e913f300ec.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/55185d4cb8.js" crossorigin="anonymous"></script>
     <title>login</title>
 </head>
 
 <body>
 
     <%- include("../partials/header.ejs") %>
-
-<% if (typeof errors != 'undefined') { %>
-    <p style="color:red">ERROR</p>
-    <ul>
-        <% for (let i =0; i < errors.length; i++) { %>
-            <li>
-                <%= errors[i].msg %>
-            </li>
-        <% } %>    
-    </ul>
-<% } %>
 
 <main class="formulario">
 
@@ -44,7 +34,7 @@
             <p style="color:red"><%= errors.password.msg %></p>
                 
          <% } %> 
-        <a href="../users/registro"><label class="sinContrasena">¿No tenés Contraseña?</label> </a>
+        <a href="../users/registro"><label class="sinContrasena">¿No tenés Cuenta?</label> </a>
            <br>
            <br>
            <label for="recordame">Recordame</label>
@@ -57,7 +47,6 @@
 
 </main>
   
- 
 
 
 

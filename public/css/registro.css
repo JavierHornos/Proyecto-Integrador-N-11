@@ -8,6 +8,8 @@ header {
     padding: 0.5px;
 }
 
+
+
 header .fila1 {
     display: flex;
     justify-content: space-around;
@@ -33,6 +35,9 @@ header .logo {
     flex-grow: 1;
     margin-left: 2.5em;
     margin-top: 1em;
+}
+.fa-home:before{
+    display: none;
 }
 
 header .b {
@@ -504,6 +509,7 @@ font-size: 0.8em;
     }
 #hamnav label{
     margin-left: 19em;
+    display: none;
 }
     header .fila2 .menu {
         display: none;
@@ -558,12 +564,25 @@ font-size: 0.8em;
     header .b {
         display: none;
     }
-
     header .logo {
         display: flex;
         flex-direction: column;
-        width: 20%;
-        padding-left: 4vw;
+        padding-left: -5vw;
+        align-items: center;
+        flex-grow: 1;
+        margin-left: 0.5em;
+        margin-top: 2em;
+    }
+    .fa-home:before{
+        display:flex;
+    }
+    
+
+    .fas{
+        padding-top: 2vh;
+    }
+    .iyr{
+        display: none;
     }
 
     .input{
@@ -575,11 +594,12 @@ display: none;
     }
 
 .fila2{
-    margin-top: 1em;
+    display: none;
 }
 
 #hamnav label{
     margin-left: 9em;
+    display: none;
 }
 
     .pie {

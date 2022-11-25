@@ -4,6 +4,7 @@
 
         <div class="logo">
             <a href="/"><img width="250" height="70" src="/imagenes/logo-dd.png"></a>
+            <a href="/"><i  class="fas fa-home"></i></a>
         </div>
         <div class="ayb">
             <button class="boton-busqueda" type="submit"><i class="prb fa fa-search"></i></button>
@@ -16,7 +17,7 @@
             <a href="../products/carrito"><i class="fa fa-cart-shopping"></i></a>
         </div>
 
-        <div>
+        <div class="iyr">
 
             <% if (!locals.isLogged) { %>
                 <span class=" item ingresa"><a href="../users/login">INGRESÁ</a></span>
@@ -64,7 +65,8 @@
    
     <!-- (C) MENU ITEMS -->
     <div id="hamitems">
-     
+      <a href="../users/login">INGRESÁ</a>|
+      <a href="../users/registro">REGISTRATE</a>|
       <a href="../products/promociones">PROMOCIONES</a>|
       <a href="../products/vinos">VINOS</a>|
       <a href="../products/espumantes">ESPUMANTES </a>|
@@ -88,5 +90,5 @@
 
     </div>
 
-
+    <script src="https://kit.fontawesome.com/55185d4cb8.js" crossorigin="anonymous"></script>
 </header>
