@@ -3,52 +3,663 @@
     padding: 0;
     block-size: border-box;
 }
+/*header*/
 
-
-html,
-body {
-    background-color: #f4f4f4;
-}
-
-.form-container {
-    position: relative;
-    left: 20%;
-    width: 60%;
-    height: 100vh;
-    background-color: #ffffff;
-}
-
-.contact-form {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 600px;
-    
-}
-
-input,
-textarea {
-    width: 100%;
-    margin-top: 2rem;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-.submit {
-    border-bottom: 1px solid black;
-    padding: 1rem;
-    text-align: center;
-    background-color: #ffffff;
-    cursor: pointer;
-}
-
-.submit:hover {
-    opacity: 0.6;
-}
-
-.h{
+header {
     background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 15vh;
+    padding: 0.5px;
 }
 
+.cont{
+display: flex;
+justify-content: center;
+}
+
+
+
+header .fila1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}
+
+header .ayb {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+    height: 100%;
+    margin-top: 1.2em;
+}
+.prb {
+    color: #000;
+    right: 48px;
+}
+
+header .logo {
+    flex-grow: 1;
+    margin-left: 2.5em;
+    margin-top: 1em;
+}
+.fa-home:before{
+    display: none;
+}
+
+header .b {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+header .menu2 {
+    flex-grow: 1;
+    margin-top: 50px;
+}
+
+header .ayb input {
+    flex-grow: 50;
+    height: 42px;
+    border-radius: 11px;
+}
+
+header .ayb button {
+    flex-grow: 1;
+    color: black;
+    cursor: pointer;
+    border-radius: 16px;
+
+}
+
+header .ayb button i {
+    color: black !important;
+}
+
+header .ayb button i:hover {
+    color: orange !important;
+}
+
+header .fila2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+header .fila2 .menu {
+    flex-grow: 1;
+}
+
+
+header .fila2 .menu-mobile {
+    display: none;
+}
+
+header .fila2 .menu-mobile .contenedor-lista-mobile {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 9999;
+    width: max-content;
+    color: orange;
+    background-color: black;
+    border: gainsboro;
+}
+
+header .fila2 .menu-mobile button:focus+.contenedor-lista-mobile {
+    display: block;
+}
+
+header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    list-style: none;
+    font-size: 12px;
+    gap: 10px;
+    text-align: left;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: solid orange 1px;
+    padding: 20px !important;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+    padding-inline-start: 20px !important;
+}
+ .boton-busqueda{
+    background: white;
+    border: none;
+     position: absolute; 
+    right: 2px;
+    height: 15px;
+    bottom:19px;
+}
+header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li {
+    width: max-content;
+    margin: 0 !important;
+    text-align: left !important;
+}
+.myr{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.tyc{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    margin-bottom: 3vh;
+}
+
+/*burga*/
+#hamnav{
+    display: none;
+}
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER */
+#hamnav {
+    width: 100%;
+    background: #000;
+  }
+  
+  /* (B) HORIZONTAL MENU ITEMS */
+  #hamitems { display: flex; }
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover { background: orange; }
+  
+  /* (C) HIDE HAMBURGER */
+  #hamnav label, #hamburger { display: none; }
+
+  /* [ON SMALL SCREENS] */
+@media screen and (max-width: 1100px){
+    /* (A) BREAK INTO VERTICAL MENU */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
+    }
+   
+    /* (B) SHOW HAMBURGER ICON */
+    #hamnav label { 
+      display: inline-block; 
+      color: white;
+      background: orangered;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+      margin-left: 9em;
+      border-radius: 20%;
+    }
+  
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { display: block; }
+  }
+
+/*burga*/
+.hamburguesa {
+    background-color: orangered;
+
+}
+
+.boton-desplegable {
+    background-color: orangered;
+    border-radius: 20%;
+    border: solid gray 3px;
+    height: 40px;
+    width: 40px;
+    padding-right: 20px;
+}
+
+header .fila2 .input-responsive {
+    display: none;
+}
+
+header .fila2 .input-responsive input {
+    height: 40px;
+}
+
+header .fila2 .input-responsive button {
+    height: 35px;
+    color: black;
+    cursor: pointer;
+    bottom: 6px;
+}
+
+header .fila2 .input-responsive button i {
+    color: black !important;
+}
+
+header .fila2 .input-responsive button i:hover {
+    color: orange !important;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+li {
+    margin: auto 4px;
+}
+
+.a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+    list-style: none;
+    padding-right: 68px;
+    position: absolute;
+    top: 25px;
+    font-size: 12px;
+}
+
+.m1{
+    display: none;
+}
+
+.fa:hover {
+    color: orange;
+}
+
+.menu2 {
+    display: flex;
+    position: relative;
+    top: -15px;
+    right: 30px;
+    list-style: none;
+}
+
+
+.b {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    top: -15px;
+    right: 10px;
+    justify-content: space-between;
+
+}
+
+.form-control {
+    max-width: 1060px;
+    display: flex;
+}
+
+i {
+    color: white;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+
+
+/*main*/
+
+.label{
+    position: absolute;
+    left: 0;
+    color: gray;
+    top: 20px;
+    padding: 8px 13px;
+    z-index: -1;
+    transition: all .3s;
+  }
+  .boton{
+  display: flex;
+  justify-content: center;
+  }
+  .header{
+    font-family: 'Tangerine', serif;
+          font-size: 48px;
+  }
+  .formlogin{
+    max-width: 60vw;
+    margin: auto;
+    padding: 20px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 13px;
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+    font-size: 16px;
+    font-family: 'Playfair';
+    box-shadow: 3px 3px 3px 3px gray;
+  }
+  
+  .container{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container2{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .icono-password i{
+color: black;
+cursor: pointer;
+font-size: 0.8em;
+  }
+  
+.icono-password{
+    position: absolute;
+    right: 1em;
+    /* width: 1em; */
+}
+
+.icono-password :hover{
+    color: orangered;
+}
+
+  .avatar{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .button {
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: p9, 136, 0 pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 1em 0.8em;
+  }
+  .button.type1 {
+    color: orangered;
+  }
+  .button.type1.type1::after, .button.type1.type1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+  }
+  .button.type1.type1::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: orangered;
+    border-right-color: orangered;
+  }
+  .button.type1.type1::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: orangered;
+    border-left-color: orangered;
+  }
+  .button.type1.type1:hover:after, .button.type1.type1:hover:before {
+    width: 100%;
+    height: 100%;
+  }
+  .form {
+    display: block;
+    width: 100%;
+    border: none;
+    position: relative;
+    outline: none;
+    box-shadow: 0 2px gray;
+    padding: 8px 3px;
+    background: none;
+  }
+  
+  .form:focus ~ .label, .form:valid ~ .label{
+    top: 0;
+    font-size: .8rem;
+  }
+  
+  .form:focus ~ .label{
+    color:orangered
+  
+  }
+  
+  .form:focus{
+    box-shadow: 0 2px orangered;
+    transition: .5s;
+  }
+
+/* footer */
+
+.pie {
+    background-color: BLACK;
+    color: white;
+    height: 20vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconosf {
+    padding-right: 10px;
+}
+
+.pie2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pie3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+@media(max-width:1100px) {
+    header .fila1 .ayb {
+        display: none;
+    }
+
+    header .fila2 .input-responsive {
+        display: flex;
+    }
+
+    header .fila2 .menu-mobile {
+        display: block;
+    }
+
+    #hamnav{
+        display: block;
+    }
+#hamnav label{
+    margin-left: 19em;
+    display: none;
+}
+    header .fila2 .menu {
+        display: none;
+    }
+    .input{
+        display: none;
+            }
+        
+            .boton-busqueda{
+                display:none;
+            }
+        
+    .pie1 img {
+        height: 50px;
+        width: 200px;
+    }
+
+    .pie2 {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .pie3 {
+        font-size: 12px;
+        margin-left: 20px;
+
+    }
+
+
+    .pie {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .formlogin{
+        max-width: 90vw;
+        margin-top: 3vh;
+    }
+
+    .input-responsive .input {
+        flex-grow: 5;
+        width: 40vw;
+    }
+
+    .btn-primary {
+        min-width: 25vw;
+    }
+}
+
+@media(max-width:691px) {
+
+    header .b {
+        display: none;
+    }
+    header .logo {
+        display: flex;
+        flex-direction: column;
+        padding-left: -5vw;
+        align-items: center;
+        flex-grow: 1;
+        margin-left: 0.5em;
+        margin-top: 2em;
+    }
+    .fa-home:before{
+        display:flex;
+    }
+    
+
+    .fas{
+        padding-top: 2vh;
+    }
+    .iyr{
+        display: none;
+    }
+
+    .input{
+display: none;
+    }
+
+    .boton-busqueda{
+        display:none;
+    }
+
+.fila2{
+    display: none;
+}
+
+#hamnav label{
+    margin-left: 9em;
+    display: none;
+}
+
+    .pie {
+        display: flex;
+        flex-wrap: inherit;
+    }
+
+    .padre-cajas {
+        flex-direction: column;
+    }
+
+    .jack-daniels {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .caja2 {
+        margin-top: 1.5em;
+    }
+
+    .pie1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pie2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pie3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu2 {
+        display: none;
+    }
+
+    .btn-primary {
+        min-width: 25vw;
+    }
+
+    .formlogin{
+        max-width: 90vw;
+        margin-top: 3vh;
+    }
+
+    .icono-password i{
+        font-size: 0.95em;
+    }
+}
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link href="/css/contacto.css" rel="stylesheet">
@@ -7,23 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
 </head>
+
 <body>
-    <header>
-        <div class="h">
-                <a href="/"><img width="300" height="75" src="/imagenes/logo-dd.png"></a>
+
+    <%- include("./partials/header.ejs") %>
+
+        <main>
+            <div class="formlogin">
+
+                <div class="container">
+                    <form action="./contacto" class="contact-form" method="POST">
+                        <h2 class="cont">Contacto</h2>
+                        <input class="form" type="text" id="name" name="de" placeholder="Nombre Completo"></br>
+                        <input class="form" type="email" id="email" name="email" placeholder="Email"></br>
+                        <input class="form" type="test" id="subjet" name="asunto" placeholder="asunto"></br>
+                        <textarea id="message" placeholder="mensaje" name="contenido" cols="30" rows="10" width="200px" style="
+                        width: 100%;"></textarea>
+                        <div class="boton">
+                            <button type="submit" class="button type1">
+                                Enviar!
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        
-            </header>
-            
-    <div class="form-container">
-        <form action="./contacto" class="contact-form" method="POST">
-            <h2>Contacto</h2>
-            <input type="text" id="name" name="de" placeholder="Nombre Completo"></br>
-            <input type="email" id="email" name="email" placeholder="Email"></br>
-            <input type="test" id="subjet" name="asunto" placeholder="asunto"></br>
-            <textarea id="message" placeholder="mensaje" name="contenido" cols="30" rows="10"></textarea></br>
-            <input type="submit" class="submit" value="submit">
-        </form>
-    </div>
+        </main>
 </body>
+
 </html>
