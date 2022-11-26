@@ -17,6 +17,18 @@
 
     <%- include("../partials/header.ejs") %>
 
+    <% if (typeof errors != 'undefined') { %>
+        <p style="color:red">ERROR</p>
+        <ul>
+            <% for (let i =0; i < errors.length; i++) { %>
+                <li>
+                    <p style="color:red"><%= errors[i].msg %></p>
+                    
+                </li>
+            <% } %>    
+        </ul>
+    <% } %>
+
 <main class="formulario">
 
         
