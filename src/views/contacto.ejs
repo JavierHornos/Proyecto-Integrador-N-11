@@ -13,26 +13,26 @@
 
     <%- include("./partials/header.ejs") %>
 
-        <main>
-            <div class="formlogin">
+    <main>
+        <div class="formlogin">
 
-                <div class="container">
-                    <form action="./contacto" class="contact-form" method="POST">
-                        <h2 class="cont">Contacto</h2>
-                        <input class="form" type="text" id="name" name="de" placeholder="Nombre Completo"></br>
-                        <input class="form" type="email" id="email" name="email" placeholder="Email"></br>
-                        <input class="form" type="test" id="subjet" name="asunto" placeholder="asunto"></br>
-                        <textarea id="message" placeholder="mensaje" name="contenido" cols="30" rows="10" width="200px" style="
-                        width: 100%;"></textarea>
-                        <div class="boton">
-                            <button type="submit" class="button type1">
-                                Enviar!
-                            </button>
-                        </div>
-                    </form>
-                </div>
+            <div class="container">
+                <form action="./contacto" class="contact-form" method="POST">
+                    <h2 class="cont">Contacto</h2>
+                    <input class="form" type="text" id="name" name="de" placeholder="Nombre Completo" pattern="[A-Za-z]+{2,25}" title="El Nombre debe tener entre 3 y 25 caracteres y contener solo letras" required  ></br>
+                    <input class="form" type="email" id="email" name="email" placeholder="Email" required></br>
+                    <input class="form" type="test" id="subjet" name="asunto" placeholder="asunto" pattern="[A-Za-z]+{2,25}" title="El Nombre debe tener entre 3 y 25 caracteres y contener solo letras" required></br>
+                    <textarea id="message" placeholder="mensaje" name="contenido" cols="30" rows="10" width="200px" style= "
+                    width: 100%;" pattern="[A-Za-z]" required ></textarea>
+                    <div class="boton">
+                        <button type="submit" class="button type1">
+                            Enviar!
+                        </button>
+                    </div>
+                </form>
             </div>
-        </main>
+        </div>
+    </main>
 </body>
 
 </html>
