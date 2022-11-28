@@ -36,12 +36,12 @@
 
     <form action="/users/login"  class="form-box animate__animated animate__pulse" method="POST">
         <h1 class="form-title">Ingresar</h1>
-        <input type="Email" placeholder="email" name="Email" required>
+        <input type="Email" placeholder="email" name="Email" id="Email">
         <% if (locals.errors && errors.email) { %>
                <p style="color:red"><%= errors.email.msg %></p>
                    
             <% } %> 
-        <input type="Password" placeholder="Password" name="Password" required>
+        <input type="Password" placeholder="Password" name="Password" id="Password">
         <% if (locals.errors && errors.password) { %>
             <p style="color:red"><%= errors.password.msg %></p>
                 
