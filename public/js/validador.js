@@ -37,19 +37,4 @@ password.onchange= validarContrasena
 
 confirmaContrasena.onkeyup= validarContrasena
 
-var btn = document.getElementById("ordenar")
-
-btn.addEventListener("click ", ()=>{
-  productosOrdenados.sort(function (a, b){
-    if (a.precio > b.precio) {
-        return 1;
-    }
-    if (a.precio < b.precio) {
-        return -1;
-    }
-    // a must be equal to b
-    return 0; 
-});
-})
-
 
