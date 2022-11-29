@@ -1,5 +1,6 @@
 const productsController = require('./../controllers/productsController')
 let adminMiddleware = require('../middlewares/adminMiddleware')         // Middleares para restringir administradores
+const guestMiddleware = require('../middlewares/guestMiddleware')
 
 const express = require('express');
 const router = express.Router();
@@ -42,9 +43,9 @@ router.get('/productos-todos-admin', adminMiddleware, productsController.product
 
 
 // Carrito
-router.get ('/carrito', productsController.carrito)
+router.get ('/carrito',adminMiddleware, productsController.carrito)
 
-router.get ('/carrito-cargado', productsController.carritoCargado)
+router.get ('/carrito-cargado', adminMiddleware, productsController.carritoCargado)
 
 
 //* DETALLE PRODUCTO *//

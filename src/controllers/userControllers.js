@@ -64,14 +64,13 @@ const controladorUsers =
 
 
         procesoRegistro: (req, res) => {
+                
 
                 const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
 
+                console.log(resultValidation.errors)
                 if (resultValidation.errors.length > 0) {
-                        return res.render ('./users/registro', {
-                                errors: resultValidation.mapped(),
-                                oldData: req.body
-                        })
+                        return res.render ('./users/registro', {errors: resultValidation.errors})
                 }
 
 
@@ -90,7 +89,7 @@ const controladorUsers =
                         "Direccion": req.body.Direccion,
                         "Imagen": req.file.filename,
                         "Administrador": 0,                                        
-                        "Local_FK": req.body.Local_FK,
+                        "Local_FK": null,
                                                                 
                 });                                                       
 
