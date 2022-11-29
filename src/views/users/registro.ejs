@@ -28,13 +28,13 @@
 
 
         <main>
-            <form action="/users/registro" method="POST" class="formlogin" enctype="multipart/form-data">
+            <form action="/users/registro" method="POST" id="formulario-registro" class="formlogin" enctype="multipart/form-data">
                 <div class="container">
                     <input class="form" type="Email" id="Email" name="Email" required>
                     <label class="label" for="Email">Mail</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="password" id="password" name="Password" pattern="[A-Za-z\d\.\0-9]{6,12}" title="El Password debe tener entre 6 y 12 caracteres" required>
+                    <input class="form" type="password" id="password" name="Password" required>
                     <label class="label" for="password">Contraseña</label>
                     <div class="icono-password">
                         <i class="fa-solid fa-eye" onclick="mostrarPassword1()"></i>
@@ -59,16 +59,16 @@
                 </div> -->
 
                 <div class="container">
-                    <input class="form" type="text" id="Nombre" name="Nombre" pattern="[A-Za-z]+{2,25}" title="El Nombre debe tener entre 3 y 25 caracteres y contener solo letras" required >
+                    <input class="form" type="text" id="nombre" name="Nombre" required >
                     <label class="label" for="Nombre">Nombre</label>
                 </div>
                 </div>
                 <div class="container">
-                    <input class="form" type="text" id="Apellido" name="Apellido" pattern="[A-Za-z]+{2,25}" title="El Nombre debe tener entre 3 y 25 caracteres y contener solo letras" required>
+                    <input class="form" type="text" id="Apellido" name="Apellido" required>
                     <label class="label" for="Apellido">Apellido</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="text" id="domicilio" name="Direccion" pattern="[A-Za-z 0-9]+{4,25}" title="la dirección debe contener letras y numeros" required>
+                    <input class="form" type="text" id="domicilio" name="domicilio" required>
                     <label class="label" for="domicilio">Domicilio</label>
                 </div>
 
