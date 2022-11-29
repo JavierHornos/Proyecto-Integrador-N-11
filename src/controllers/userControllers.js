@@ -65,13 +65,11 @@ const controladorUsers =
 
         procesoRegistro: (req, res) => {
 
+                console.log(req.body)
                 const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
 
                 if (resultValidation.errors.length > 0) {
-                        return res.render ('./users/registro', {
-                                errors: resultValidation.mapped(),
-                                oldData: req.body
-                        })
+                        return res.render ('./users/registro', {errors: resultValidation.errors})
                 }
 
 
@@ -80,7 +78,7 @@ const controladorUsers =
                 let hash = bcrypt.hashSync(textoPlano, 10);
 
                 let datos = req.body
-               // console.log(datos)
+                //console.log(datos)
 
                 db.usuarios.create({
                         "Nombre": req.body.Nombre,
