@@ -320,7 +320,6 @@ i {
 }
 
 
-
 /*main*/
 
 .label{
@@ -341,7 +340,7 @@ i {
           font-size: 48px;
   }
   .formlogin{
-    max-width: 60vw;
+    max-width: 40vw;
     margin: auto;
     padding: 20px 15px;
     border: 1px solid rgba(0, 0, 0, 0.5);

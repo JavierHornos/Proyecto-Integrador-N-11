@@ -19,8 +19,7 @@ module.exports =  [
       .isLength({mnin: 4}).withMessage('El Apellido debe tener al menos 4 caracteres'),
 
     body('domicilio')
-    .exists().withMessage('Completar el campo domicilio')
-        .isAlphanumeric().isLength({mnin: 4}).withMessage('La dirección debe tener al menos 4 caracteres y puede ser alfanumericos'),
+    .exists().withMessage('Completar el campo domicilio').isLength({mnin: 4}).withMessage('La dirección debe tener al menos 4 caracteres y puede ser alfanumericos'),
     
         
     
