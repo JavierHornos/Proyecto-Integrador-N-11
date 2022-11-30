@@ -28,7 +28,12 @@
 
 
         <main>
-            <form action="/users/registro" method="POST" id="formulario-registro" class="formlogin" enctype="multipart/form-data">
+
+            <div class="errores">
+                <ul></ul>
+            </div>
+
+            <form action="/users/registro" method="POST" id="formulario-registro"class="formlogin" enctype="multipart/form-data">
                 <div class="container">
                     <input class="form" type="Email" id="Email" name="Email" required>
                     <label class="label" for="Email">Mail</label>
@@ -59,16 +64,16 @@
                 </div> -->
 
                 <div class="container">
-                    <input class="form" type="text" id="nombre" name="Nombre" required >
-                    <label class="label" for="Nombre">Nombre</label>
+                    <input class="form" type="text" id="nombre" name="Nombre" >
+                    <label class="label" for="nombre">Nombre</label>
                 </div>
                 </div>
                 <div class="container">
-                    <input class="form" type="text" id="Apellido" name="Apellido" required>
-                    <label class="label" for="Apellido">Apellido</label>
+                    <input class="form" type="text" id="apellido" name="Apellido"  >
+                    <label class="label" for="apellido">Apellido</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="text" id="domicilio" name="domicilio" required>
+                    <input class="form" type="text" id="domicilio" name="Direccion" >
                     <label class="label" for="domicilio">Domicilio</label>
                 </div>
 
@@ -104,8 +109,8 @@
             </form>
         </main>
 
-        <script src="/js/validador.js"></script>        
-        <script src="/js/editar-perfil.js"></script>
+        <script src="/js/validador.js"></script>
+        <script src="/js/validacion-registro.js"></script>
 </body>
 
 </html>
