@@ -73,7 +73,7 @@ const controladorUsers =
                 }
 
 
-                let textoPlano = req.body.Password; 
+                let textoPlano = req.body.password; 
                           
                 let hash = bcrypt.hashSync(textoPlano, 10);
 

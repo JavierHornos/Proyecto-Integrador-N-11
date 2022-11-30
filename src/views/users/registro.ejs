@@ -28,13 +28,14 @@
 
 
         <main>
+        
             <form action="/users/registro" method="POST" id="formulario-registro" class="formlogin" enctype="multipart/form-data">
                 <div class="container">
                     <input class="form" type="Email" id="Email" name="Email" required>
                     <label class="label" for="Email">Mail</label>
                 </div>
                 <div class="container">
-                    <input class="form" type="password" id="password" name="Password" required>
+                    <input class="form" type="password" id="password" name="password" required>
                     <label class="label" for="password">Contraseña</label>
                     <div class="icono-password">
                         <i class="fa-solid fa-eye" onclick="mostrarPassword1()"></i>
@@ -59,8 +60,11 @@
                 </div> -->
 
                 <div class="container">
-                    <input class="form" type="text" id="nombre" name="Nombre" required >
+                    <input class="form" type="text" id="Nombre" name="Nombre" required >
                     <label class="label" for="Nombre">Nombre</label>
+                    <div class="errores">
+                        <ul></ul>
+                    </div>
                 </div>
                 </div>
                 <div class="container">
@@ -106,6 +110,7 @@
 
         <script src="/js/validador.js"></script>        
         <script src="/js/editar-perfil.js"></script>
+        <script src="/js/validador-registro.js"></script>
 </body>
 
 </html>

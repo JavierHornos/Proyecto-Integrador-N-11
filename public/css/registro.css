@@ -331,6 +331,7 @@ i {
     z-index: -1;
     transition: all .3s;
   }
+
   .boton{
   display: flex;
   justify-content: center;

@@ -10,7 +10,7 @@ module.exports =  [
     .exists().withMessage('Completar el campo password')
         .isAlphanumeric().isLength({mnin: 4}).withMessage('La contraseña debe tener al menos 4 caracteres'),
 
-    body('nombre')
+    body('Nombre')
     .exists().withMessage('Completar el campo nombre')
         .isLength({mnin: 4}).withMessage('el Nombre debe tener al menos 4 caracteres'),
 
