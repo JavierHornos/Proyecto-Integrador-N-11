@@ -24,6 +24,7 @@ function mostrarPassword1() {
 
 
 //eventos//
+
 password.onchange= validarContrasena
 
 confirmaContrasena.onkeyup= validarContrasena
