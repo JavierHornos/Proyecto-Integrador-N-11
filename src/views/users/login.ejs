@@ -34,7 +34,7 @@
         
 
 
-    <form action="/users/login"  class="form-box animate__animated animate__pulse" method="POST">
+    <form action="/users/login" id="formulario" class="form-box animate__animated animate__pulse" method="POST">
         <h1 class="form-title">Ingresar</h1>
         <input type="Email" placeholder="email" name="Email" id="Email">
         <% if (locals.errors && errors.email) { %>
@@ -63,7 +63,8 @@
 
 
     
-
     
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/validacion-Login.js"></script>
 </body>
 </html>
