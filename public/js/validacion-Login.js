@@ -7,14 +7,13 @@ formulario.addEventListener("submit",function(e) {
     let password = document.getElementById("Password").value.trim()
 
 
-  
+  //arreglo de expresiones regulares para validar Email//
 const validaEmail = (email) => {
   return /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(email);        
 }
+
+//arreglo de expresiones regulares para validar password
 const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/  
-
-
-
 
 
 
@@ -25,7 +24,7 @@ const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/
                  title: 'Validacion',
                  text: 'Ingrese un e-mail'})
 
-    } else if(!validaEmail(email)) {                                 
+    } else if(!validaEmail(email)) {                             // comparamos con el erreglo de expresiones            
                      return Swal.fire({
                           icon: 'error',
                           title: 'Validacion',
@@ -46,10 +45,10 @@ const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/
           return Swal.fire({
             icon: 'error',
             title: 'Validacion',
-            text: 'Debe tener minimo 6 caracteres'})           
+            text: 'Debe tener minimo 6 caracteres'})    
 
-         } else if (!password.match(er)) {
 
+         } else if (!password.match(er)) {                    // comparamos con el erreglo de expresiones
           return Swal.fire({
             icon: 'error',
             title: 'Validacion',
@@ -57,7 +56,7 @@ const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/
 
          } else {
 
-          formulario.submit();
+          formulario.submit();                              // hacemos submit al formulario
           
          } 
  });
