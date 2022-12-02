@@ -50,7 +50,7 @@ const controladorUsers =
                                 return res.render('./users/login', {errors: {password: {msg: 'Password incorrecto'}}});
                         }
                 }
-                        } return res.render('./users/login', {errors: {email: {msg: 'Email incorrecto'}}});
+                        } return res.render('./users/login', {errors: {email: {msg: 'Email no registrado'}}});
 
                 });
         },
