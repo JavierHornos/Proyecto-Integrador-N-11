@@ -1,46 +1,43 @@
-window.addEventListener("load", function(){
-    let formulario = document.querySelector("#formulario-registro");
-    let campoNombre = document.querySelector("#nombre");
-     /* console.log(campoNombre)
+let formulario = document.getElementById("formulario-registro");
+let campoNombre = document.getElementById("Nombre");
+let email = document.getElementById("Email");
+let apellido = document.getElementById("apellido");
+let fileInput = document.getElementById('Imagen');
 
-     console.log(formulario)*/
-
-    formulario.addEventListener("submit", function(e){
-         /*e.preventDefault();*/
- 
-         let errores = [];
- 
-         let campoNombre = document.querySelector("#nombre");
-
-         /* console.log(campoNombre)*/
- 
-         if(campoNombre.value == ""){
-             errores.push("El campo de nombre debe estar completo")
-         }
- 
-         else if(campoNombre.value.length < 4){
-             errores.push("El campo de nombre debe tener al menos 4 caracteres")
-         }
- 
-         if(errores.length > 0){
-             e.preventDefault();
-     
-             let ulErrores = document.querySelector ("div.errores ul");
-             for (let i=0 ; i < errores.length; i++)
-     
-             ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-         }
-  })
-
-/*campoNombre.addEventListener("blur", function(){
-    if(campoNombre.value == ""){
-        alert("El campo de nombre debe estar completo")
+formulario.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let warnings = ""
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    let entrar = false
+    if (campoNombre.value.length < 3) {
+        warnings += '<div class="errreg" >* El nombre debe tener mas de 2 caracteres.</div>'
+        entrar = true
+    }
+    if (!regexEmail.test(Email.value)) {
+        warnings += '<div class="errreg" >* El Email no es valido.</div>'
+        entrar = true
     }
 
-    else if(campoNombre.value.length < 4){
-        alert("El campo de nombre debe tener al menos 4 caracteres")
+    if (password.value.length < 8) {
+        warnings += '<div class="errreg" >* La contraseña debe tener al menos 8 caracteres.</div>'
+        entrar = true
     }
-})
-*/
 
-})
+    if (apellido.value.length < 3) {
+        warnings += '<div class="errreg" >* El apellido debe tener mas de 2 caracteres.</div>'
+        entrar = true
+    }
+        var allowedExtensions = /(.jpg|.jpeg)$/i;
+        if (!allowedExtensions.exec(fileInput.value = 1)) {
+            warnings += '<div class="errreg" >* Asegurese que la imgen sea una extension valida. (.jpg|.jpeg)</div>';
+            entrar = true
+            fileInput.value = '';
+            
+        }
+
+        if (entrar) {
+            error.innerHTML = warnings
+        } else {
+            formulario.submit();
+        }
+    })

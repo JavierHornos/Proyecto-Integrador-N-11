@@ -6,7 +6,7 @@
       errores.push("El campo de nombre debe estar completo")
     }
   }) */
-  console.log(formulario)
+  /*console.log(formulario)
   formulario.addEventListener("submit", function (e) {
    e.preventDefault(); 
     let errores = [];
@@ -35,6 +35,26 @@
 
     }
 
-    formulario.submit();
+    
 
-  })
+  })*/
+  formulario.addEventListener("submit", function(e){
+  e.preventDefault();
+  campoNombre.onblur = function() {
+    if (campoNombre.value.length < 3) { 
+      campoNombre.classList.add('invalid');
+      error.innerHTML = '<div class="errreg" >El nombre tiene que ser mayor a 2 caracteres.</div>'
+   
+   
+    }
+  };
+    campoNombre.onfocus = function() {
+    if (this.classList.contains('invalid')) {
+      this.classList.remove('invalid');
+      error.innerHTML = "";
+    }
+  };
+  
+  e.preventDefault();
+
+});
