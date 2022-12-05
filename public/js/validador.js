@@ -4,15 +4,6 @@ const confirmaContrasena= document.getElementById("password2")
 
 //funciones//
 
-function validarContrasena(){
-    if (password.value == confirmaContrasena.value){
-        confirmaContrasena.setCustomValidity("")
-
-    } else {
-        confirmaContrasena.setCustomValidity("Las Contraseñas No Coinciden")
-    }
-}
-
 function mostrarPassword1() {
     var x = document.getElementById("password");
     if (x.type === "password") {

@@ -335,13 +335,21 @@ i {
   .errreg{
     color: red;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    justify-content: center;
+    flex-direction: row;
+}
+
   .imgr{
     border: 2px solid red
     
   }
+
+  .fa-triangle-exclamation{
+    color:red;
+    
+    padding-right: 5px;
+  }
+
   .styleImage{
     border:2px green solid
   }
