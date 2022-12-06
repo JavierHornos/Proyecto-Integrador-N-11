@@ -4,7 +4,13 @@ let precio = document.getElementById("price");
 let descuento = document.getElementById("discount");
 let categoria = document.getElementById("category");
 let creador = document.getElementById("creator");
-/*let fechaCreacion = document.getElementById("");*/
+/*let fechaCreacion = document.getElementById("fecha");
+let date = new Date();
+let day = date.getDay();
+let month = date.getMonth();
+let year = date.getFullYear();
+let fullYear = day+"/"+month+"/"+year;*/
+let descripcion = document.getElementById("description");
 let fileInput = document.getElementById('cImage');
 
 formulario.addEventListener("submit", function (e) {
@@ -21,7 +27,7 @@ formulario.addEventListener("submit", function (e) {
     }
 
 
-    if (precio.value.length <= 0) {
+    if (precio.value <= 0) {
         warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> El precio debe ser mayor a $0.</div>'
         entrar = true
     }
@@ -38,6 +44,46 @@ formulario.addEventListener("submit", function (e) {
         warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Debe completar el campo descuento.</div>'
         entrar = true
     }
+
+    if (categoria.value.length == 'Elegí') {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese una categoría válida.</div>'
+        entrar = true
+    }
+    if (categoria.value =="") {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Debe ingresar una categoría.</div>'
+        entrar = true
+    }
+
+    if (creador.value.length == 'Elegí') {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese un creador válido.</div>'
+        entrar = true
+    }
+    if (creador.value =="") {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Debe ingresar un creador.</div>'
+        entrar = true
+    }
+
+    /*if (fechaCreacion.value != fullYear.value) {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese la fecha de hoy.</div>'
+        entrar = true
+    }
+    if (fechaCreacion.value =="dd/mm/aaaa") {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Debe ingresar una fecha.</div>'
+        entrar = true
+    }*/
+
+    if (descripcion.value.length <= 0) {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese una descripción.</div>'
+        entrar = true
+    }
+    if (descripcion.value =="") {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Debe ingresar una descripción.</div>'
+        entrar = true
+    }
+
+
+
+
         var allowedExtensions = /(.jpg|.jpeg)$/i;
         if (!allowedExtensions.exec(fileInput.value)) {
             warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i>Asegurese que la imgen sea una extension valida. (.jpg|.jpeg)</div>'
