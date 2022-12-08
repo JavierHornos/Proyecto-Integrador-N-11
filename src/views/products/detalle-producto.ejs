@@ -21,17 +21,20 @@
                 <div class="caja1">
                     <div>Nuevo</div>
                     <h2><%= productoDetallado.nombre %></h2>
+                    <h3><%= productoDetallado.descripcion %></h3>
                     <del>$<%= productoDetallado.precio %></del>
                     <div class="padre-precio">
-                        <h2 class="precio"> $ <%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%></h2> <span class="off"><%= productoDetallado.descuento %>% OFF</span>
+                        <div id="precio">
+                        <h2 class="precio"><%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%></h2> <span class="off"><%= productoDetallado.descuento %>% OFF</span>
+                        </div>
                     </div>
                     <div>
                         <label>Cantidad</label></label>
                         <input class="cantidades" type="number" value="0">
                     </div>
-                    <a href="../carrito-cargado">
-                        <input class="al-carrito" type="button" value="Agregar Al Carrito">
-                    </a>
+                    <!-- <a href="../carrito-cargado"> -->
+                        <button class="al-carrito" id="al-carrito" data-id="<%= productoDetallado.id %>" data-nombre="<%= productoDetallado.nombre%>" data-precio="<%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%>" data-imagen="/imagenes/productos/<%=productoDetallado.imagen%>" >Agregar Al Carrito</button>
+                    <!-- </a> -->
                     <span class="cuotas"> En 12x $ <%= productoDetallado.precio / 12 %></span>
                     <span class="litro">El precio por litro es $ 13.440</span>
                     <a href="#medios-pago" class="pago">Ver los medios de pago</a>
@@ -56,6 +59,9 @@
             <%- include("../partials/footer.ejs") %>
 
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/js/comprar.js"></script>
 
 </body>
 

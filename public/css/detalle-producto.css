@@ -121,6 +121,7 @@ border-color: gainsboro;
     margin: 0.2em;
     margin-bottom: 0.5em;
     color: white;
+    cursor:pointer;
 }
 
 .al-carrito:hover{

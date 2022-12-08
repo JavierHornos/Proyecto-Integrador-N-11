@@ -15,27 +15,32 @@
         <h1>CARRITO DE COMPRAS</h1>
 <div class="contenedor1">
  <div class="contenedor1a">
-   <div class="columna1"><img class="jack-daniels" width='80' height='150' src="/imagenes/jack-daniels.png"></img></div>
+
+   <div class="columna1"><img class="jack-daniels" width='80' height='150' ></img></div>
+
    <div class="columna2">Producto
-       <div class="mayusculas">WHISKIE JACK DANIEL'S</div>
-       <div class="wiskito">J.Daniel's</div>
-    </div>
+    <div class="mayusculas" id="nombre"> </div>                                              <!-- nombre -->                                       
+  </div>
+
    <div class="columna3">Envío
-       <div>a calcular</div>
+       <div>Envio Gratis</div>
    </div>
-   <div class="columna4">Precio
-       <div>$ 10.080</div>
+
+   <div class="columna4" id="precio" ><div></div>                                               <!-- precio -->
    </div>
+
    <div class="columna5">Cantidad
-       <div><input class="cantidades" type="number" value="1"></div>
+       <div class="cantidades" id="cantidad"> </div>                                              <!-- cantidad -->
    </div>
+
    <div class="columna6">TOTAL
-       <div>$ 10.080</div>
+       <div id="total"></div>                                                                           <!-- Total -->
     </div>     
+
 
 </div>
 
-<div class="contenedor1b">
+<!-- <div class="contenedor1b">
    <div class="contenedor2">
     <div class="fila1b">SUMAR CUPON DE DESCUENTO</div>
     <div class="fila2b">Subtotal
@@ -50,7 +55,7 @@
     <button>FINALIZAR COMPRA</button>
     <a href="/products/productos-todos"><div class="elegi">Elegí mas productos</div></a>
 </div>
-</div>
+</div> -->
 
 </div>
 
@@ -61,5 +66,8 @@
         <%- include("../partials/footer.ejs") %> 
 
     </footer>
+
+    <script src="/js/carrito-cargado.js"></script>
+
 </body>
 </html>
