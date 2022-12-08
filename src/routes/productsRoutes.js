@@ -44,7 +44,7 @@ router.get('/productos-todos-admin', adminMiddleware, productsController.product
 // Carrito
 router.get ('/carrito', productsController.carrito)
 
-router.get ('/carrito-cargado', productsController.carritoCargado)
+router.get ('/carrito-cargado', adminMiddleware, productsController.carritoCargado)
 
 
 //* DETALLE PRODUCTO *//
