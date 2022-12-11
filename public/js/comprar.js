@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
  
 
   botonComprar.addEventListener("click", function (e) {
-    console.log(e.target.dataset.id, e.target.dataset.nombre, e.target.dataset.precio, e.target.dataset.imagen)
+   // console.log(e.target.dataset.id, e.target.dataset.nombre, e.target.dataset.precio, e.target.dataset.imagen)
     if (localStorage.carrito) {
       //si hay carrito veremos que hacemos
       let carrito = JSON.parse(localStorage.carrito);

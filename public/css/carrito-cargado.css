@@ -15,104 +15,83 @@ footer{
 
 /*main*/
 .contenedor1{
+    border: solid 5px black;
     display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    gap:50px;
-    position: relative;
-    flex-wrap: wrap;
-    padding-top: 20px;
+    
+    
 }
 
-.contenedor1a{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    gap:50px;
-    position: relative;
-    flex-wrap: wrap;
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
-}
-
-.contenedor1b{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    gap:50px;
-    position: relative;
-    flex-wrap: wrap;
-}
 
 .columna2{
-    display: flex;
-    flex-direction: column;
-    gap:50px ;  
+    
+    text-align: center;
+    width: 65%;
+
 }
 
+
 .columna3{
-    display: flex;
-    flex-direction: column;
-    gap:50px ;
+    
+    text-align: center;
+    width: 10%;
+
 }
 
 .columna4{
-    display: flex;
-    flex-direction: column;
-    gap:50px ;
+    
+    text-align: center;
+    width: 10%;
+
 }
 
 .columna5{
-    display: flex;
-    flex-direction: column;
-    gap:50px ;
-}
-
-.columna6{
-    display: flex;
-    flex-direction: column;
-    gap:50px ;
-}
-
-.cantidades{
     
-    width: 2em;
-    height: 1em;
     text-align: center;
-    border-radius: 0.6em;
-    border-color: gainsboro;
+    width: 15%;
+    
+
 }
 
-.contenedor2{
+.total2{
+    border: solid 5px black;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: center;
+    align-items: flex-end;
+    padding-right: 85px;
+    padding-bottom: 20px;
 }
 
-.fila1b{
-    border: solid gray 1px;
-    background-color: gainsboro;
-    padding: 3px;
-    opacity: 0.5;
+.botonBorrar{
+    color: orangered;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    
 }
 
-.fila2b{
-    display: flex;
-    gap:100px;
-    border-bottom: solid 1px gainsboro;
+.botonBorrar:hover{
+    background-color: rgb(238, 78, 20);
+    color: white;
+    cursor: pointer;
+    
 }
 
-.fila3{
-    display: flex;
-    gap:110px;
-    border-bottom: solid 1px gainsboro;
-}
 
-.fila4{
-    display: flex;
-    gap:100px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .wiskito{
     display: none;

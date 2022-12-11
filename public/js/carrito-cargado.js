@@ -6,6 +6,9 @@ let cantidad = document.getElementById("cantidad");
 //console.log(cantidad)
 let total = document.getElementById("total");
 // console.log(total)
+let total2 = document.getElementById("total2")
+let botonBorrar = document.getElementById("botonBorrar")
+
 
 
 if (localStorage.carrito) {
@@ -38,9 +41,23 @@ if (localStorage.carrito) {
     total.appendChild(div)
    })
 
+ 
+let sumaTotal = carrito.reduce((acum, prod) => acum + prod.precio * prod.Cantidad, 0)
+let div = document.createElement("div")
+div.innerHTML = sumaTotal
+total2.appendChild(div)
 
-     
+
+botonBorrar.addEventListener("click", function (e) {
+        localStorage.removeItem('carrito');
+        
+    
+
+
+});
+
 
      
    
 }
+
