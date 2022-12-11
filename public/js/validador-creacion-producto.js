@@ -4,12 +4,13 @@ let precio = document.getElementById("price");
 let descuento = document.getElementById("discount");
 let categoria = document.getElementById("category");
 let creador = document.getElementById("creator");
-/*let fechaCreacion = document.getElementById("fecha");
-let date = new Date();
+let fechaCreacion = document.getElementById("fecha");
+/*let date = new Date();
 let day = date.getDay();
 let month = date.getMonth();
 let year = date.getFullYear();
 let fullYear = day+"/"+month+"/"+year;*/
+let fecha = moment().subtract(10, 'days').calendar();;
 let descripcion = document.getElementById("description");
 let fileInput = document.getElementById('cImage');
 
@@ -71,6 +72,11 @@ formulario.addEventListener("submit", function (e) {
         warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Debe ingresar una fecha.</div>'
         entrar = true
     }*/
+
+    if (fechaCreacion.value != fecha.value) {
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese la fecha de hoy.</div>'
+        entrar = true
+    }
 
     if (descripcion.value.length <= 0) {
         warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese una descripción.</div>'
