@@ -50,6 +50,7 @@ total2.appendChild(div)
 
 botonBorrar.addEventListener("click", function (e) {
         localStorage.removeItem('carrito');
+        location.reload()
         
     
 
