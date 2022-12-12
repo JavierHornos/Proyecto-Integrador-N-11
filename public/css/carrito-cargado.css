@@ -134,9 +134,6 @@ font-family: Arial, Helvetica, sans-serif;
 
     
 
-    .wiskito{
-        display: flex;
-    }
   }
 
   @media(max-width:411px){
@@ -144,6 +141,13 @@ font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
 }
   }
+
+  .columna2{
+    
+    text-align: center;
+    width: 65%;
+
+}
 
   /*header*/
 
