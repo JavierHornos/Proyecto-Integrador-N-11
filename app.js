@@ -1,6 +1,7 @@
 const mainRoutes = require('./src/routes/mainRoutes');
 const usersRouters = require('./src/routes/userRoutes');
 const productsRouters = require('./src/routes/productsRoutes');
+const apiRouter = require('./src/routes/api');
 const methodOverride =  require('method-override');              // Pasar poder usar los métodos PUT y DELETE
 const express = require('express');                            
 const path = require('path');                                   
@@ -9,6 +10,7 @@ const session = require('express-session');                     // express-sessi
 const cookieParser = require('cookie-parser');                  //cookie parser
 const MemoryStore = require('memorystore')(session)
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
+
 
  
 
@@ -48,6 +50,8 @@ app.use('/', mainRoutes); // se concatenan las rutas del primer y segundo parám
 app.use('/users', usersRouters);
 
 app.use('/products', productsRouters);
+
+app.use("/api/", apiRouter);
 
 
 
