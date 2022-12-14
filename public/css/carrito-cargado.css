@@ -15,7 +15,7 @@ footer{
 
 /*main*/
 .contenedor1{
-    border: solid 5px black;
+    border: solid 5px gainsboro;
     display: flex;
     
     
@@ -48,17 +48,18 @@ footer{
     
     text-align: center;
     width: 15%;
-    
 
 }
 
+
 .total2{
-    border: solid 5px black;
+    border-bottom: solid 5px gainsboro;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding-right: 85px;
     padding-bottom: 20px;
+    
 }
 
 .botonBorrar{
