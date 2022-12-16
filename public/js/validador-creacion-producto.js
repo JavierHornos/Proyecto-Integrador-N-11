@@ -65,12 +65,29 @@ formulario.addEventListener("submit", function (e) {
 
     let fecha = new Date();     // variable fecha con toda la fecha y hora de hoy
     let dia = fecha.getDate();  // extraemos solo el dia de hoy
+    let mes = fecha.getMonth() +1; // extraemos el mes de hoy
+    let anio = fecha.getFullYear(); // extramos el año 
+   
+    
+   
 
-    if (!fechaCreacion.value.match(dia)) {  // comparamos que no sea el dia de hoy tira error else true
+    if (!fechaCreacion.value.match(dia)) {  // comparamos que no sea el dia, mes y año de hoy y tira error, else formulario.submit
         
-       warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese la fecha de hoy.</div>'
+       warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Día incorrecto, ingrese la fecha de hoy.</div>'
        entrar = true
    }
+
+   if (!fechaCreacion.value.match(mes)) {  // comparamos que no sea el dia, mes y año de hoy y tira error, else formulario.submit
+   
+    warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Mes incorrecto, ingrese la fecha de hoy.</div>'
+    entrar = true
+    }
+
+    if (!fechaCreacion.value.match(anio)) {  // comparamos que no sea el dia, mes y año de hoy y tira error, else formulario.submit
+       
+        warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Año incorrecto, ingrese la fecha de hoy.</div>'
+        entrar = true
+        }
 
        
 
@@ -98,6 +115,6 @@ formulario.addEventListener("submit", function (e) {
         if (entrar) {
             error.innerHTML = warnings
         } else {
-            formulario.submit();
+           formulario.submit();
         }
     })
