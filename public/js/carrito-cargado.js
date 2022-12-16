@@ -1,13 +1,9 @@
 
 let imagen = document.getElementById("imagen");
 let nombre = document.getElementById("nombre");
-// console.log(nombre)
 let precio = document.getElementById("precio");
-// console.log(precio)
 let cantidad = document.getElementById("cantidad");
-//console.log(cantidad)
 let total = document.getElementById("total");
-// console.log(total)
 let total2 = document.getElementById("total2")
 let botonBorrar = document.getElementById("botonBorrar")
 
@@ -15,24 +11,20 @@ let botonBorrar = document.getElementById("botonBorrar")
 
 if (localStorage.carrito) {
     let carrito = JSON.parse(localStorage.carrito);
-    //console.log(carrito)
 
-
-
-       carrito.forEach(e => {
-        let div = document.createElement("div")
-        div.style.borderTop = "gainsboro solid 3px"
-        div.style.height = "50px"
-        div.style.display = "flex"
-        div.style.alignItems ="center"
-        div.style.justifyContent ="center"
-        e.imagen
-        div.innerHTML = '<div class="columna1"><img src="/imagenes/productos/<%=e.imagen%>" class="jack-daniels" ></img></div>'
-        imagen.appendChild(div)
-       })
-
-   
-       
+    carrito.forEach(e => {
+     let div = document.createElement("div")
+     div.style.borderTop = "gainsboro solid 3px"
+     div.style.height = "50px"
+     div.style.display = "flex"
+     div.style.alignItems ="center"
+     div.style.justifyContent ="center"
+     e.imagen
+     div.innerHTML = `<div class="columna1"><img src="${e.imagen}" class="jack-daniels" width= 40 height= 45 ></img></div>`
+     console.log(div.innerHTML)
+     imagen.appendChild(div)
+   })
+      
 
    carrito.forEach(e => {
     let div = document.createElement("div")
