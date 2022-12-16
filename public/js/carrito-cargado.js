@@ -6,6 +6,8 @@ let cantidad = document.getElementById("cantidad");
 let total = document.getElementById("total");
 let total2 = document.getElementById("total2")
 let botonBorrar = document.getElementById("botonBorrar")
+let botonComprar = document.getElementById("botonComprar")
+
 
 
 
@@ -21,7 +23,6 @@ if (localStorage.carrito) {
      div.style.justifyContent ="center"
      e.imagen
      div.innerHTML = `<div class="columna1"><img src="${e.imagen}" class="jack-daniels" width= 40 height= 45 ></img></div>`
-     console.log(div.innerHTML)
      imagen.appendChild(div)
    })
       

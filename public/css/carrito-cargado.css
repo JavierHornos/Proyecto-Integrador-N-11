@@ -7,10 +7,10 @@ main{
     height: 60vh;
 }
 
-footer{
+/* footer{
     height: 20vh;
     background-color: black;
-}
+} */
 
 
 /*main*/
@@ -68,6 +68,7 @@ footer{
     border-radius: 5px;
     padding: 5px;
     margin-top: 10px;
+    margin-bottom: 50px;
     
 }
 
@@ -78,6 +79,22 @@ footer{
     
 }
 
+.botonComprar {
+
+    color: orangered;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.botonComprar:hover{
+    background-color: rgb(238, 78, 20);
+    color: white;
+    cursor: pointer;
+    
+}
 
 
 
