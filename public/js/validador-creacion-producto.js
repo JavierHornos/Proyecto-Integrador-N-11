@@ -1,21 +1,22 @@
-
 let formulario = document.getElementById("creacion-producto");
 let campoNombre = document.getElementById("nombre");
 let precio = document.getElementById("price");
 let descuento = document.getElementById("discount");
 let categoria = document.getElementById("category");
 let creador = document.getElementById("creator");
-//let fechaCreacion = document.getElementById("fecha");
-//let date = new Date();
-//let outPut = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
-//console.log(outPut)
+let fechaCreacion = document.getElementById("fecha");
 let descripcion = document.getElementById("description");
 let fileInput = document.getElementById('cImage');
+
+
 
 formulario.addEventListener("submit", function (e) {
     e.preventDefault();
     let warnings = ""
     let entrar = false
+
+    
+    
     if (campoNombre.value.length < 3) {
         warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> El nombre debe tener mas de 2 caracteres.</div>'
         entrar = true
@@ -62,11 +63,16 @@ formulario.addEventListener("submit", function (e) {
         entrar = true
     }
 
-    //if (fechaCreacion.value !== outPut.value) {
-      //  warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese la fecha de hoy.</div>'
-       // entrar = true
-   // }
-    
+    let fecha = new Date();     // variable fecha con toda la fecha y hora de hoy
+    let dia = fecha.getDate();  // extraemos solo el dia de hoy
+
+    if (!fechaCreacion.value.match(dia)) {  // comparamos que no sea el dia de hoy tira error else true
+        
+       warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese la fecha de hoy.</div>'
+       entrar = true
+   }
+
+       
 
     if (descripcion.value.length <= 0) {
         warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i> Ingrese una descripción.</div>'
@@ -87,6 +93,7 @@ formulario.addEventListener("submit", function (e) {
             fileInput.value = '';
             
         }
+        
 
         if (entrar) {
             error.innerHTML = warnings
