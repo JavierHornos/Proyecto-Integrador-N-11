@@ -10,10 +10,11 @@ const session = require('express-session');                     // express-sessi
 const cookieParser = require('cookie-parser');                  //cookie parser
 const MemoryStore = require('memorystore')(session)
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
+const cors = require('cors');
 
 
  
-
+app.use(cors())
 
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.static(__dirname +'/views'));
