@@ -3,12 +3,7 @@ const db = require("../database/models");
 module.exports = {
   usuarios: async function (req, res) {
     await db.usuarios
-      .findAll({attributes: [
-        "id",
-        "Nombre",
-        "Apellido",
-
-      ]})
+      .findAll({attributes: {exclude: ["Password"]}})
       .then((listaUsuarios) => {
         return res.status(200).json({
           total: listaUsuarios.length,
