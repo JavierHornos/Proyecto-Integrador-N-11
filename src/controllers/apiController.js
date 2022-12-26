@@ -11,6 +11,7 @@ module.exports = {
           status: 200,
         });
       });
+      
   },
 
   usuarioDetalle: async function (req, res) {
