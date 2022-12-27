@@ -36,7 +36,7 @@ const controladorProductos =
 			
         let soloVinos = listaProductos.filter((prod) => prod.Categoria_FK  == 1);
 		
-			//console.log(soloVinos);
+			console.log(soloVinos);
 
 		 	res.render('./products/vinos',{soloVinos: soloVinos});
 
