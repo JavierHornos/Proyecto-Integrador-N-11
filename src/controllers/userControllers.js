@@ -63,9 +63,11 @@ const controladorUsers =
 
 
 
-        procesoRegistro: (req, res) => {
+        procesoRegistro: async (req, res) => {
 
-                console.log(req.body)
+                // console.log(req.body)
+                console.log(req.file.destination)
+
                 const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
 
                 if (resultValidation.errors.length > 0) {
@@ -80,13 +82,13 @@ const controladorUsers =
                 let datos = req.body
                 //console.log(datos)
 
-                db.usuarios.create({
+                await db.usuarios.create({
                         "Nombre": req.body.Nombre,
                         "Apellido": req.body.Apellido,
                         "Email": req.body.Email,
                         "Password": hash,
                         "Direccion": req.body.Direccion,
-                        "Imagen": req.file.filename,
+                        "Imagen": req.file.path,
                         "Administrador": 0,                                        
                         "Local_FK": req.body.Local_FK,
                                                                 
