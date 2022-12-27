@@ -18,6 +18,8 @@ app.use(cors())
 
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.static(__dirname +'/views'));
+app.use(express.static(path.resolve(__dirname, './public/imagenes/avatares')));
+app.use(express.static(path.resolve(__dirname, './public/imagenes/productos')));
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
