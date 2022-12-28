@@ -103,7 +103,7 @@ formulario.addEventListener("submit", function (e) {
 
 
 
-        var allowedExtensions = /(.jpg|.jpeg)$/i;
+        var allowedExtensions = /(.jpg|.jpeg|.png)$/i;
         if (!allowedExtensions.exec(fileInput.value)) {
             warnings += '<div class="errreg" ><i class="fa-solid fa-triangle-exclamation"></i>Asegurese que la imgen sea una extension valida. (.jpg|.jpeg)</div>'
             entrar = true

@@ -18,7 +18,7 @@
         <%  for (let user of usuarios) {%> 
         <div class="container">
             <div class="cover-photo">
-                <img src="/imagenes/avatares/<%=user.Imagen%>" class="profile">
+                <img src="<%=user.Imagen%>" class="profile">
             </div> <br>
             <div class="profile-name"><%=user.Nombre + " " + user.Apellido%></div> <br>
             <p class="about"><%=user.Email%></p><br>

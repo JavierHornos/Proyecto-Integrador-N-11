@@ -1,5 +1,12 @@
-let fs = require('fs');
+let fs = require('fs-extra');
 const path = require('path'); 
+const cloudinary = require('cloudinary')
+
+cloudinary.config({
+        cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+        api_key: process.env.CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 
 const { validationResult } = require('express-validator');
@@ -32,6 +39,7 @@ const controladorUsers =
          
                 db.usuarios.findAll().then((listaUsuarios) =>{
                 let userToLogin = listaUsuarios.filter((prod) => prod.Email  == datos.Email);
+                console.log(userToLogin)
 
                 if(userToLogin) {
                         for (let p of userToLogin) {
@@ -63,7 +71,7 @@ const controladorUsers =
 
 
 
-        procesoRegistro: (req, res) => {
+        procesoRegistro: async (req, res) => {
 
                 console.log(req.body)
                 const resultValidation = validationResult(req); // resultados de errores de formulario y lo guardamos en errors
@@ -80,17 +88,21 @@ const controladorUsers =
                 let datos = req.body
                 //console.log(datos)
 
+                 
+                const result = await cloudinary.v2.uploader.upload(req.file.path) //subimos la imagen a cloudinary y le ponemos el path de donde esta la foto 
+                console.log(result)
                 db.usuarios.create({
                         "Nombre": req.body.Nombre,
                         "Apellido": req.body.Apellido,
                         "Email": req.body.Email,
                         "Password": hash,
                         "Direccion": req.body.Direccion,
-                        "Imagen": req.file.filename,
+                        "Imagen": result.url,
                         "Administrador": 0,                                        
                         "Local_FK": req.body.Local_FK,
                                                                 
-                });                                                       
+                });               
+                await fs.unlink(req.file.path)
 
                 res.redirect ('/users/login');
         },
@@ -122,12 +134,15 @@ const controladorUsers =
                         Emailplano = user[0].Email
                         passplano = user[0].Password
                         nombreImagenAntigua = user[0].Imagen
+                        direccion = user[0].Direccion
 
                         console.log(nombreImagenAntigua)
-                      
+                        const result = await cloudinary.v2.uploader.upload(req.file.path)
+                        console.log(result)
                         req.session.userLogged[0].Email = Emailplano
                         req.session.userLogged[0].Password = passplano 
-                        req.session.userLogged[0].Imagen = req.file.filename
+                        req.session.userLogged[0].Imagen = result.url
+                        req.session.userLogged[0].Direccion = direccion
                         console.log(req.file.filename);
                        
 
@@ -138,7 +153,7 @@ const controladorUsers =
                         "Email": Emailplano,
                         "Password": passplano,
                         "Direccion": req.body.Direccion,
-                        "Imagen": req.file.filename,
+                        "Imagen": result.url,
                         "Administrador": 0,
                         "Local_FK": req.body.Local_FK,    
                    },{
@@ -147,6 +162,8 @@ const controladorUsers =
                      }
                      
                 });
+
+                await fs.unlink(req.file.path)
            
                 //         fs.unlinkSync(__dirname+'/../../public/imagenes/avatares/'+nombreImagenAntigua, (error) =>{
                 //         if (error) {

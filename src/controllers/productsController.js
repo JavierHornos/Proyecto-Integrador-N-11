@@ -1,6 +1,10 @@
-const e = require('express');
-let fs = require('fs');
+let fs = require('fs-extra');
 const path = require('path'); 
+const cloudinary = require('cloudinary')
+
+
+
+
 
 const db = require('../database/models');
 
@@ -267,15 +271,16 @@ const controladorProductos =
         res.render("./products/creacion-producto");
     },
 
-    store: (req,res) => {
+    store: async (req,res) => {
       let datos = req.body;
       console.log(datos)  
+      const result = await cloudinary.v2.uploader.upload(req.file.path)
       db.productos.create({
             "nombre": datos.nombre,
             "precio": parseInt(datos.precio),
             "descuento": parseInt(datos.descuento),
             "descripcion": datos.descripcion,
-            "imagen": req.file.filename,
+            "imagen": result.url,
             "fecha_creacion": datos.fecha_creacion,
             "fecha_modificacion": null,
             "fecha_borrado": null,
@@ -283,6 +288,8 @@ const controladorProductos =
             "creador_FK": datos.Creador_FK,
     
       });   
+
+      await fs.unlink(req.file.path)
        res.render("./products/creacion-producto");
     },
 
@@ -298,42 +305,48 @@ const controladorProductos =
 
     
     actualizarProducto: async (req, res) =>{
-
+    const result = await cloudinary.v2.uploader.upload(req.file.path)
      await db.productos.findByPk(req.params.id)
-            .then(function(productoDetallado) {
+             .then(function(productoDetallado) {
               
               nombreImagenAntigua = productoDetallado.imagen
 
              // console.log(nombreImagenAntigua)
-            
-      
-           db.productos.update({
-          
-           "nombre": req.body.nombre,
-            "precio": parseInt(req.body.precio),
-            "descuento": parseInt(req.body.descuento),
-            "descripcion": req.body.descripcion,
-            "imagen": req.file.filename,
-            "fecha_creacion": null,
-            "fecha_modificacion": req.body.fecha_modificacion,
-            "fecha_borrado": null,
-            "Categoria_FK": req.body.Categoria_FK,
-            "creador_FK": req.body.Creador_FK,
-    
-      },{
-          where: {
-          id: req.params.id
-        }
-      });
 
+             
+
+             db.productos.update({
+              
+              "nombre": req.body.nombre,
+               "precio": parseInt(req.body.precio),
+               "descuento": parseInt(req.body.descuento),
+               "descripcion": req.body.descripcion,
+               "imagen": result.url,
+               "fecha_creacion": null,
+               "fecha_modificacion": req.body.fecha_modificacion,
+               "fecha_borrado": null,
+               "Categoria_FK": req.body.Categoria_FK,
+               "creador_FK": req.body.Creador_FK,
+       
+         },{
+             where: {
+             id: req.params.id
+           }    
+             
+          
+      
       // fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
       //   if (error) {
       //           console.log(error.message);
       //   }})
 
-
+      
       }) 
+
+    
      
+   });
+    await fs.unlink(req.file.path)
       res.redirect ('../../users/login') 
 		
     },
