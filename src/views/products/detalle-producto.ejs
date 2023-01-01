@@ -33,7 +33,7 @@
                         <input class="cantidades" type="number" value="0">
                     </div>
                     <!-- <a href="../carrito-cargado"> -->
-                        <button class="al-carrito" id="al-carrito" data-id="<%= productoDetallado.id %>" data-nombre="<%= productoDetallado.nombre%>" data-precio="<%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%>" data-imagen="/imagenes/productos/<%=productoDetallado.imagen%>" >Agregar Al Carrito</button>
+                        <button class="al-carrito" id="al-carrito" data-id="<%= productoDetallado.id %>" data-nombre="<%= productoDetallado.nombre%>" data-precio="<%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%>" data-imagen="<%=productoDetallado.imagen%>" >Agregar Al Carrito</button>
                     <!-- </a> -->
                     <span class="cuotas"> En 12x $ <%= productoDetallado.precio / 12 %></span>
                     <span class="litro">El precio por litro es $ 13.440</span>

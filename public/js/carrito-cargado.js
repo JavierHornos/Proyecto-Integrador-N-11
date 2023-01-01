@@ -22,6 +22,7 @@ if (localStorage.carrito) {
      div.style.alignItems ="center"
      div.style.justifyContent ="center"
      e.imagen
+     console.log(e.imagen)
      div.innerHTML = `<div class="columna1"><img src="${e.imagen}" class="jack-daniels" width= 40 height= 45 ></img></div>`
      imagen.appendChild(div)
    })
