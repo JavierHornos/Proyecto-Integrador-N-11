@@ -5,6 +5,8 @@ const controller = require("./../controllers/apiController");
 
 router.get("/users/", controller.usuarios);
 
+router.get("/users/ultimo", controller.ultimo);
+
 router.get("/users/:id", controller.usuarioDetalle);
 
 router.get("/products/", controller.lista);

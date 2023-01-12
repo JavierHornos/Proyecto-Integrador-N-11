@@ -15,6 +15,18 @@ module.exports = {
       
   },
 
+  ultimo: async function (req, res) {
+    await db.usuarios
+      .findAll({attributes: {exclude: ["Password"]}})
+      .then((listaUsuarios) => {
+        return res.status(200).json({
+          ultimo: listaUsuarios.pop(),
+          status: 200,
+        });
+      });
+      
+  },
+
   usuarioDetalle: async function (req, res) {
     await db.usuarios
       .findByPk(req.params.id, {attributes: {exclude: ["Password"]}})
