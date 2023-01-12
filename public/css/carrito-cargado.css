@@ -21,13 +21,13 @@ header .ayb button {
     color: black;
     cursor: pointer;
     border-radius: 16px;
-    height: 31px;
+    height: 30px;
 }
 
 header .boton-busqueda{
     z-index: 1;
     position: relative;
-    left: 42vw;
+    left: 41vw;
     top: 11px;
     border: none;
     background: white;
