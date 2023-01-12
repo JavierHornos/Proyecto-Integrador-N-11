@@ -7,8 +7,8 @@ module.exports = {
       .then((listaUsuarios) => {
         return res.status(200).json({
           total: listaUsuarios.length,
-          ultimo: listaUsuarios.pop(),
           data: listaUsuarios,
+          ultimo: listaUsuarios.pop(),
           status: 200,
         });
       });
@@ -30,8 +30,8 @@ module.exports = {
     await db.productos.findAll().then((listaProductos) => {
       return res.status(200).json({
         total: listaProductos.length,
-        ultimo: listaProductos.pop(),
         data: listaProductos,
+        ultimo: listaProductos.pop(),
         status: 200,
       });
     });
