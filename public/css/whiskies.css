@@ -471,6 +471,7 @@ margin: 0;
     grid-template-rows: 2fr;
     grid-gap: 10em;
     margin: 2em;
+    justify-content: center;
 
 }
 
