@@ -7,8 +7,21 @@ module.exports = {
       .then((listaUsuarios) => {
         return res.status(200).json({
           total: listaUsuarios.length,
-          ultimo: listaUsuarios.pop(),
           data: listaUsuarios,
+          // ultimo: listaUsuarios.pop(),
+          status: 200,
+        });
+      });
+      
+  },
+
+  ultimo: async function (req, res) {
+    await db.usuarios
+      .findAll({attributes: {exclude: ["Password"]}})
+      .then((listaUsuarios) => {
+        return res.status(200).json({
+          data: listaUsuarios,
+          ultimo: listaUsuarios.pop(),
           status: 200,
         });
       });
@@ -30,8 +43,17 @@ module.exports = {
     await db.productos.findAll().then((listaProductos) => {
       return res.status(200).json({
         total: listaProductos.length,
-        ultimo: listaProductos.pop(),
         data: listaProductos,
+        status: 200,
+      });
+    });
+  },
+
+  ultima: async function (req, res) {
+    await db.productos.findAll().then((listaProductos) => {
+      return res.status(200).json({
+        data: listaProductos,
+        ultima: listaProductos.pop(),
         status: 200,
       });
     });
