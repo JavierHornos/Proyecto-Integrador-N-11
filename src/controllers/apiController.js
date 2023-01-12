@@ -8,7 +8,7 @@ module.exports = {
         return res.status(200).json({
           total: listaUsuarios.length,
           data: listaUsuarios,
-          ultimo: listaUsuarios.pop(),
+          // ultimo: listaUsuarios.pop(),
           status: 200,
         });
       });
