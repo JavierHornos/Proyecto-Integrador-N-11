@@ -44,7 +44,6 @@ module.exports = {
       return res.status(200).json({
         total: listaProductos.length,
         data: listaProductos,
-        ultimo: listaProductos.pop(),
         status: 200,
       });
     });
