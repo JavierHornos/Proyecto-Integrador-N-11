@@ -20,6 +20,7 @@ module.exports = {
       .findAll({attributes: {exclude: ["Password"]}})
       .then((listaUsuarios) => {
         return res.status(200).json({
+          data: listaUsuarios,
           ultimo: listaUsuarios.pop(),
           status: 200,
         });
