@@ -50,6 +50,16 @@ module.exports = {
     });
   },
 
+  ultima: async function (req, res) {
+    await db.productos.findAll().then((listaProductos) => {
+      return res.status(200).json({
+        data: listaProductos,
+        ultima: listaProductos.pop(),
+        status: 200,
+      });
+    });
+  },
+
   productosDetalle: async function (req, res) {
     await db.productos.findByPk(req.params.id).then((producto) => {
       return res.status(200).json({
