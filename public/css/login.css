@@ -2,7 +2,14 @@
 
 body{
     margin: 0%;
-    background: #000;
+}
+
+.fondo-imagenes {
+    background-image: url("../imagenes/fondo-login.jpg");
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .fa-home:before {
@@ -35,6 +42,7 @@ header .ayb {
     align-items: center;
     flex-grow: 3;
     height: 100%;
+    margin-top: 1.2em;
 }
 
 .prb {
@@ -42,13 +50,14 @@ header .ayb {
      color: #000;
      right: 48px;
  }
- .boton-busqueda{
+ .boton-busqueda {
     background: white;
     border: none;
-     position: absolute; 
-    right: 2px;
-    height: 15px;
-    bottom:19px;
+    position: absolute;
+    right: 47px;
+    height: 24px;
+    bottom: 1px;
+    z-index: 1;
 }
 
  .menu a {
@@ -94,19 +103,31 @@ header .ayb {
     transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
   }
 
-
- header .logo {
+/* header!! */
+ 
+  header .logo {
     flex-grow: 1;
-    padding-left: 2vw;
+    margin-left: 2.5em;
+    margin-top: 1em;
+    position: relative;
+    top: 14px;
+}
+header .iyr{
+    position: relative;
+    right: 62px;
+    top: 2vh;
 }
 
-header .b{
+header .b {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
+    position: relative;
+    top: 2px;
+    right: 2vw;
 }
 
 header .menu2{
@@ -117,7 +138,10 @@ header .menu2{
 header .ayb input {
     flex-grow: 50;
     height: 42px;
+    position: relative;
     border-radius: 11px;
+    top: 12px;
+    right: 2vw;
 }
 
 header .ayb button {
@@ -125,7 +149,6 @@ header .ayb button {
     color: black;
     cursor: pointer;
     border-radius: 16px;
-
 }
 
 header .ayb button i{
@@ -357,7 +380,6 @@ i{
 main{
     margin: 0;
     padding: 0;
-    background: rgb(0, 0, 0);;
     padding-bottom: 50px;
 
     display: flex;
@@ -369,17 +391,22 @@ main{
 }
 
 .form-box{
-    width: 100%;
+    margin-top: 3vh;
     padding: 120px;
-    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    box-shadow: rgb(255, 255, 255) 0 3px 3px 0;
     text-align: center;
-    
+    border-radius: 10px;
+    background: rgba(14, 13, 13, 0.5);
 }
 
-.form-title{
+.form-title {
     color: #fff;
     text-transform: uppercase;
     font-weight: 500;
+    opacity: 1;
+    position: relative;
+    bottom: 54px;
 }
 
 .form-box input[type="email"],
@@ -397,6 +424,7 @@ main{
     color: white;
     border-radius: 24px;
     transition: 0.25s;
+    opacity: 1;
 }
     
 

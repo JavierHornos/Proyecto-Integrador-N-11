@@ -14,6 +14,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    color: white
+    ;
 
 }
 
@@ -347,7 +349,7 @@ i {
 .label{
     position: absolute;
     left: 0;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     top: 20px;
     padding: 8px 13px;
     transition: all .3s;
@@ -390,20 +392,20 @@ i {
     font-family: 'Tangerine', serif;
           font-size: 48px;
   }
-  .formlogin{
-    background-color: whitesmoke;
+.formlogin {
+    background-color: rgb(2, 2, 2, 0.8 );
     max-width: 40vw;
     margin: auto;
     padding: 20px 15px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     margin-top: 7vh;
     margin-bottom: 5vh;
     font-size: 16px;
     font-family: 'Playfair';
-    box-shadow:2px 2px 1px 1px #666666;
-  }
-  
+    box-shadow: 2px 2px 1px 1px #6e6e6e;
+}
+
   .container{
     position: relative;
     padding-top: 20px;
@@ -419,7 +421,7 @@ i {
   }
 
   .icono-password i{
-color: black;
+color: orangered;
 cursor: pointer;
 font-size: 0.8em;
   }
@@ -431,7 +433,7 @@ font-size: 0.8em;
 }
 
 .icono-password :hover{
-    color: orangered;
+    color: rgb(3, 109, 26);
 }
 
   .avatar{
@@ -572,7 +574,9 @@ font-size: 0.8em;
             .boton-busqueda{
                 display:none;
             }
-        
+    body{
+        color: white
+    } 
     .pie1 img {
         height: 50px;
         width: 200px;

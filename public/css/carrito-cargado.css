@@ -7,6 +7,56 @@ body{
     margin: 0px;
 }
 
+header .ayb input {
+    flex-grow: 50;
+    height: 42px;
+    position: relative;
+    border-radius: 11px;
+    top: 12px;
+    right: 2vw;
+}
+
+header .ayb button {
+    flex-grow: 1;
+    color: black;
+    cursor: pointer;
+    border-radius: 16px;
+    height: 31px;
+}
+
+header .boton-busqueda{
+    z-index: 1;
+    position: relative;
+    left: 42vw;
+    top: 11px;
+    border: none;
+    background: white;
+    }
+    
+    header .ayb button {
+        flex-grow: 1;
+        color: black;
+        cursor: pointer;
+        border-radius: 16px;
+    }
+    
+    header .ayb button i{
+        color: black !important;
+    }
+    
+    header .ayb button i:hover{
+        color: orange !important;
+    }
+}
+
+header .ayb button i{
+    color: black !important;
+}
+
+header .ayb button i:hover{
+    color: orange !important;
+}
+
 main{
     height: 60vh;
 }
@@ -291,14 +341,6 @@ header .ayb input{
     flex-grow: 50;
     height: 40px;
     }
-
-header .ayb button{
-    flex-grow: 1;
-    height: 45px;
-    color: black;
-    cursor:pointer;
-
-}
 
 header .ayb button i{
     color: black !important;
