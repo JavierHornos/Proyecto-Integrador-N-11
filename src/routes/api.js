@@ -11,7 +11,7 @@ router.get("/users/:id", controller.usuarioDetalle);
 
 router.get("/products/", controller.lista);
 
-router.get("/products/ultimo", controller.ultima);
+router.get("/products/ultima", controller.ultima);
 
 router.get("/products/:id", controller.productosDetalle);
 
