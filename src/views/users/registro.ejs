@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/registro.css" />
 </head>
 
-<body>
+<body  class="fondo-imagenes">
     <%- include("../partials/header.ejs") %>
 
         <% if (typeof errors !='undefined' ) { %>
@@ -28,7 +28,6 @@
 
 
                 <main>
-
                     <form action="/users/registro" method="POST" id="formulario-registro" class="formlogin"
                         enctype="multipart/form-data">
                         <div class="container">

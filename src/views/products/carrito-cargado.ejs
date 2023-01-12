@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/carrito-cargado.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e913f300ec.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+
+
     <title>Carrito-cargado</title>
 </head>
+
 <body>
     <%- include("../partials/header.ejs") %>
 
-    <main>
-        <h1>CARRITO DE COMPRAS</h1>
-<div class="contenedor1">
-
- 
-    <div class="columna1">IMAGEN
-      <div id="imagen"></div>
-    </div>
-   
-
-   <div class="columna2">PRODUCTO
-    <div class="mayusculas" id="nombre"></div>                                              <!-- nombre -->                                       
-  </div>
-
-  
-   <div class="columna3" id="precio">PRECIO<div></div>                                               <!-- precio -->
-   </div>
-
-   <div class="columna4">CANTIDAD
-       <div class="cantidades" id="cantidad"></div>                                              <!-- cantidad -->
-   </div>
-
-   <div class="columna5">SUBTOTAL
-       <div id="total"></div>                                                                           <!-- Total -->
-    </div>
-    
-    
+        <main>
+            <div class="wrapper">
+                <p class="title">CARRITO DE COMPRAS</p>
+           </div>
+            <div class="contenedor1">
 
 
+                <div class="columna1">IMAGEN
+                    <div id="imagen"></div>
+                </div>
 
+
+                <div class="columna2">PRODUCTO
+                    <div class="mayusculas" id="nombre"></div> <!-- nombre -->
+                </div>
+
+
+                <div class="columna3" id="precio">PRECIO<div></div> <!-- precio -->
+                </div>
+
+                <div class="columna4">CANTIDAD
+                    <div class="cantidades" id="cantidad"></div> <!-- cantidad -->
+                </div>
+
+                <div class="columna5">SUBTOTAL
+                    <div id="total"></div> <!-- Total -->
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="total2" id="total2">
+                <h2>Total</h2>
+                <div></div>
+            </div>
+<div class="botones">
+            <button class="botonBorrar" id="botonBorrar">Vaciar Carrito</button>
+
+            <button class="botonComprar" id="botonComprar">Comprar</button>
 </div>
 
-<div class="total2" id="total2">
-    <h2>Total</h2>
-    <div></div>
-</div>
+        </main>
+        <footer>
 
-<button class="botonBorrar" id="botonBorrar"  >Vaciar Carrito</button>
+            <!-- <%- include("../partials/footer.ejs") %>  -->
 
-<button class="botonComprar" id="botonComprar"  >Comprar</button>
+        </footer>
 
-
-    </main>
-    <footer>
-        
-        <!-- <%- include("../partials/footer.ejs") %>  -->
-
-    </footer>
-
-    <script src="/js/carrito-cargado.js"></script>
+        <script src="/js/carrito-cargado.js"></script>
 
 </body>
+
 </html>
