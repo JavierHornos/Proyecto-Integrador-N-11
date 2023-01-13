@@ -14,7 +14,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: white
+    color: white;
     ;
 
 }
@@ -393,7 +393,7 @@ i {
           font-size: 48px;
   }
 .formlogin {
-    background-color: rgb(2, 2, 2, 0.8 );
+    background-color: rgb(0, 0, 0, 0.8 );
     max-width: 40vw;
     margin: auto;
     padding: 20px 15px;

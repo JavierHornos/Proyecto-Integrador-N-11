@@ -13,23 +13,36 @@
 
 <body  class="fondo-imagenes">
     <%- include("../partials/header.ejs") %>
-
-        <% if (typeof errors !='undefined' ) { %>
-            <p style="color:red">ERROR</p>
+    
+    <% if (typeof errors !='undefined' ) { %>
+        <p style="color:red">ERROR</p>
             <ul>
                 <% for (let i=0; i < errors.length; i++) { %>
                     <li>
                         <%= errors[i].msg %>
                     </li>
                     <% } %>
-            </ul>
-            <% } %>
-
-
-
+                </ul>
+                <% } %>
+                
+                
+                
                 <main>
                     <form action="/users/registro" method="POST" id="formulario-registro" class="formlogin"
-                        enctype="multipart/form-data">
+                    enctype="multipart/form-data">
+                    <div class="container">
+                        <input class="form" type="text" id="Nombre" name="Nombre">
+                        <label class="label" for="Nombre">Nombre</label>
+                
+                    </div>
+                    <div class="container">
+                        <input class="form" type="text" id="apellido" name="Apellido">
+                        <label class="label" for="apellido">Apellido</label>
+                    </div>
+                    <div class="container">
+                        <input class="form" type="text" id="domicilio" name="domicilio">
+                        <label class="label" for="domicilio">Domicilio</label>
+                    </div>
                         <div class="container">
                             <input class="form" type="text" id="Email" name="Email">
                             <label class="label" for="Email">Mail</label>
@@ -51,19 +64,6 @@
                         </div>
 
 
-                        <div class="container">
-                            <input class="form" type="text" id="Nombre" name="Nombre">
-                            <label class="label" for="Nombre">Nombre</label>
-
-                        </div>
-                        <div class="container">
-                            <input class="form" type="text" id="apellido" name="Apellido">
-                            <label class="label" for="apellido">Apellido</label>
-                        </div>
-                        <div class="container">
-                            <input class="form" type="text" id="domicilio" name="domicilio">
-                            <label class="label" for="domicilio">Domicilio</label>
-                        </div>
 
 
                         <div class="avatar">
