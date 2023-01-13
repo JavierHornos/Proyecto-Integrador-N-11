@@ -36,7 +36,13 @@ header .fila1{
       flex-grow: 3;
       height: 100%;
   }
+
+  main {
+    padding: 40px;
+    background-color: white;
+  }
   
+
   .prb {
       /* position: absolute;*/
        color: #000;
