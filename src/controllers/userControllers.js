@@ -45,6 +45,8 @@ const controladorUsers =
                         for (let p of userToLogin) {
                         let PasswordHash = p.Password 
                         let isOkThePassword = bcrypt.compareSync(PasswordPlano, PasswordHash)
+                        let administrador = p.Administrador
+                        console.log(administrador)
                         if (isOkThePassword) {
                                 delete userToLogin.Password;
                                 req.session.userLogged = userToLogin;

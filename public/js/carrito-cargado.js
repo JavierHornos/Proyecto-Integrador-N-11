@@ -47,7 +47,7 @@ if (localStorage.carrito) {
     div.style.display = "flex"
     div.style.alignItems ="center"
     div.style.justifyContent ="center"
-    div.innerHTML = "$" + e.precio  
+    div.innerHTML = "$" + parseInt(e.precio)  
     precio.appendChild(div)
    })
 
@@ -69,15 +69,15 @@ if (localStorage.carrito) {
     div.style.display = "flex"
     div.style.alignItems ="center"
     div.style.justifyContent ="center"
-    div.innerHTML = "$" + e.Cantidad * e.precio
+    div.innerHTML = "$" + e.Cantidad * parseInt(e.precio)
     total.appendChild(div)
    })
 
  
-let sumaTotal = carrito.reduce((acum, prod) => acum + prod.precio * prod.Cantidad, 0)
+let sumaTotal = carrito.reduce((acum, prod) => parseInt(acum) + parseInt(prod.precio) * prod.Cantidad, 0)
 let div = document.createElement("div")
 div.style.fontSize = "x-large"
-div.innerHTML = "$" + sumaTotal
+div.innerHTML = "$" + parseInt(sumaTotal)
 total2.appendChild(div)
 
 
