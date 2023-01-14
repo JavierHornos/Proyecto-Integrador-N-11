@@ -1,5 +1,6 @@
 const mainController= require('./../controllers/mainController')
 let adminMiddleware = require('../middlewares/adminMiddleware')         // Middleares para restringir administradores
+const RealAdmin = require('../middlewares/RealAdmin')
 
 
 
@@ -9,7 +10,7 @@ const router = express.Router();
 
 router.get ('/' , mainController.home)
 
-router.get ('/home-admin' , adminMiddleware, mainController.homeAdmin)
+router.get ('/home-admin' , adminMiddleware, RealAdmin, mainController.homeAdmin)
 
 router.get ('/contacto', mainController.contacto)
 
