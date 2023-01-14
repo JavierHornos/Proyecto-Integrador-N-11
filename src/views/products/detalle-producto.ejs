@@ -28,10 +28,10 @@
                         <h2 class="precio"><%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%></h2> <span class="off"><%= productoDetallado.descuento %>% OFF</span>
                         </div>
                     </div>
-                    <div>
+                 <!-- <div>
                         <label>Cantidad</label></label>
                         <input class="cantidades" type="number" value="0">
-                    </div>
+                    </div> -->
                     <!-- <a href="../carrito-cargado"> -->
                         <button class="al-carrito" id="al-carrito" data-id="<%= productoDetallado.id %>" data-nombre="<%= productoDetallado.nombre%>" data-precio="<%=( ( (100-productoDetallado.descuento) * productoDetallado.precio ) / 100  )%>" data-imagen="<%=productoDetallado.imagen%>" >Agregar Al Carrito</button>
                     <!-- </a> -->

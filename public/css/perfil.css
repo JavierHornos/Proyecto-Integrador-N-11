@@ -77,6 +77,8 @@ header .ayb button i:hover{
     color: orange !important;
 }
 
+
+
 header .fila2 {
     display: flex;
     justify-content: space-around;
@@ -126,6 +128,11 @@ header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile{
     margin-inline-start: 0px !important;
     margin-inline-end: 0px !important;
     padding-inline-start: 20px !important;
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    display: none;
 }
 
 header .fila2 .menu-mobile .contenedor-lista-mobile .lista-mobile li{
