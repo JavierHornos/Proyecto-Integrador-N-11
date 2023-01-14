@@ -17,18 +17,17 @@
         <div class="iyr">
 
             <% if (!locals.isLogged) { %>
-                <span class=" item ingresa"><a href="../users/login">INGRESÁ</a></span>
+                <span class=" item ingresa"><a href="/users/login">INGRESÁ</a></span>
                 <span class="separador">|</span>
-                <span class="item registrate"><a href="../users/registro">REGISTRATE</a></span>
+                <span class="item registrate"><a href="/users/registro">REGISTRATE</a></span>
                 
-                <% } else if (locals.isLogged.Administrador === 1) { %>
-                <span class="item ingresa"><a href="../users/perfil">PERFIL</a></span>
+                <% } else  { %>
+                <span class="item ingresa"><a href="/users/perfil">PERFIL</a></span>
                 <span class="separador">|</span>
-                <span class=" item ingresa"><a href="../products/creacion-producto">CREAR</a></span>
+                <span class=" item ingresa"><a href="/products/creacion-producto">CREAR</a></span>
                 <span class="separador">|</span>
-                <span class="item registrate"><a href="../products/productos-todos-admin">EDITAR</a></span>
-                <% } else {  %>
-                        <span class="item ingresa"><a href="../users/perfil">PERFIL</a></span>
+                <span class="item registrate"><a href="/products/productos-todos-admin">EDITAR</a></span>
+              
                 <% } %>
 
                 

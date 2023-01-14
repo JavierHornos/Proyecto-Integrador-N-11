@@ -50,6 +50,7 @@ const controladorUsers =
                         if (isOkThePassword) {
                                 delete userToLogin.Password;
                                 req.session.userLogged = userToLogin;
+                                
 
                                 if(req.body.recordame) {
                                       res.cookie('recordame', req.body.Email, { maxAge: (1000 * 60) * 5 })  
