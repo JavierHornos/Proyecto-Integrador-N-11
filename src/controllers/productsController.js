@@ -205,14 +205,8 @@ const controladorProductos =
     productosTodos: (req, res) => {
      
           db.productos.findAll().then((products) =>{
-            let productosOrdenados = products;
-            if (req.query.orden == 0) {
-              productosOrdenados = products.sort((a,b) => a.precio - b.precio);
-            } else if (req.query.orden == 1) {
-              productosOrdenados = products.sort((a,b) => b.precio - a.precio);
-            }
-       
-            res.render('./products/productos-todos', {products: productosOrdenados});
+                   
+            res.render('./products/productos-todos', {products: products});
           });
                
       },
@@ -290,7 +284,7 @@ const controladorProductos =
       });   
 
       await fs.unlink(req.file.path)
-       res.render("./products/creacion-producto");
+      res.redirect('../') ;
     },
 
     //* EDITAR Y ACTUALIZAR *//
@@ -346,7 +340,7 @@ const controladorProductos =
     
      
    });
-    await fs.unlink(req.file.path)
+    // await fs.unlink(req.file.path)
       res.redirect ('../../users/login') 
 		
     },
@@ -374,10 +368,10 @@ const controladorProductos =
           })
 
 
-          fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
-            if (error) {
-                    console.log(error.message);
-            }})
+          // fs.unlinkSync(__dirname+'/../../public/imagenes/productos/'+nombreImagenAntigua, (error) =>{
+          //   if (error) {
+          //           console.log(error.message);
+          //   }})
     
 
         });
