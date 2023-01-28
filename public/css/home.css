@@ -287,15 +287,24 @@ a:hover{
 #hamnav input{
     opacity: 0;
 }
+
 #hamnav label {
     display: inline-block;
     color: white;
-    background: orangered;
+    background: #F44336;
     font-style: normal;
     font-size: 1.2em;
     padding: 5px;
     padding-left: 0.7em;
     padding-right: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+#hamnav label:hover {
+    background: #E53935;
+    cursor: pointer;
 }
 
 
